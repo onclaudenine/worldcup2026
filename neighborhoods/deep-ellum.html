@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deep Ellum — Dallas 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.highlights-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1px;background:var(--border);margin-bottom:2.5rem}
+.hi-cell{background:var(--card);padding:1.2rem;display:flex;align-items:flex-start;gap:10px}
+.hi-star{color:var(--gold);flex-shrink:0;font-size:.9rem;margin-top:1px}
+.hi-text{font-size:.82rem;color:var(--muted);line-height:1.55;font-weight:300}
+.tips-list{display:flex;flex-direction:column;gap:8px;margin-bottom:2rem}
+.tip-item{display:flex;gap:10px;padding:.85rem 1rem;background:var(--card);border-left:3px solid var(--gold);font-size:.82rem;color:var(--muted);line-height:1.55;font-weight:300}
+.tip-num{font-family:var(--fh);font-weight:700;color:var(--gold);flex-shrink:0;min-width:24px}
+</style>
+</head>
+<body>
+<div id="affiliate-disclosure"></div>
+<nav id="main-nav"></nav>
+<div class="page-hero" style="margin-top:56px">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-content">
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a><span>/</span>
+      <a href="../explore.html">Explore</a><span>/</span>
+      <span style="color:var(--text)">Deep Ellum</span>
+    </div>
+    <h1>🎸 <em>Deep Ellum</em></h1>
+    <p class="page-hero-sub">Dallas's gritty arts district — live blues & jazz every night, craft breweries, murals, and legendary BBQ spots within walking distance of each other.</p>
+    <div class="page-hero-tags">
+      <span class="tag tag-gold">nightlife</span><span class="tag tag-gold">food</span>
+      <span class="tag tag-green">DART accessible</span>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="sec-label">About</div>
+  <div class="sec-title" style="margin-bottom:1.25rem">The <em>Details</em></div>
+  <p style="font-size:.95rem;color:var(--muted);line-height:1.85;max-width:680px;font-weight:300;margin-bottom:2.5rem">Deep Ellum is the heartbeat of Dallas after dark. Once a booming jazz scene in the 1920s, today it pulses with live music venues, independent galleries, craft beer bars, and some of the city's best BBQ joints. During the World Cup, expect wall-to-wall fan energy every night.</p>
+  <div class="sec-label" style="margin-bottom:.85rem">Highlights</div>
+  <div class="highlights-grid">
+    <div class="hi-cell"><span class="hi-star">★</span><div class="hi-text">Live music 7 nights a week</div></div><div class="hi-cell"><span class="hi-star">★</span><div class="hi-text">Pecan Lodge — best brisket in Dallas</div></div><div class="hi-cell"><span class="hi-star">★</span><div class="hi-text">Craft brewery trail</div></div><div class="hi-cell"><span class="hi-star">★</span><div class="hi-text">Massive murals & street art</div></div>
+  </div>
+  <div class="sec-label" style="margin-bottom:.75rem">Insider Tips</div>
+  <div class="tips-list">
+    <div class="tip-item"><span class="tip-num">01</span><span>Park on side streets — avoid the main strip lots</span></div><div class="tip-item"><span class="tip-num">02</span><span>Most venues open until 2am</span></div><div class="tip-item"><span class="tip-num">03</span><span>DART Green Line stops at Deep Ellum station</span></div>
+  </div>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:.5rem">
+    <a href="https://maps.google.com/?q=Deep+Ellum+Dallas+TX" target="_blank" rel="noopener" class="ext-link">Open in Google Maps ↗</a>
+    <a href="https://www.deepellumtexas.com" target="_blank" rel="noopener" class="ext-link">Deep Ellum Foundation ↗</a>
+  </div>
+</section>
+
+<!-- AFFILIATE: hotel/car/activity booking for this neighborhood -->
+<section style="background:var(--mid)">
+  <div class="sec-label">Stay & Explore</div>
+  <div class="sec-title" style="margin-bottom:.5rem">Book for <em>Deep Ellum</em></div>
+  <p style="font-size:.82rem;color:var(--muted);font-weight:300;max-width:500px;margin-bottom:0">
+    Well connected by DART. Hotels here put you close to restaurants and nightlife.
+  </p>
+  <div id="nbh-booking"></div>
+</section>
+
+<section>
+  <div class="sec-label">Nearby Dining</div>
+  <div class="sec-title" style="margin-bottom:1.5rem">Where to <em>Eat</em></div>
+  <div class="cards-grid" id="nearby"></div>
+  <div style="margin-top:1.5rem"><a href="../explore.html#restaurants" class="btn-sec">All Restaurants →</a></div>
+</section>
+
+<section style="background:var(--mid)">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem">
+    <div><div class="sec-label">Keep Exploring</div><div class="sec-title" style="margin-bottom:0">More <em>Neighborhoods</em></div></div>
+    <a href="../explore.html" class="btn-ghost">All Neighborhoods →</a>
+  </div>
+  <div class="cards-grid" id="more"></div>
+</section>
+
+<footer id="main-footer"></footer>
+<script src="../js/site.js"></script>
+<script src="../js/affiliate.js"></script>
+<script>
+renderNav(); renderFooter(); renderDisclosure();
+const slug='deep-ellum';
+const nbhName='Deep Ellum';
+renderNeighborhoodBooking('nbh-booking', nbhName + ', Dallas Texas', false);
+const nearby=RESTAURANTS.slice(0,4);
+document.getElementById('nearby').innerHTML=nearby.map(r=>`<a href="../restaurants/${r.slug}.html" class="card card-link"><div class="card-label">${r.cuisine} · ${r.price}</div><div class="card-title">${r.name}</div><div class="card-body">${r.desc}</div><span class="card-arrow">→</span></a>`).join('');
+const others=NEIGHBORHOODS.filter(n=>n.slug!==slug).slice(0,3);
+document.getElementById('more').innerHTML=others.map(n=>`<a href="${n.slug}.html" class="card card-link"><div class="card-label">${n.tag}</div><div class="card-title">${n.icon} ${n.name}</div><div class="card-body">${n.desc}</div><span class="card-arrow">→</span></a>`).join('');
+</script>
+</body>
+</html>
