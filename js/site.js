@@ -120,7 +120,7 @@ const RESTAURANTS = [
     website:'https://www.albashmediterranean.com', gmaps:'https://maps.google.com/?q=Al+Basha+Mediterranean+Richardson+TX',
     tips:['The mixed grill platter feeds two easily — great value','Richardson is 20 min north of downtown Dallas on US-75','DART Red Line to Arapaho Center station is nearby','Try the baklava for dessert — made in-house']
   },
-  { slug:'mina-halal', name:'Mina's Halal Kitchen', stars:5, cuisine:'Halal · American Soul Food', cat:'halal', price:'$', area:'South Dallas',
+  { slug:'mina-halal', name: "Mina's Halal Kitchen", stars:5, cuisine:'Halal · American Soul Food', cat:'halal', price:'$', area:'South Dallas',
     desc:'Halal soul food with Southern roots. Fried chicken, catfish, oxtail, and sides that taste like home cooking.',
     long:'Mina\'s is one of the most unique restaurants in Dallas — halal soul food, done with love and serious skill. The fried chicken is legendary, the oxtail is slow-braised to perfection, and the sides (mac and cheese, collard greens, cornbread) are as good as any in the South. A true Dallas original and one of the most exciting spots in the city for adventurous eaters.',
     address:'3150 S Lancaster Rd, Dallas, TX 75216', hours:'Tue–Sun 11am–8pm',
