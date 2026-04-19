@@ -5,6 +5,11 @@ const SITE = {
     { label: 'Map',       href: '/map.html',           key: 'nav_map' },
     { label: 'Explore',   href: '/explore.html',       key: 'nav_explore' },
     { label: 'Get There', href: '/logistics.html',     key: 'nav_logistics' },
+    { label: 'Fan Zones', href: '/fanzones.html',      key: 'nav_fanzones' },
+    { label: 'Airport',   href: '/airport.html',       key: 'nav_airport' },
+    { label: 'Stay',      href: '/accommodation.html', key: 'nav_accommodation' },
+    { label: 'Budget',    href: '/budget.html',        key: 'nav_budget' },
+    { label: 'Shopping',  href: '/shopping.html',      key: 'nav_shopping' },
     { label: 'Checklist', href: '/checklist.html',     key: 'nav_checklist' },
     { label: 'Survival',  href: '/survival.html',      key: 'nav_survival' },
     { label: 'Families',  href: '/families.html',      key: 'nav_families' },
@@ -853,8 +858,9 @@ const TRANSLATIONS = {
   en: {
     // NAV
     nav_matches:'Matches', nav_map:'Map', nav_explore:'Explore',
-    nav_logistics:'Get There', nav_checklist:'Checklist',
-    nav_survival:'Survival', nav_families:'Families', nav_weather:'Weather',
+    nav_logistics:'Get There', nav_fanzones:'Fan Zones', nav_airport:'Airport',
+    nav_accommodation:'Stay', nav_budget:'Budget', nav_shopping:'Shopping',
+    nav_checklist:'Checklist', nav_survival:'Survival', nav_families:'Families', nav_weather:'Weather',
 
     // HOMEPAGE
     home_eyebrow:'FIFA World Cup 2026 · Dallas, Texas',
@@ -1014,8 +1020,9 @@ const TRANSLATIONS = {
 
   es: {
     nav_matches:'Partidos', nav_map:'Mapa', nav_explore:'Explorar',
-    nav_logistics:'Cómo Llegar', nav_checklist:'Lista',
-    nav_survival:'Guía', nav_families:'Familias', nav_weather:'Clima',
+    nav_logistics:'Cómo Llegar', nav_fanzones:'Fanzones', nav_airport:'Aeropuerto',
+    nav_accommodation:'Alojamiento', nav_budget:'Presupuesto', nav_shopping:'Compras',
+    nav_checklist:'Lista', nav_survival:'Guía', nav_families:'Familias', nav_weather:'Clima',
 
     home_eyebrow:'Copa Mundial FIFA 2026 · Dallas, Texas',
     home_h1_line1:'Big', home_h1_line2:'D', home_h1_line3:'Guía Ciudad Sede',
@@ -1165,7 +1172,9 @@ const TRANSLATIONS = {
 
   fr: {
     nav_matches:'Matchs', nav_map:'Carte', nav_explore:'Explorer',
-    nav_logistics:'Y Aller', nav_checklist:'Liste',
+    nav_logistics:'Y Aller', nav_fanzones:'Fan Zones', nav_airport:'Aéroport',
+    nav_accommodation:'Hébergement', nav_budget:'Budget', nav_shopping:'Shopping',
+    nav_checklist:'Liste',
     nav_survival:'Guide', nav_families:'Familles', nav_weather:'Météo',
 
     home_eyebrow:'Coupe du Monde FIFA 2026 · Dallas, Texas',
@@ -1316,8 +1325,9 @@ const TRANSLATIONS = {
 
   nl: {
     nav_matches:'Wedstrijden', nav_map:'Kaart', nav_explore:'Verkennen',
-    nav_logistics:'Reizen', nav_checklist:'Checklist',
-    nav_survival:'Gids', nav_families:'Families', nav_weather:'Weer',
+    nav_logistics:'Reizen', nav_fanzones:'Fanzones', nav_airport:'Vliegveld',
+    nav_accommodation:'Verblijf', nav_budget:'Budget', nav_shopping:'Winkelen',
+    nav_checklist:'Checklist', nav_survival:'Gids', nav_families:'Families', nav_weather:'Weer',
     home_eyebrow:'FIFA Wereldkampioenschap 2026 - Dallas, Texas',
     home_h1_line1:'Big', home_h1_line2:'D', home_h1_line3:'Bezoekersguide',
     home_sub:'Alles wat je nodig hebt voor Dallas tijdens het grootste sportevenement ter wereld.',
