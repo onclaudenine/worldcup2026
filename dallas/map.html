@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+(function(){var s=localStorage.getItem('dallas2026-theme');var d=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;if(s?s==='light':!d)document.documentElement.classList.add('light');})();
+</script>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Map — Dallas 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.map-shell{display:grid;grid-template-columns:280px 1fr;height:620px;border:1px solid var(--border);overflow:hidden}
+.map-sidebar{background:var(--card);border-right:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden;transition:background .25s}
+.filter-head{padding:.75rem 1rem;border-bottom:1px solid var(--border);font-family:var(--fh);font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);flex-shrink:0}
+.cat-btns{display:flex;flex-direction:column;flex-shrink:0;border-bottom:1px solid var(--border)}
+.cat-btn{display:flex;align-items:center;gap:10px;padding:.6rem 1rem;cursor:pointer;border:none;background:none;color:var(--muted);width:100%;text-align:left;transition:all .15s;border-left:3px solid transparent;font-family:var(--fh);font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.cat-btn:hover{background:rgba(255,255,255,.04);color:var(--text)}
+.cat-btn.active{background:rgba(191,10,48,.07);color:var(--text);border-left-color:var(--red)}
+.cat-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.places-list{overflow-y:auto;flex:1;-webkit-overflow-scrolling:touch}
+.place-item{padding:.85rem 1rem;border-bottom:1px solid var(--border);cursor:pointer;transition:background .15s}
+.place-item:hover,.place-item.sel{background:rgba(191,10,48,.06)}
+.pi-name{font-family:var(--fh);font-size:.88rem;font-weight:700;text-transform:uppercase;letter-spacing:.02em;color:var(--text);margin-bottom:2px}
+.pi-type{font-size:.68rem;color:var(--muted);font-weight:300;text-transform:capitalize}
+.map-area{position:relative;flex:1}
+#gmap{width:100%;height:100%}
+/* Info panel */
+.info-panel{position:absolute;bottom:-100%;left:0;right:0;background:var(--card);border-top:2px solid var(--red);padding:1.25rem 1.5rem 1.5rem;transition:bottom .28s cubic-bezier(.4,0,.2,1);z-index:10;max-height:60%}
+.info-panel.open{bottom:0}
+.ip-close{position:absolute;top:.75rem;right:1rem;background:none;border:none;color:var(--muted);cursor:pointer;font-size:1.1rem;padding:4px 8px;line-height:1}
+.ip-close:hover{color:var(--text)}
+.ip-cat{font-family:var(--fh);font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin-bottom:.25rem}
+.ip-name{font-family:var(--fh);font-size:1.4rem;font-weight:900;text-transform:uppercase;line-height:1;margin-bottom:.5rem;color:var(--text)}
+.ip-desc{font-size:.82rem;color:var(--muted);line-height:1.65;font-weight:300;margin-bottom:.35rem}
+.ip-tip{font-size:.78rem;color:var(--muted);line-height:1.6;margin-bottom:1rem}
+.ip-tip strong{color:var(--white)}
+.ip-actions{display:flex;gap:8px;flex-wrap:wrap}
+@media(max-width:640px){
+  .map-shell{grid-template-columns:1fr;height:auto}
+  .map-sidebar{max-height:200px;border-right:none;border-bottom:1px solid var(--border)}
+  .map-area{height:400px}
+}
+</style>
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+</head>
+<body>
+<div id="affiliate-disclosure"></div>
+<nav id="main-nav"></nav>
+
+<div style="margin-top:56px">
+<div style="background:var(--mid);border-bottom:1px solid var(--border);padding:2rem 2rem 1.5rem">
+  <div class="sec-label" id="map-label">Interactive Visitor Map</div>
+  <div style="font-family:var(--fh);font-weight:900;font-size:clamp(2rem,5vw,3rem);text-transform:uppercase;line-height:.92;margin-bottom:.5rem" id="map-title">Dallas <em style="color:var(--red);font-style:normal">Map</em></div>
+  <p style="font-size:.82rem;color:var(--muted);font-weight:300;max-width:560px;line-height:1.65">Stadium, transit stops, hotels, fan zones, and top restaurants. Click any pin for details and directions.</p>
+</div>
+
+<div class="map-shell">
+  <!-- Sidebar -->
+  <div class="map-sidebar">
+    <div class="filter-head" id="map-filter-label">Filter by Category</div>
+    <div class="cat-btns">
+      <button class="cat-btn active" data-cat="all"><span class="cat-dot" style="background:#888"></span><span id="map-cat-all">All</span></button>
+      <button class="cat-btn" data-cat="stadium"><span class="cat-dot" style="background:#BF0A30"></span><span id="map-cat-stadium">Stadium</span></button>
+      <button class="cat-btn" data-cat="transit"><span class="cat-dot" style="background:#4CAF50"></span><span id="map-cat-transit">Transit</span></button>
+      <button class="cat-btn" data-cat="food"><span class="cat-dot" style="background:#F0A030"></span><span id="map-cat-food">Food & Drink</span></button>
+      <button class="cat-btn" data-cat="hotel"><span class="cat-dot" style="background:#2196F3"></span><span id="map-cat-hotels">Hotels</span></button>
+      <button class="cat-btn" data-cat="fanzone"><span class="cat-dot" style="background:#9C27B0"></span><span id="map-cat-fanzones">Fan Zones</span></button>
+    </div>
+    <div class="places-list" id="places-list"></div>
+  </div>
+
+  <!-- Real Google Map -->
+  <div class="map-area" id="map-area">
+    <iframe
+      id="gmap"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d145736!2d-97.1!3d32.75!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1"
+      style="width:100%;height:100%;border:none;display:block">
+    </iframe>
+
+    <!-- Info panel slides up on pin/list click -->
+    <div class="info-panel" id="info-panel">
+      <button class="ip-close" id="ip-close">✕</button>
+      <div class="ip-cat" id="ip-cat"></div>
+      <div class="ip-name" id="ip-name"></div>
+      <div class="ip-desc" id="ip-desc"></div>
+      <div class="ip-tip" id="ip-tip"></div>
+      <div class="ip-actions" id="ip-actions"></div>
+    </div>
+  </div>
+</div>
+
+<div style="padding:1.25rem 2rem;display:flex;gap:10px;flex-wrap:wrap;background:var(--mid);border-top:1px solid var(--border)">
+  <a href="https://maps.google.com/?q=AT%26T+Stadium+Arlington+TX" target="_blank" rel="noopener" class="ext-link">AT&T Stadium ↗</a>
+  <a href="https://www.dart.org/maps/systemmap" target="_blank" rel="noopener" class="ext-link">DART System Map ↗</a>
+  <a href="https://ridetretrain.com" target="_blank" rel="noopener" class="ext-link">TRE Rail Info ↗</a>
+</div>
+</div>
+
+<footer id="main-footer"></footer>
+<script src="js/site.js"></script>
+<script src="js/affiliate.js"></script>
+<script>
+renderNav(); renderFooter(); renderDisclosure(); initLang();
+
+const PLACES = [
+  {id:1,  name:'AT&T Stadium',          cat:'stadium', color:'#BF0A30',
+   desc:'FIFA World Cup 2026 venue. Capacity 105,000 with retractable roof and full climate control.',
+   tip:'Gates open 2.5 hrs before kickoff. Clear bags only. TRE + free shuttle is the best way in.',
+   lat:32.7479, lng:-97.0928, href:'matches.html',
+   mapsQ:'AT%26T+Stadium+Arlington+TX'},
+  {id:2,  name:'CentrePort/DFW Station', cat:'transit', color:'#4CAF50',
+   desc:'TRE rail stop and official FIFA shuttle hub to AT&T Stadium.',
+   tip:'Free FIFA shuttles run from here to the stadium on match days — 10–15 min ride.',
+   lat:32.8968, lng:-97.0385, href:'logistics.html',
+   mapsQ:'CentrePort+DFW+Airport+Station+Texas'},
+  {id:3,  name:'Union Station Dallas',   cat:'transit', color:'#4CAF50',
+   desc:'Main TRE and DART hub in downtown Dallas. Start of the TRE rail line to CentrePort.',
+   tip:'~35 min to CentrePort by TRE. $5 one-way. DART Green/Blue/Red lines connect here.',
+   lat:32.7791, lng:-96.8093, href:'logistics.html',
+   mapsQ:'Union+Station+Dallas+TX'},
+  {id:4,  name:'Fort Worth TRE Station', cat:'transit', color:'#4CAF50',
+   desc:'Trinity Railway Express start point from Fort Worth side.',
+   tip:'Take TRE to CentrePort then free FIFA shuttle. Best option for Fort Worth visitors.',
+   lat:32.7555, lng:-97.3308, href:'logistics.html',
+   mapsQ:'Fort+Worth+Intermodal+Transportation+Center'},
+  {id:5,  name:'Omni Dallas Hotel',      cat:'hotel',   color:'#2196F3',
+   desc:'Luxury hotel connected directly to the Kay Bailey Hutchison Convention Center via skybridge.',
+   tip:'Walking distance to Union Station. One of the best-located hotels for the tournament.',
+   lat:32.7791, lng:-96.8076, href:null,
+   mapsQ:'Omni+Dallas+Hotel'},
+  {id:6,  name:'Marriott Uptown Dallas', cat:'hotel',   color:'#2196F3',
+   desc:'Upscale hotel in Uptown Dallas. Walkable to McKinney Ave restaurants and DART.',
+   tip:'Best neighborhood base. McKinney Ave, West Village, and DART all within walking distance.',
+   lat:32.7982, lng:-96.8031, href:null,
+   mapsQ:'Marriott+Dallas+Uptown'},
+  {id:7,  name:'Sheraton Arlington',     cat:'hotel',   color:'#2196F3',
+   desc:'Closest major hotel to AT&T Stadium. Walking distance to the venue on match days.',
+   tip:'Best for fans wanting to walk to the stadium. Book very early — fills months in advance.',
+   lat:32.7368, lng:-97.1073, href:null,
+   mapsQ:'Sheraton+Arlington+Hotel+Texas'},
+  {id:8,  name:'Pecan Lodge BBQ',        cat:'food',    color:'#F0A030',
+   desc:'One of the best brisket spots in Texas. Legendary pit-smoked BBQ in Deep Ellum.',
+   tip:'Arrive at 11am or expect a 45-min wait. Order the Trough. Worth every minute.',
+   lat:32.7831, lng:-96.7831, href:'restaurants/pecan-lodge.html',
+   mapsQ:'Pecan+Lodge+BBQ+Dallas'},
+  {id:9,  name:'Revolver Taco Lounge',   cat:'food',    color:'#F0A030',
+   desc:'Chef-driven tacos with bold flavors. A Deep Ellum institution.',
+   tip:'Try the Trompo (pastor) taco. Gets busy after 8pm — arrive early.',
+   lat:32.7834, lng:-96.7836, href:'restaurants/revolver-taco.html',
+   mapsQ:'Revolver+Taco+Lounge+Dallas'},
+  {id:10, name:'Heim BBQ Fort Worth',    cat:'food',    color:'#F0A030',
+   desc:'Best BBQ closest to the stadium. Famous for bacon burnt ends.',
+   tip:'Only 15 min from AT&T Stadium. Sells out of ribs by 1pm on weekends.',
+   lat:32.7529, lng:-97.3635, href:'restaurants/heim-bbq.html',
+   mapsQ:'Heim+BBQ+Fort+Worth'},
+  {id:11, name:'HG Sply Co',             cat:'food',    color:'#F0A030',
+   desc:'Rooftop bar and restaurant in Uptown. Best pre-match spot in Dallas.',
+   tip:'Book the rooftop on a match day — fills up 2 hrs before kickoff.',
+   lat:32.7984, lng:-96.8044, href:'restaurants/hg-sply-co.html',
+   mapsQ:'HG+Sply+Co+Dallas'},
+  {id:12, name:'West 7th Fan Zone',      cat:'fanzone', color:'#9C27B0',
+   desc:'Official FIFA fan zone in Fort Worth\'s West 7th entertainment district.',
+   tip:'Walking distance from Fort Worth TRE station. Bars, live music, and big screens.',
+   lat:32.7470, lng:-97.3706, href:null,
+   mapsQ:'West+7th+Street+Fort+Worth+TX'},
+  {id:13, name:'Reunion Tower Fan Fest', cat:'fanzone', color:'#9C27B0',
+   desc:'Dallas fan gathering zone at Reunion Tower plaza, downtown.',
+   tip:'Iconic Dallas skyline backdrop. Walking distance from Union Station.',
+   lat:32.7757, lng:-96.8082, href:null,
+   mapsQ:'Reunion+Tower+Dallas+TX'},
+  {id:14, name:'Deep Ellum Fan Walk',    cat:'fanzone', color:'#9C27B0',
+   desc:'Dallas\'s arts and bar district — alive with World Cup fans all tournament.',
+   tip:'Best nightlife in Dallas. Bars open until 2am. Perfect post-match destination.',
+   lat:32.7831, lng:-96.7803, href:'neighborhoods/deep-ellum.html',
+   mapsQ:'Deep+Ellum+Dallas+TX'},
+];
+
+const CAT_LABELS = {stadium:'Stadium',transit:'Transit',food:'Food & Drink',hotel:'Hotel',fanzone:'Fan Zone'};
+let activeCat = 'all';
+let selectedId = null;
+
+// ── SIDEBAR + INFO PANEL ──────────────────────────────────────
+function renderSidebar() {
+  const list = document.getElementById('places-list');
+  list.innerHTML = '';
+  const visible = PLACES.filter(p => activeCat === 'all' || p.cat === activeCat);
+  visible.forEach(p => {
+    const div = document.createElement('div');
+    div.className = 'place-item' + (selectedId === p.id ? ' sel' : '');
+    div.dataset.id = p.id;
+    div.innerHTML = `<div class="pi-name">${p.name}</div><div class="pi-type">${CAT_LABELS[p.cat]||p.cat}</div>`;
+    div.addEventListener('click', () => {
+      openPanel(p);
+      // Pan map to location
+      const base = getBase();
+      const q = encodeURIComponent(p.name + ' ' + (p.mapsQ || ''));
+      document.getElementById('gmap').src =
+        `https://www.google.com/maps/embed/v1/place?key=AIzaSyD-PLACEHOLDER&q=${p.mapsQ || p.name}&zoom=15`;
+      // Use search embed as fallback (works without API key)
+      document.getElementById('gmap').src =
+        `https://maps.google.com/maps?q=${p.mapsQ||p.name.replace(/\s+/g,'+')}&output=embed&z=15`;
+    });
+    list.appendChild(div);
+  });
+}
+
+function openPanel(p) {
+  selectedId = p.id;
+  document.getElementById('ip-cat').textContent = CAT_LABELS[p.cat] || p.cat;
+  document.getElementById('ip-name').textContent = p.name;
+  document.getElementById('ip-desc').textContent = p.desc;
+  document.getElementById('ip-tip').innerHTML = p.tip
+    ? `<strong>💡 Tip:</strong> ${p.tip}` : '';
+
+  const actions = document.getElementById('ip-actions');
+  actions.innerHTML = '';
+  if (p.href) {
+    const a = document.createElement('a');
+    a.href = p.href; a.className = 'btn-prim';
+    a.style.cssText = 'font-size:.72rem;padding:9px 18px';
+    a.textContent = 'View Details →';
+    actions.appendChild(a);
+  }
+  const gm = document.createElement('a');
+  gm.href = `https://maps.google.com/?q=${p.mapsQ||p.name.replace(/\s+/g,'+')}`;
+  gm.target = '_blank'; gm.rel = 'noopener';
+  gm.className = 'btn-ghost';
+  gm.style.cssText = 'font-size:.72rem;padding:9px 18px';
+  gm.textContent = 'Open in Google Maps ↗';
+  actions.appendChild(gm);
+
+  document.getElementById('info-panel').classList.add('open');
+  document.querySelectorAll('.place-item').forEach(el =>
+    el.classList.toggle('sel', +el.dataset.id === p.id));
+}
+
+function closePanel() {
+  document.getElementById('info-panel').classList.remove('open');
+  selectedId = null;
+  document.querySelectorAll('.place-item').forEach(el => el.classList.remove('sel'));
+}
+
+document.getElementById('ip-close').addEventListener('click', closePanel);
+
+// ── CATEGORY FILTER ──────────────────────────────────────────
+document.querySelectorAll('.cat-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    activeCat = btn.dataset.cat;
+    document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    closePanel();
+    renderSidebar();
+    // Reset map to show full Dallas area
+    setMapArea(activeCat);
+  });
+});
+
+// ── MAP IFRAME URLS ───────────────────────────────────────────
+// Uses the free Google Maps embed (no API key needed) with search queries
+const CAT_MAP_URLS = {
+  all:     'https://maps.google.com/maps?q=AT%26T+Stadium+Arlington+TX&output=embed&z=11',
+  stadium: 'https://maps.google.com/maps?q=AT%26T+Stadium+Arlington+TX&output=embed&z=15',
+  transit: 'https://maps.google.com/maps?q=Union+Station+Dallas+TX&output=embed&z=11',
+  food:    'https://maps.google.com/maps?q=Deep+Ellum+Dallas+TX&output=embed&z=14',
+  hotel:   'https://maps.google.com/maps?q=Omni+Dallas+Hotel&output=embed&z=13',
+  fanzone: 'https://maps.google.com/maps?q=Reunion+Tower+Dallas+TX&output=embed&z=13',
+};
+
+function setMapArea(cat) {
+  const iframe = document.getElementById('gmap');
+  iframe.src = CAT_MAP_URLS[cat] || CAT_MAP_URLS.all;
+}
+
+// ── LANG ─────────────────────────────────────────────────────
+function updateMapLang() {
+  const ids = {
+    'map-label':'map_label','map-cat-all':'map_all',
+    'map-cat-stadium':'map_stadium','map-cat-transit':'map_transit',
+    'map-cat-food':'map_food','map-cat-hotels':'map_hotels',
+    'map-cat-fanzones':'map_fanzones',
+  };
+  Object.entries(ids).forEach(([id,key])=>{const el=document.getElementById(id);if(el)el.textContent=t(key);});
+}
+document.addEventListener('langchange', updateMapLang);
+if (currentLang !== 'en') updateMapLang();
+
+// ── INIT ─────────────────────────────────────────────────────
+renderSidebar();
+setMapArea('all');
+</script>
+</body>
+</html>

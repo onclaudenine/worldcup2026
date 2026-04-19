@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+(function(){var s=localStorage.getItem('dallas2026-theme');var d=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;if(s?s==='light':!d)document.documentElement.classList.add('light');})();
+</script>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Survival Guide — Dallas 2026</title>
+<meta name="description" content="Essential guide for international visitors to Dallas for FIFA World Cup 2026.">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.surv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.surv-card{background:var(--card);border:1px solid var(--border);padding:1.4rem;transition:border-color .18s}
+.surv-card:hover{border-color:var(--border2)}
+.surv-head{display:flex;align-items:center;gap:9px;margin-bottom:.85rem}
+.surv-ico{font-size:1.2rem}
+.surv-title{font-family:var(--fh);font-weight:700;font-size:.95rem;text-transform:uppercase;letter-spacing:.04em}
+.surv-items{list-style:none;display:flex;flex-direction:column;gap:6px}
+.surv-items li{font-size:.78rem;color:var(--muted);line-height:1.55;font-weight:300;display:flex;gap:7px;align-items:flex-start}
+.surv-items li::before{content:'—';color:var(--red);flex-shrink:0;margin-top:1px}
+.surv-items a{color:var(--white)}
+</style>
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+</head>
+<body>
+<div id="affiliate-disclosure"></div>
+<nav id="main-nav"></nav>
+<div class="page-hero" style="margin-top:56px">
+  <div class="page-hero-bg"></div>
+  <div style="position:absolute;right:0;top:0;bottom:0;width:50%;pointer-events:none;z-index:0;overflow:hidden;opacity:0.06">
+    <svg viewBox="0 0 900 600" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="300" height="600" fill="#002868"/><rect x="300" y="0" width="600" height="300" fill="#BF0A30"/><rect x="300" y="300" width="600" height="300" fill="#F0EDE8"/>
+      <polygon points="150,120 163,162 207,162 172,187 185,229 150,204 115,229 128,187 93,162 137,162" fill="#F0EDE8"/>
+    </svg>
+  </div>
+  <div class="page-hero-content" style="position:relative;z-index:2">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span style="color:var(--text)" id="surv-know-label">For International Visitors</span></div>
+    <h1 id="surv-know-title" style="font-family:var(--fh);font-weight:900;font-size:clamp(2.5rem,7vw,5rem);line-height:.9;text-transform:uppercase;margin-bottom:1rem">Survival Guide</h1>
+    <p class="page-hero-sub">Essential knowledge for international visitors. Texas has its own rules, culture, and climate — here's what you need to know before you arrive.</p>
+  </div>
+</div>
+
+<section style="background:var(--mid)">
+  <div class="surv-grid" id="surv-grid"></div>
+</section>
+
+<section>
+  <div class="sec-label" id="surv-weather-label">Live Conditions</div>
+  <div style="font-family:var(--fh);font-weight:900;font-size:clamp(1.8rem,4vw,2.6rem);text-transform:uppercase;line-height:.92;margin-bottom:.75rem" id="surv-weather-title">Dallas Weather</div>
+  <p style="font-size:.82rem;color:var(--muted);font-weight:300;max-width:540px;line-height:1.65;margin-bottom:1.25rem" id="surv-weather-sub">Real-time Dallas weather — toggle between °F and °C. Plan your outdoor activities around the heat.</p>
+  <div id="survival-weather" style="max-width:700px"></div>
+</section>
+
+<footer id="main-footer"></footer>
+<script src="js/site.js"></script>
+<script src="js/affiliate.js"></script>
+<script>
+renderNav(); renderFooter(); renderDisclosure(); initLang();
+renderSurvivalPage();
+renderWeatherWidget('survival-weather');
+document.addEventListener('langchange', renderSurvivalPage);
+</script>
+</body>
+</html>

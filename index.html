@@ -1,199 +1,914 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>
-/* Theme init — runs immediately to prevent flash of wrong theme */
-(function(){
-  var saved = localStorage.getItem('dallas2026-theme');
-  var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  var useDark = saved ? saved === 'dark' : prefersDark;
-  if (!useDark) document.documentElement.classList.add('light');
-})();
-</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="theme-color" content="#06090F" media="(prefers-color-scheme: dark)">
-<meta name="theme-color" content="#F4F1EC" media="(prefers-color-scheme: light)">
-<title>Dallas 2026 — FIFA World Cup Visitor Guide</title>
-<meta name="description" content="Your complete guide to visiting Dallas for FIFA World Cup 2026. Matches, maps, restaurants, neighborhoods, hotels, flights, and more.">
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<title>FIFA World Cup 2026 USA — Official Fan Visitor Guide</title>
+<meta name="description" content="Your complete guide to attending the FIFA World Cup 2026 in the United States. 11 host cities, 48 teams, 104 matches. Find your city, plan your trip.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-.hero{position:relative;min-height:100svh;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding-top:56px}
-.hero-bg{position:absolute;inset:0;
-  background:
-    radial-gradient(ellipse 60% 80% at 75% 40%,rgba(191,10,48,.18) 0%,transparent 60%),
-    radial-gradient(ellipse 50% 70% at 15% 60%,rgba(0,40,104,.25) 0%,transparent 55%),
-    radial-gradient(ellipse 30% 40% at 85% 80%,rgba(191,10,48,.08) 0%,transparent 50%)}
-.hero-grid{position:absolute;inset:0;
-  background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),
-                   linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);
-  background-size:56px 56px}
-.hero-content{position:relative;z-index:2;padding:0 2rem;max-width:780px}
-.hero-eyebrow{font-family:var(--fh);font-size:.75rem;font-weight:700;letter-spacing:.22em;
-  text-transform:uppercase;color:var(--white);margin-bottom:1.25rem;display:flex;align-items:center;gap:10px}
-.hero-eyebrow::before{content:'';width:28px;height:2px;background:var(--red)}
-.hero h1{font-family:var(--fh);font-weight:900;font-size:clamp(3.5rem,10vw,7rem);
-  line-height:.88;letter-spacing:-.01em;text-transform:uppercase;margin-bottom:1.75rem}
-.hero h1 .l2{color:var(--white);display:block}
-.hero h1 .l3{color:rgba(240,237,232,.6);display:block;font-size:.48em;font-weight:700;letter-spacing:.04em;margin-top:.1em}
-.hero-sub{font-size:1.05rem;color:var(--muted);line-height:1.75;max-width:520px;margin-bottom:2.5rem;font-weight:300}
-.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
-.hero-aside{position:absolute;right:3rem;top:50%;transform:translateY(-50%);z-index:2;display:flex;flex-direction:column;gap:16px;align-items:flex-end}
-.hero-badge{width:150px;height:150px;border-radius:50%;border:2px solid var(--red);
-  display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative}
-.hero-badge::before{content:'';position:absolute;inset:7px;border-radius:50%;border:1px solid rgba(240,237,232,.2)}
-.badge-num{font-family:var(--fh);font-size:3.8rem;font-weight:900;color:var(--white);line-height:1}
-.badge-lbl{font-family:var(--fh);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:2px}
-.weather-card{background:rgba(0,40,104,.6);border:1px solid rgba(240,237,232,.15);padding:1rem 1.25rem;min-width:160px;text-align:center;transition:background .25s,border-color .25s}
-.weather-temp{font-family:var(--fh);font-size:2.5rem;font-weight:900;line-height:1;margin-bottom:2px}
-.weather-desc{font-size:.75rem;color:var(--muted);font-weight:300}
-.weather-loc{font-family:var(--fh);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-top:4px}
-.weather-detail{display:flex;justify-content:center;gap:12px;margin-top:8px}
-.wd{font-size:.7rem;color:var(--muted);font-weight:300}
-.wd span{color:var(--text);font-weight:500}
-.cd-bar{background:var(--mid);border-top:1px solid var(--border);border-bottom:1px solid var(--border);
-  padding:1.25rem 2rem;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
-.cd-label{font-family:var(--fh);font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--white);margin-bottom:.3rem}
-.cd-game{font-family:var(--fh);font-weight:700;font-size:1.1rem;text-transform:uppercase}
-.cd-units{display:flex;gap:1rem}
-.cu{text-align:center;min-width:48px}
-.cu-n{font-family:var(--fh);font-size:2.2rem;font-weight:900;color:var(--white);line-height:1;display:block}
-.cu-l{font-size:.58rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
-.quick-links{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-top:2rem}
-.ql-card{display:block;background:var(--card);border:1px solid var(--border);padding:1.25rem;
-  text-decoration:none;transition:border-color .18s,transform .15s;-webkit-tap-highlight-color:transparent}
-.ql-card:hover{border-color:rgba(191,10,48,.5);transform:translateY(-2px)}
-.ql-icon{font-size:1.5rem;margin-bottom:.6rem;display:block}
-.ql-title{font-family:var(--fh);font-weight:700;font-size:.95rem;text-transform:uppercase;letter-spacing:.02em;margin-bottom:.25rem}
-.ql-sub{font-size:.75rem;color:var(--muted);font-weight:300}
+:root {
+  --navy: #002147;
+  --red:  #B22234;
+  --white:#F8F4EF;
+  --gold: #C9A84C;
+  --dim:  rgba(248,244,239,0.45);
+  --fh: 'Bebas Neue', 'Barlow Condensed', sans-serif;
+  --fb: 'Barlow', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--navy);
+  color: var(--white);
+  font-family: var(--fb);
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+/* ── STARS BACKGROUND ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 10% 20%, rgba(248,244,239,0.35) 0%, transparent 100%),
+    radial-gradient(1px 1px at 30% 60%, rgba(248,244,239,0.2) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 55% 15%, rgba(248,244,239,0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 75% 40%, rgba(248,244,239,0.25) 0%, transparent 100%),
+    radial-gradient(1px 1px at 90% 70%, rgba(248,244,239,0.2) 0%, transparent 100%),
+    radial-gradient(1px 1px at 20% 85%, rgba(248,244,239,0.15) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 45% 75%, rgba(248,244,239,0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 65% 90%, rgba(248,244,239,0.2) 0%, transparent 100%),
+    radial-gradient(1px 1px at 85% 10%, rgba(248,244,239,0.25) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  height: 56px;
+  background: rgba(0,33,71,0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(248,244,239,0.1);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2rem;
+}
+.nav-logo {
+  font-family: var(--fh);
+  font-size: 1.4rem;
+  letter-spacing: .06em;
+  color: var(--white);
+  text-decoration: none;
+  display: flex; align-items: center; gap: 8px;
+}
+.nav-logo .accent { color: var(--red); }
+.nav-cta {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--white);
+  background: var(--red);
+  border: none;
+  padding: 8px 18px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background .2s;
+}
+.nav-cta:hover { background: #8b1a26; }
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 80px 2rem 3rem;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Flag stripes as subtle background */
+.hero::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(
+    180deg,
+    rgba(178,34,52,0.06) 0px,
+    rgba(178,34,52,0.06) 60px,
+    transparent 60px,
+    transparent 120px
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-eyebrow {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  display: flex; align-items: center; gap: 10px;
+}
+.hero-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 24px; height: 2px;
+  background: var(--gold);
+}
+
+.hero-h1 {
+  font-family: var(--fh);
+  font-size: clamp(4rem, 10vw, 9rem);
+  line-height: .88;
+  text-transform: uppercase;
+  letter-spacing: .01em;
+  margin-bottom: 1.5rem;
+}
+.hero-h1 em {
+  font-style: normal;
+  color: var(--red);
+  -webkit-text-stroke: 0;
+}
+.hero-h1 .outline {
+  -webkit-text-stroke: 1px rgba(248,244,239,0.4);
+  color: transparent;
+}
+
+.hero-sub {
+  font-size: 1rem;
+  color: var(--dim);
+  line-height: 1.75;
+  max-width: 480px;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.hero-stats {
+  display: flex; gap: 2rem; margin-bottom: 2.5rem; flex-wrap: wrap;
+}
+.stat { }
+.stat-num {
+  font-family: var(--fh);
+  font-size: 2.4rem;
+  line-height: 1;
+  color: var(--white);
+}
+.stat-num span { color: var(--red); }
+.stat-label {
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin-top: 2px;
+}
+
+.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-primary {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  background: var(--red);
+  color: var(--white);
+  border: none;
+  padding: 14px 28px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background .2s, transform .15s;
+  display: inline-block;
+}
+.btn-primary:hover { background: #8b1a26; transform: translateY(-2px); }
+.btn-ghost {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--white);
+  border: 1px solid rgba(248,244,239,0.3);
+  padding: 14px 28px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all .2s;
+  display: inline-block;
+}
+.btn-ghost:hover { border-color: var(--white); background: rgba(248,244,239,0.07); }
+
+/* ── US MAP SVG ── */
+.hero-map {
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
+.map-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+}
+.map-wrap svg { width: 100%; height: auto; }
+
+/* City dot pulse animation */
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: .6; transform: scale(1.4); }
+}
+@keyframes ripple {
+  0% { r: 6; opacity: .6; }
+  100% { r: 18; opacity: 0; }
+}
+.city-dot { cursor: pointer; }
+.city-dot circle.core { transition: r .2s; }
+.city-dot:hover circle.core { r: 7; }
+.city-dot circle.ring {
+  animation: ripple 2s ease-out infinite;
+  transform-origin: center;
+}
+.city-dot:nth-child(2) circle.ring { animation-delay: .1s; }
+.city-dot:nth-child(3) circle.ring { animation-delay: .3s; }
+.city-dot:nth-child(4) circle.ring { animation-delay: .5s; }
+.city-dot:nth-child(5) circle.ring { animation-delay: .2s; }
+.city-dot:nth-child(6) circle.ring { animation-delay: .7s; }
+.city-dot:nth-child(7) circle.ring { animation-delay: .4s; }
+.city-dot:nth-child(8) circle.ring { animation-delay: .6s; }
+.city-dot:nth-child(9) circle.ring { animation-delay: .15s; }
+.city-dot:nth-child(10) circle.ring { animation-delay: .45s; }
+.city-dot:nth-child(11) circle.ring { animation-delay: .8s; }
+
+/* ── CITY CARDS SECTION ── */
+.cities-section {
+  position: relative;
+  z-index: 1;
+  padding: 4rem 2rem 6rem;
+  background: rgba(0,0,0,0.3);
+  border-top: 1px solid rgba(248,244,239,0.08);
+}
+.cities-inner { max-width: 1400px; margin: 0 auto; }
+
+.section-eyebrow {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: .75rem;
+  display: flex; align-items: center; gap: 10px;
+}
+.section-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 24px; height: 2px;
+  background: var(--gold);
+}
+
+.section-title {
+  font-family: var(--fh);
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: .9;
+  text-transform: uppercase;
+  margin-bottom: .5rem;
+}
+.section-title em { font-style: normal; color: var(--red); }
+
+.section-sub {
+  font-size: .88rem;
+  color: var(--dim);
+  line-height: 1.7;
+  max-width: 560px;
+  margin-bottom: 3rem;
+  font-weight: 300;
+}
+
+.cities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2px;
+  background: rgba(248,244,239,0.06);
+}
+
+.city-card {
+  position: relative;
+  background: rgba(0,33,71,0.6);
+  padding: 1.75rem;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  transition: background .25s, transform .2s;
+  display: block;
+  border: 1px solid rgba(248,244,239,0.06);
+}
+.city-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--red);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .3s ease;
+}
+.city-card:hover { background: rgba(0,33,71,0.9); transform: translateY(-3px); }
+.city-card:hover::before { transform: scaleX(1); }
+.city-card.available:hover { background: rgba(10,30,70,0.95); }
+
+/* Dallas card — live/available */
+.city-card.available .city-badge {
+  background: var(--red);
+  color: var(--white);
+}
+.city-card.available .city-name { color: var(--white); }
+
+.city-num {
+  font-family: var(--fh);
+  font-size: 4rem;
+  line-height: 1;
+  color: rgba(248,244,239,0.08);
+  position: absolute;
+  top: .5rem; right: 1rem;
+  user-select: none;
+  transition: color .25s;
+}
+.city-card:hover .city-num { color: rgba(248,244,239,0.14); }
+
+.city-badge {
+  display: inline-block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: .6rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  background: rgba(248,244,239,0.1);
+  color: var(--dim);
+  margin-bottom: 1rem;
+}
+
+.city-name {
+  font-family: var(--fh);
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  line-height: 1;
+  margin-bottom: .3rem;
+  color: rgba(248,244,239,0.7);
+  transition: color .25s;
+}
+.city-card:hover .city-name { color: var(--white); }
+
+.city-stadium {
+  font-size: .72rem;
+  color: var(--dim);
+  font-weight: 300;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.city-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+.city-meta span { display: flex; align-items: center; gap: 4px; }
+
+.city-arrow {
+  position: absolute;
+  bottom: 1.75rem; right: 1.75rem;
+  font-size: 1rem;
+  color: var(--red);
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity .2s, transform .2s;
+}
+.city-card:hover .city-arrow { opacity: 1; transform: translateX(0); }
+.city-card.available .city-arrow { opacity: 1; transform: translateX(0); }
+
+/* Coming soon overlay */
+.city-card.coming-soon { cursor: default; }
+.city-card.coming-soon:hover { transform: none; }
+
+/* ── SOCCER BALL DECORATION ── */
+.ball-deco {
+  position: absolute;
+  right: -120px; top: 50%;
+  transform: translateY(-50%);
+  width: 400px; height: 400px;
+  opacity: .04;
+  pointer-events: none;
+}
+
+/* ── ABOUT STRIP ── */
+.about-strip {
+  position: relative;
+  z-index: 1;
+  padding: 4rem 2rem;
+  border-top: 1px solid rgba(248,244,239,0.08);
+  background: var(--red);
+}
+.about-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.about-title {
+  font-family: var(--fh);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  text-transform: uppercase;
+  line-height: .92;
+  margin-bottom: 1rem;
+}
+.about-body {
+  font-size: .88rem;
+  line-height: 1.8;
+  color: rgba(248,244,239,0.85);
+  font-weight: 300;
+}
+.about-facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.fact {
+  border-left: 2px solid rgba(248,244,239,0.3);
+  padding-left: 1rem;
+}
+.fact-num {
+  font-family: var(--fh);
+  font-size: 2.2rem;
+  line-height: 1;
+  color: var(--white);
+}
+.fact-label {
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(248,244,239,0.65);
+  margin-top: 3px;
+}
+
+/* ── FOOTER ── */
+footer {
+  position: relative;
+  z-index: 1;
+  background: rgba(0,0,0,0.5);
+  border-top: 1px solid rgba(248,244,239,0.08);
+  padding: 2rem;
+  text-align: center;
+}
+.footer-logo {
+  font-family: var(--fh);
+  font-size: 1.4rem;
+  letter-spacing: .06em;
+  margin-bottom: .5rem;
+  color: var(--white);
+}
+.footer-logo span { color: var(--red); }
+.footer-note {
+  font-size: .72rem;
+  color: var(--dim);
+  line-height: 1.6;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* ── FADE-IN ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp .7s ease both; }
+.fade-up:nth-child(2) { animation-delay: .1s; }
+.fade-up:nth-child(3) { animation-delay: .2s; }
+
+/* ── RESPONSIVE ── */
+@media(max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .hero-map { order: -1; }
+  .map-wrap { max-width: 100%; }
+  .about-inner { grid-template-columns: 1fr; gap: 2rem; }
+}
+@media(max-width: 600px) {
+  nav { padding: 0 1rem; }
+  .hero { padding: 72px 1rem 2.5rem; }
+  .cities-section { padding: 3rem 1rem 4rem; }
+  .about-strip { padding: 3rem 1rem; }
+  .hero-stats { gap: 1.25rem; }
+  .cities-grid { grid-template-columns: 1fr; }
+  .about-facts { grid-template-columns: 1fr 1fr; }
+}
 </style>
-<link rel="icon" type="image/svg+xml" href="./favicon.svg">
 </head>
 <body>
-<div id="affiliate-disclosure"></div>
-<nav id="main-nav"></nav>
 
-<div class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-grid"></div>
-  <!-- Texas Flag SVG Background -->
-  <div style="position:absolute;inset:0;z-index:1;overflow:hidden;pointer-events:none">
-    <svg viewBox="0 0 900 600" preserveAspectRatio="xMidYMid slice"
-         style="position:absolute;right:-5%;top:-5%;width:65%;height:110%;opacity:0.09"
-         xmlns="http://www.w3.org/2000/svg">
-      <!-- Blue stripe left third -->
-      <rect x="0" y="0" width="300" height="600" fill="#002868"/>
-      <!-- Red stripe top right -->
-      <rect x="300" y="0" width="600" height="300" fill="#BF0A30"/>
-      <!-- White stripe bottom right -->
-      <rect x="300" y="300" width="600" height="300" fill="#F0EDE8"/>
-      <!-- Lone Star - centered in blue stripe -->
-      <polygon points="150,120 163,162 207,162 172,187 185,229 150,204 115,229 128,187 93,162 137,162"
-               fill="#F0EDE8"/>
-    </svg>
-    <!-- Faint full-width flag strip at bottom of hero -->
-    <div style="position:absolute;bottom:0;left:0;right:0;height:4px;
-      background:linear-gradient(90deg,#002868 33.3%,#BF0A30 33.3%,#BF0A30 66.6%,#F0EDE8 66.6%);
-      opacity:0.4"></div>
-  </div>
-  <div class="hero-content fade-up" style="position:relative;z-index:2">
-    <div class="hero-eyebrow" data-i18n="home_eyebrow">FIFA World Cup 2026 · Dallas, Texas</div>
-    <h1>Big<span class="l2">D</span><span class="l3">Host City Guide</span></h1>
-    <p class="hero-sub" data-i18n="home_sub">Everything you need to experience Dallas during the world's biggest sporting event — matches, food, transit, neighborhoods, hotels, and flights.</p>
-    <div class="hero-btns">
-      <a href="matches.html" class="btn-prim" data-i18n="home_btn_matches">View Matches</a>
-      <a href="explore.html" class="btn-sec" data-i18n="home_btn_explore">Explore Dallas</a>
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">⚽ WC<span class="accent">2026</span> USA</a>
+  <a class="nav-cta" href="#cities">Choose Your City</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <!-- Soccer ball decoration -->
+  <svg class="ball-deco" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="100" cy="100" r="95" fill="none" stroke="white" stroke-width="2"/>
+    <polygon points="100,10 118,65 170,65 128,98 143,153 100,120 57,153 72,98 30,65 82,65" fill="none" stroke="white" stroke-width="1.5"/>
+    <circle cx="100" cy="10" r="8" fill="none" stroke="white" stroke-width="1.5"/>
+    <circle cx="170" cy="65" r="8" fill="none" stroke="white" stroke-width="1.5"/>
+    <circle cx="143" cy="153" r="8" fill="none" stroke="white" stroke-width="1.5"/>
+    <circle cx="57" cy="153" r="8" fill="none" stroke="white" stroke-width="1.5"/>
+    <circle cx="30" cy="65" r="8" fill="none" stroke="white" stroke-width="1.5"/>
+  </svg>
+
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-eyebrow fade-up">FIFA World Cup 2026 · USA · Canada · Mexico</div>
+      <h1 class="hero-h1 fade-up">
+        The<br>
+        <em>World's</em><br>
+        <span class="outline">Game</span><br>
+        Comes<br>
+        <em>Home</em>
+      </h1>
+      <p class="hero-sub fade-up">11 American cities. 48 nations. 104 matches. The biggest sporting event in human history lands in the USA in June and July 2026. Your complete guide to every host city.</p>
+      <div class="hero-stats fade-up">
+        <div class="stat">
+          <div class="stat-num">1<span>1</span></div>
+          <div class="stat-label">Host Cities</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">10<span>4</span></div>
+          <div class="stat-label">Matches</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">4<span>8</span></div>
+          <div class="stat-label">Nations</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">5<span>M+</span></div>
+          <div class="stat-label">Visitors</div>
+        </div>
+      </div>
+      <div class="hero-btns fade-up">
+        <a href="#cities" class="btn-primary">Choose Your City ↓</a>
+        <a href="dallas/index.html" class="btn-ghost">Dallas Guide →</a>
+      </div>
     </div>
-  </div>
-  <div class="hero-aside" style="position:relative;z-index:2">
-    <div class="hero-badge">
-      <span class="badge-num" id="days-hero">—</span>
-      <span class="badge-lbl" data-i18n="home_days_away">Days Away</span>
-    </div>
-    <div class="weather-card" style="position:relative">
-      <!-- Unit toggle: shows the unit you can SWITCH TO, not the current one -->
-      <button id="hw-toggle" onclick="heroWeatherToggle()"
-        style="position:absolute;top:7px;right:7px;font-family:var(--fh);font-size:.62rem;
-               font-weight:700;padding:3px 9px;border:1px solid rgba(240,237,232,.4);
-               border-radius:2px;cursor:pointer;transition:all .2s;
-               background:rgba(0,28,80,.5);color:rgba(240,237,232,.9)"
-        title="Toggle temperature unit">°C</button>
-      <div class="weather-temp" id="w-temp" style="margin-top:.25rem">—°</div>
-      <div class="weather-desc" id="w-desc">Loading…</div>
-      <div class="weather-loc">Dallas, TX · Live</div>
-      <div class="weather-detail">
-        <div class="wd"><span id="w-hum">—</span>% humidity</div>
-        <div class="wd"><span id="w-wind">—</span> <span id="w-wind-unit">mph</span> wind</div>
+
+    <div class="hero-map">
+      <!-- US Map SVG with 11 host cities marked -->
+      <div class="map-wrap">
+        <svg viewBox="0 0 960 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Map of the United States showing 11 FIFA World Cup 2026 host cities">
+          <defs>
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+              <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+
+          <!-- US outline — simplified but recognizable continental shape -->
+          <path d="M140,120 L155,105 L175,100 L200,95 L230,92 L255,90 L280,88
+                   L310,85 L340,82 L370,80 L400,78 L430,76 L460,75 L490,74
+                   L520,74 L550,75 L575,77 L600,80 L625,84 L645,88
+                   L660,95 L670,108 L678,118 L682,130 L685,142
+                   L680,152 L672,158 L660,162 L655,170 L658,182
+                   L665,192 L668,202 L663,212 L655,218 L648,228
+                   L642,240 L638,255 L635,270 L630,285 L626,300
+                   L622,315 L618,330 L614,348 L615,362 L618,374
+                   L620,386 L618,398 L614,408 L608,418 L600,426
+                   L590,432 L578,436 L565,438 L550,438 L535,436
+                   L518,432 L502,428 L485,424 L468,420 L450,418
+                   L432,416 L412,415 L392,414 L372,414 L350,416
+                   L330,418 L312,420 L295,424 L280,428 L268,433
+                   L255,438 L243,444 L232,450 L222,458 L212,466
+                   L202,474 L192,480 L180,484 L165,484 L152,480
+                   L142,474 L135,465 L130,455 L128,444 L128,432
+                   L130,420 L133,408 L136,395 L138,382 L138,368
+                   L136,355 L133,342 L130,328 L128,315 L128,302
+                   L130,288 L133,274 L136,260 L138,246 L138,232
+                   L136,218 L133,205 L130,192 L130,178 L132,165
+                   L136,152 L140,140 L140,120 Z"
+            fill="none" stroke="rgba(248,244,239,0.15)" stroke-width="1.5" stroke-linejoin="round"/>
+
+          <!-- Interior state lines suggestion -->
+          <path d="M310,85 L308,200 L305,315 L302,420
+                   M460,75 L458,200 L455,320 L452,420
+                   M620,80 L615,200 L610,320
+                   M130,250 L300,248 L460,246 L620,244 L650,240
+                   M128,340 L300,338 L460,336 L618,334
+                   M268,433 L270,335 L272,240 L274,145"
+            stroke="rgba(248,244,239,0.05)" stroke-width="1" fill="none"/>
+
+          <!-- Florida peninsula -->
+          <path d="M550,438 L545,450 L540,462 L536,474 L534,486 L536,498 L540,508 L545,516 L548,510 L550,500 L552,488 L554,476 L555,464 L554,452 L550,438 Z"
+            fill="none" stroke="rgba(248,244,239,0.12)" stroke-width="1.5"/>
+
+          <!-- Great Lakes suggestion -->
+          <ellipse cx="490" cy="145" rx="55" ry="18" fill="rgba(0,100,200,0.12)" stroke="rgba(248,244,239,0.06)" stroke-width="1"/>
+          <ellipse cx="430" cy="155" rx="30" ry="12" fill="rgba(0,100,200,0.1)" stroke="rgba(248,244,239,0.06)" stroke-width="1"/>
+
+          <!-- City dots with labels -->
+          <!-- Seattle -->
+          <g class="city-dot" onclick="window.location='#seattle'" title="Seattle">
+            <circle cx="148" cy="112" r="5" fill="var(--red)" class="core" filter="url(#glow)"/>
+            <circle cx="148" cy="112" r="6" fill="none" stroke="var(--red)" stroke-width="1.5" class="ring" opacity="0"/>
+            <text x="148" y="100" fill="rgba(248,244,239,0.85)" font-size="9" font-family="Barlow Condensed,sans-serif" font-weight="700" text-anchor="middle" letter-spacing=".06em">SEATTLE</text>
+          </g>
+
+          <!-- San Francisco/Bay Area -->
+          <g class="city-dot" onclick="window.location='#sf'" title="San Francisco">
+            <circle cx="148" cy="250" r="5" fill="var(--red)" class="core" filter="url(#glow)"/>
+            <circle cx="148" cy="250" r="6" fill="none" stroke="var(--red)" stroke-width="1.5" class="ring" opacity="0"/>
+            <text x="132" y="265" fill="rgba(248,244,239,0.85)" font-size="9" font-family="Barlow Condensed,sans-serif" font-weight="700" text-anchor="middle" letter-spacing=".06em">BAY AREA</text>
+          </g>
+
+          <!-- Los Angeles -->
+          <g class="city-dot" onclick="window.location='#la'" title="Los Angeles">
+            <circle cx="168" cy="298" r="5" fill="var(--red)" class="core" filter="url(#glow)"/>
+            <circle cx="168" cy="298" r="6" fill="none" stroke="var(--red)" stroke-width="1.5" class="ring" opacity="0"/>
+            <text x="152" y="314" fill="rgba(248,244,239,0.85)" font-size="9" font-family="Barlow Condensed,sans-serif" font-weight="700" text-anchor="middle" letter-spacing=".06em">LOS ANGELES</text>
+          </g>
+
+          <!-- Dallas — highlighted (guide ready) -->
+          <g class="city-dot" onclick="window.location='dallas/index.html'" title="Dallas — Guide Available">
+            <circle cx="390" cy="356" r="7" fill="var(--gold)" class="core" filter="url(#glow)"/>
+            <circle cx="390" cy="356" r="8" fill="none" stroke="var(--gold)" stroke-width="2" class="ring" opacity="0"/>
+            <text x="390" y="342" fill="var(--gold)" font-size="10" font-family="Barlow Condensed,sans-serif" font-weight="700" text-anchor="middle" letter-spacing=".06em">★ DALLAS</text>
+          </g>
+
+          <!-- Houston -->
+          <g class="city-dot" onclick="window.location='#houston'" title="Houston">
+            <circle cx="408" cy="404" r="5" fill="var(--red)" class="core" filter="url(#glow)"/>
+            <circle cx="408" cy="404" r="6" fill="none" stroke="var(--red)" stroke-width="1.5" class="ring" opacity="0"/>
+            <text x="430" y="408" fill="rgba(248,244,239,0.85)" font-size="9" font-family="Barlow Condensed,sans-serif" font-weight="700" text-anchor="start" letter-spacing=".06em">HOUSTON</text>
+          </g>
+
+          <!-- Kansas City -->
+          <g class="city-dot" onclick="window.location='#kc'" title="Kansas City">
+            <circle cx="450" cy="270" r="5" fill="var(--red)" class="core" filter="url(#glow)"/>
+            <circle cx="450" cy="270" r="6" fill="none" stroke="var(--red)" stroke-width="1.5" class="ring" opacity="0"/>
+            <text x="450" y="257" fill="rgba(248,244,239,0.85)" font-size="9" font-family="Barlow Condensed,sans-serif" font-weight="700" text-anchor="middle" letter-spacing=".06em">KANSAS CITY</text>
+          </g>
+
+          <!-- Atlanta -->
+          <g class="city-dot" onclick="window.location='#atlanta'" title="Atlanta">
+            <circle cx="572" cy="340" r="5" fill="var(--red)" class="core" filter="url(#glow)"/>
+            <circle cx="572" cy="340" r="6" fill="none" stroke="var(--red)" stroke-width="1.5" class="ring" opacity="0"/>
+            <text x="572" y="327" fill="rgba(248,244,239,0.85)" font-size="9" font-family="Barlow Condensed,sans-serif" font-weight="700" text-anchor="middle" letter-spacing=".06em">ATLANTA</text>
+          </g>
+
+          <!-- Miami -->
+          <g class="city-dot" onclick="window.location='#miami'" title="Miami">
+            <circle cx="608" cy="418" r="5" fill="var(--red)" class="core" filter="url(#glow)"/>
+            <circle cx="608" cy="418" r="6" fill="none" stroke="var(--red)" stroke-width="1.5" class="ring" opacity="0"/>
+            <text x="624" y="422" fill="rgba(248,244,239,0.85)" font-size="9" font-family="Barlow Condensed,sans-serif" font-weight="700" text-anchor="start" letter-spacing=".06em">MIAMI</text>
+          </g>
+
+          <!-- Philadelphia -->
+          <g class="city-dot" onclick="window.location='#philly'" title="Philadelphia">
+            <circle cx="680" cy="210" r="5" fill="var(--red)" class="core" filter="url(#glow)"/>
+            <circle cx="680" cy="210" r="6" fill="none" stroke="var(--red)" stroke-width="1.5" class="ring" opacity="0"/>
+            <text x="696" y="213" fill="rgba(248,244,239,0.85)" font-size="9" font-family="Barlow Condensed,sans-serif" font-weight="700" text-anchor="start" letter-spacing=".06em">PHILLY</text>
+          </g>
+
+          <!-- New York / New Jersey -->
+          <g class="city-dot" onclick="window.location='#nyc'" title="New York / New Jersey">
+            <circle cx="706" cy="192" r="5" fill="var(--red)" class="core" filter="url(#glow)"/>
+            <circle cx="706" cy="192" r="6" fill="none" stroke="var(--red)" stroke-width="1.5" class="ring" opacity="0"/>
+            <text x="722" y="195" fill="rgba(248,244,239,0.85)" font-size="9" font-family="Barlow Condensed,sans-serif" font-weight="700" text-anchor="start" letter-spacing=".06em">NEW YORK</text>
+          </g>
+
+          <!-- Boston -->
+          <g class="city-dot" onclick="window.location='#boston'" title="Boston">
+            <circle cx="736" cy="172" r="5" fill="var(--red)" class="core" filter="url(#glow)"/>
+            <circle cx="736" cy="172" r="6" fill="none" stroke="var(--red)" stroke-width="1.5" class="ring" opacity="0"/>
+            <text x="752" y="175" fill="rgba(248,244,239,0.85)" font-size="9" font-family="Barlow Condensed,sans-serif" font-weight="700" text-anchor="start" letter-spacing=".06em">BOSTON</text>
+          </g>
+
+          <!-- Legend -->
+          <g transform="translate(20, 530)">
+            <circle cx="6" cy="6" r="5" fill="var(--gold)"/>
+            <text x="16" y="10" fill="var(--gold)" font-size="8.5" font-family="Barlow Condensed,sans-serif" font-weight="700" letter-spacing=".08em">GUIDE AVAILABLE</text>
+            <circle cx="130" cy="6" r="4" fill="var(--red)"/>
+            <text x="140" y="10" fill="rgba(248,244,239,0.6)" font-size="8.5" font-family="Barlow Condensed,sans-serif" font-weight="700" letter-spacing=".08em">COMING SOON</text>
+          </g>
+        </svg>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<div class="cd-bar">
-  <div>
-    <div class="cd-label"><span class="live-dot"></span><span data-i18n="home_cd_label">Next Dallas Match</span></div>
-    <div class="cd-game" id="cd-next-game" data-i18n="home_cd_game">Netherlands vs Japan — Group Stage · Jun 14, 3:00 PM CDT</div>
-  </div>
-  <div>
-    <div class="cd-label">Countdown to Kickoff</div>
-    <div class="cd-units">
-      <div class="cu"><span class="cu-n" id="cd-d">—</span><span class="cu-l" data-i18n="days">days</span></div>
-      <div class="cu"><span class="cu-n" id="cd-h">—</span><span class="cu-l" data-i18n="hrs">hrs</span></div>
-      <div class="cu"><span class="cu-n" id="cd-m">—</span><span class="cu-l" data-i18n="min">min</span></div>
-      <div class="cu"><span class="cu-n" id="cd-s">—</span><span class="cu-l" data-i18n="sec">sec</span></div>
+<!-- CITIES GRID -->
+<section class="cities-section" id="cities">
+  <div class="cities-inner">
+    <div class="section-eyebrow">11 Host Cities</div>
+    <h2 class="section-title">Pick Your <em>City</em></h2>
+    <p class="section-sub">Every host city has its own matches, stadiums, neighborhoods, and culture. Choose your destination and start planning.</p>
+
+    <div class="cities-grid">
+
+      <!-- Dallas — LIVE -->
+      <a href="dallas/index.html" class="city-card available">
+        <div class="city-num">01</div>
+        <div class="city-badge">★ Guide Available Now</div>
+        <div class="city-name">Dallas</div>
+        <div class="city-stadium">AT&T Stadium · Arlington, TX<br>9 matches · incl. Semifinal</div>
+        <div class="city-meta">
+          <span>🏟️ 105,000 cap</span>
+          <span>📅 Jun 14 – Jul 14</span>
+        </div>
+        <div class="city-arrow">→</div>
+      </a>
+
+      <!-- New York -->
+      <div class="city-card coming-soon">
+        <div class="city-num">02</div>
+        <div class="city-badge">Coming Soon</div>
+        <div class="city-name">New York</div>
+        <div class="city-stadium">MetLife Stadium · East Rutherford, NJ<br>8 matches · incl. Final</div>
+        <div class="city-meta">
+          <span>🏟️ 82,500 cap</span>
+          <span>📅 Jun 15 – Jul 19</span>
+        </div>
+      </div>
+
+      <!-- Los Angeles -->
+      <div class="city-card coming-soon">
+        <div class="city-num">03</div>
+        <div class="city-badge">Coming Soon</div>
+        <div class="city-name">Los Angeles</div>
+        <div class="city-stadium">SoFi Stadium · Inglewood, CA<br>8 matches · incl. Semifinal</div>
+        <div class="city-meta">
+          <span>🏟️ 100,240 cap</span>
+          <span>📅 Jun 15 – Jul 14</span>
+        </div>
+      </div>
+
+      <!-- San Francisco -->
+      <div class="city-card coming-soon">
+        <div class="city-num">04</div>
+        <div class="city-badge">Coming Soon</div>
+        <div class="city-name">Bay Area</div>
+        <div class="city-stadium">Levi's Stadium · Santa Clara, CA<br>6 matches</div>
+        <div class="city-meta">
+          <span>🏟️ 68,500 cap</span>
+          <span>📅 Jun 15 – Jul 2</span>
+        </div>
+      </div>
+
+      <!-- Seattle -->
+      <div class="city-card coming-soon">
+        <div class="city-num">05</div>
+        <div class="city-badge">Coming Soon</div>
+        <div class="city-name">Seattle</div>
+        <div class="city-stadium">Lumen Field · Seattle, WA<br>6 matches</div>
+        <div class="city-meta">
+          <span>🏟️ 68,740 cap</span>
+          <span>📅 Jun 15 – Jul 1</span>
+        </div>
+      </div>
+
+      <!-- Boston -->
+      <div class="city-card coming-soon">
+        <div class="city-num">06</div>
+        <div class="city-badge">Coming Soon</div>
+        <div class="city-name">Boston</div>
+        <div class="city-stadium">Gillette Stadium · Foxborough, MA<br>6 matches</div>
+        <div class="city-meta">
+          <span>🏟️ 65,878 cap</span>
+          <span>📅 Jun 15 – Jul 1</span>
+        </div>
+      </div>
+
+      <!-- Philadelphia -->
+      <div class="city-card coming-soon">
+        <div class="city-num">07</div>
+        <div class="city-badge">Coming Soon</div>
+        <div class="city-name">Philadelphia</div>
+        <div class="city-stadium">Lincoln Financial Field · Philadelphia, PA<br>6 matches</div>
+        <div class="city-meta">
+          <span>🏟️ 69,000 cap</span>
+          <span>📅 Jun 16 – Jul 2</span>
+        </div>
+      </div>
+
+      <!-- Miami -->
+      <div class="city-card coming-soon">
+        <div class="city-num">08</div>
+        <div class="city-badge">Coming Soon</div>
+        <div class="city-name">Miami</div>
+        <div class="city-stadium">Hard Rock Stadium · Miami Gardens, FL<br>6 matches</div>
+        <div class="city-meta">
+          <span>🏟️ 65,326 cap</span>
+          <span>📅 Jun 14 – Jul 2</span>
+        </div>
+      </div>
+
+      <!-- Atlanta -->
+      <div class="city-card coming-soon">
+        <div class="city-num">09</div>
+        <div class="city-badge">Coming Soon</div>
+        <div class="city-name">Atlanta</div>
+        <div class="city-stadium">Mercedes-Benz Stadium · Atlanta, GA<br>6 matches</div>
+        <div class="city-meta">
+          <span>🏟️ 71,000 cap</span>
+          <span>📅 Jun 16 – Jul 2</span>
+        </div>
+      </div>
+
+      <!-- Kansas City -->
+      <div class="city-card coming-soon">
+        <div class="city-num">10</div>
+        <div class="city-badge">Coming Soon</div>
+        <div class="city-name">Kansas City</div>
+        <div class="city-stadium">Arrowhead Stadium · Kansas City, MO<br>6 matches</div>
+        <div class="city-meta">
+          <span>🏟️ 76,416 cap</span>
+          <span>📅 Jun 16 – Jul 2</span>
+        </div>
+      </div>
+
+      <!-- Houston -->
+      <div class="city-card coming-soon">
+        <div class="city-num">11</div>
+        <div class="city-badge">Coming Soon</div>
+        <div class="city-name">Houston</div>
+        <div class="city-stadium">NRG Stadium · Houston, TX<br>5 matches</div>
+        <div class="city-meta">
+          <span>🏟️ 72,220 cap</span>
+          <span>📅 Jun 16 – Jun 30</span>
+        </div>
+      </div>
+
     </div>
   </div>
-  <div style="margin-left:auto">
-    <a href="matches.html" class="btn-ghost">Full Schedule →</a>
+</section>
+
+<!-- ABOUT STRIP -->
+<section class="about-strip">
+  <div class="about-inner">
+    <div>
+      <h2 class="about-title">The Biggest Tournament<br>in History</h2>
+      <p class="about-body" style="margin-top:.75rem">FIFA World Cup 2026 is the first edition with 48 participating nations — 16 more than ever before. The United States, Canada, and Mexico co-host 104 matches across 16 stadiums. More games. More cities. More history.</p>
+    </div>
+    <div class="about-facts">
+      <div class="fact">
+        <div class="fact-num">48</div>
+        <div class="fact-label">Nations</div>
+      </div>
+      <div class="fact">
+        <div class="fact-num">104</div>
+        <div class="fact-label">Matches</div>
+      </div>
+      <div class="fact">
+        <div class="fact-num">16</div>
+        <div class="fact-label">Stadiums</div>
+      </div>
+      <div class="fact">
+        <div class="fact-num">5M+</div>
+        <div class="fact-label">Expected Visitors</div>
+      </div>
+    </div>
   </div>
-</div>
-
-<!-- MAIN BOOKING WIDGET -->
-<section style="background:var(--mid)" id="book">
-  <div id="main-booking-widget"></div>
 </section>
 
-<section>
-  <div class="sec-label" data-i18n="home_quick_title">Everything You Need</div>
-  <div class="sec-title"><span data-i18n="home_quick_sub">Quick Links</span></div>
-  <div class="quick-links">
-    <a href="matches.html" class="ql-card"><span class="ql-icon">📅</span><div class="ql-title">Match Schedule</div><div class="ql-sub">All Dallas fixtures with dates & times</div></a>
-    <a href="map.html" class="ql-card"><span class="ql-icon">🗺️</span><div class="ql-title">Interactive Map</div><div class="ql-sub">Stadium, transit, hotels, fan zones</div></a>
-    <a href="explore.html" class="ql-card"><span class="ql-icon">🎸</span><div class="ql-title">Neighborhoods</div><div class="ql-sub">Deep Ellum, Uptown, Bishop Arts & more</div></a>
-    <a href="explore.html#restaurants" class="ql-card"><span class="ql-icon">🍽️</span><div class="ql-title">Restaurants</div><div class="ql-sub">BBQ, Tex-Mex, international, bars</div></a>
-    <a href="logistics.html" class="ql-card"><span class="ql-icon">🚌</span><div class="ql-title">Get to the Stadium</div><div class="ql-sub">DART rail, shuttles, parking guide</div></a>
-    <a href="checklist.html" class="ql-card"><span class="ql-icon">✅</span><div class="ql-title">Match Day Checklist</div><div class="ql-sub">Everything to pack and plan</div></a>
-    <a href="survival.html" class="ql-card"><span class="ql-icon">🌡️</span><div class="ql-title">Survival Guide</div><div class="ql-sub">Heat, tipping, transit, connectivity</div></a>
-    <a href="families.html" class="ql-card"><span class="ql-icon">👨‍👩‍👧</span><div class="ql-title">Family Activities</div><div class="ql-sub">Zoo, LEGOLAND, water parks, museums</div></a>
-    <a href="weather.html" class="ql-card"><span class="ql-icon">🌡️</span><div class="ql-title">Weather Forecast</div><div class="ql-sub">Live Dallas weather, 7-day forecast, °F/°C</div></a>
-    <a href="https://www.fifa.com/fifaplus/en/tournaments/mens/worldcup/canadamexicousa2026" target="_blank" rel="noopener" class="ql-card"><span class="ql-icon">⚽</span><div class="ql-title">FIFA Official Site ↗</div><div class="ql-sub">Tickets, tournament news, schedules</div></a>
-  </div>
-</section>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">WC<span>2026</span> · USA Fan Guide</div>
+  <p class="footer-note">Independent fan-made visitor guide for the FIFA World Cup 2026. Not affiliated with FIFA, US Soccer, or any official tournament body. City guides contain affiliate links — we earn a small commission at no extra cost to you.</p>
+</footer>
 
-<section style="background:var(--mid)">
-  <div class="sec-label">Live Conditions</div>
-  <div class="sec-title" style="margin-bottom:1.25rem">Dallas <em>Weather</em></div>
-  <div id="home-weather-widget" style="max-width:700px"></div>
-</section>
-
-<footer id="main-footer"></footer>
-<script src="js/site.js"></script>
-<script src="js/affiliate.js"></script>
-<script>
-  renderNav(); renderFooter(); renderDisclosure(); initLang();
-  renderWeatherWidget('home-weather-widget');
-  initCountdown('cd-d','cd-h','cd-m','cd-s');
-  initWeather();
-  renderBookingSection('main-booking-widget', {
-    title: 'Plan Your Dallas Trip',
-    subtitle: 'Compare hotels near AT&T Stadium, find flights into DFW, and book rental cars — all in one place.',
-    showHotels: true, showFlights: true, showCars: true, showBus: true, showAirbnb: true, showUberEats: true, showTuro: true, showActivities: true,
-    hotelLocation: 'Dallas Texas FIFA World Cup 2026',
-  });
-</script>
 </body>
 </html>

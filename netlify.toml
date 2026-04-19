@@ -1,4 +1,15 @@
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "/dallas"
+  to = "/dallas/index.html"
   status = 200
+
+[[redirects]]
+  from = "/dallas/"
+  to = "/dallas/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
