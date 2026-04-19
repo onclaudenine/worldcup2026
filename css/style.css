@@ -346,7 +346,7 @@ html.light .lang-btn:hover,html.light .lang-btn.active{background:var(--red);col
 /* ── HAMBURGER MENU ── */
 .hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;
   width:36px;height:36px;background:none;border:none;cursor:pointer;padding:4px;flex-shrink:0}
-.hamburger span{display:block;height:2px;background:var(--text);border-radius:1px;
+.hamburger span{display:block;height:2px;background:#F0EDE8;border-radius:1px;
   transition:transform .25s,opacity .2s,width .2s}
 .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .hamburger.open span:nth-child(2){opacity:0;width:0}
@@ -370,9 +370,10 @@ html.light .mobile-nav-link:hover,html.light .mobile-nav-link.active{color:#fff}
   section{padding:3rem 1.25rem}
   .sec-title{margin-bottom:1.25rem}
 
-  /* Nav: hide links, show hamburger */
+  /* Nav: hide links and lang switcher, show hamburger */
   .nav-links{display:none !important}
   .hamburger{display:flex}
+  .lang-switcher{display:none !important}
   nav{padding:0 1.25rem}
 
   /* Hero: stack vertically, hide aside */
