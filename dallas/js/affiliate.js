@@ -46,11 +46,12 @@ const AFF = {
     baseUrl: 'https://www.viator.com/Dallas/d673-ttd',
   },
 
-  // VRBO — sign up at vrbo.com/info/affiliates (Expedia Group affiliate program)
+  // VRBO — Expedia Group / Partnerize affiliate
   // Commission: up to 6% per completed booking, 7-30 day cookie
   vrbo: {
-    id: '1100l426249',                  // Partnerize Publisher ID — Expedia Group
+    id: '1100l426249',                  // Partnerize Publisher ID
     baseUrl: 'https://www.vrbo.com/vacation-rentals/usa/texas/dallas',
+    directLink: 'https://vrbo.com/affiliate/teCuJ9x', // Direct affiliate tracking link
   },
 
   // Uber Eats — sign up at impact.com → search "Uber Eats"
@@ -124,8 +125,8 @@ function usMobileUrl() {
 }
 
 function vrboUrl(location = 'dallas-tx') {
-  // Partnerize tracking URL format for Expedia Group / VRBO
-  return `https://prf.hn/click/camref:${AFF.vrbo.id}/destination:${encodeURIComponent(AFF.vrbo.baseUrl)}`;
+  // Use the direct VRBO affiliate tracking link
+  return AFF.vrbo.directLink;
 }
 
 function uberEatsUrl(restaurant = '') {
