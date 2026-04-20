@@ -46,11 +46,11 @@ const AFF = {
     baseUrl: 'https://www.viator.com/Dallas/d673-ttd',
   },
 
-  // Airbnb — sign up at impact.com → search "Airbnb"
-  // Commission: ~4% of booking value for new Airbnb users
-  airbnb: {
-    id: 'YOUR_AIRBNB_AFF_ID',           // from Impact.com dashboard
-    baseUrl: 'https://www.airbnb.com/s/Dallas--TX/homes',
+  // VRBO — sign up at vrbo.com/info/affiliates (Expedia Group affiliate program)
+  // Commission: up to 6% per completed booking, 7-30 day cookie
+  vrbo: {
+    id: '1100l426249',                  // Partnerize Publisher ID — Expedia Group
+    baseUrl: 'https://www.vrbo.com/vacation-rentals/usa/texas/dallas',
   },
 
   // Uber Eats — sign up at impact.com → search "Uber Eats"
@@ -123,14 +123,9 @@ function usMobileUrl() {
   return `${AFF.usmobile.baseUrl}?ref=${AFF.usmobile.id}`;
 }
 
-function airbnbUrl(location = 'Dallas, TX', checkin = '2026-06-14', checkout = '2026-07-15') {
-  return `${AFF.airbnb.baseUrl}?` + new URLSearchParams({
-    query: location,
-    checkin, checkout,
-    adults: 2,
-    af_id: AFF.airbnb.id,
-    c: 'afflnk',
-  });
+function vrboUrl(location = 'dallas-tx') {
+  // Partnerize tracking URL format for Expedia Group / VRBO
+  return `https://prf.hn/click/camref:${AFF.vrbo.id}/destination:${encodeURIComponent(AFF.vrbo.baseUrl)}`;
 }
 
 function uberEatsUrl(restaurant = '') {
@@ -358,7 +353,7 @@ function renderBookingSection(containerId, options = {}) {
     showBus = true,
     showTuro = false,
     showActivities = false,
-    showAirbnb = false,
+    showVrbo = false,
     showUberEats = false,
     showUber = false,
     showUsMobile = false,
@@ -452,15 +447,15 @@ function renderBookingSection(containerId, options = {}) {
     badgeColor: 'rgba(240,237,232,0.1)', badgeText: '#F0EDE8',
   });
 
-  if (showAirbnb) cards.push({
+  if (showVrbo) cards.push({
     icon: '🏠',
     label: tr('bk_airbnb_label', 'Vacation Rentals'),
-    partner: 'via Airbnb',
+    partner: 'via VRBO',
     desc: compact
       ? tr('bk_airbnb_desc_s', 'Apartments, houses & rooms near Dallas.')
       : tr('bk_airbnb_desc',   'Entire apartments and houses near AT&T Stadium. Great for groups — often cheaper than hotels for 4+.'),
-    cta: tr('bk_airbnb_cta', 'Search Airbnb'),
-    url: airbnbUrl(hotelLocation),
+    cta: tr('bk_airbnb_cta', 'Search VRBO'),
+    url: vrboUrl(),
     badge: tr('bk_airbnb_badge', 'Homes'),
     badgeColor: 'rgba(255,90,95,0.15)', badgeText: '#FF5A5F',
   });
