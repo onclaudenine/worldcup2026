@@ -24,6 +24,14 @@
 .tip-num{font-family:var(--fh);font-weight:700;color:var(--white);flex-shrink:0;min-width:24px}
 </style>
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R35LTLLC4L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R35LTLLC4L');
+</script>
 </head>
 <body>
 <div id="affiliate-disclosure"></div>
@@ -54,14 +62,14 @@
 </div>
 
 <section>
-  <div class="sec-label">About</div>
-  <div class="sec-title" style="margin-bottom:1.25rem">The <em>Details</em></div>
+  <h3 class="sec-label">About</h3>
+  <h2 class="sec-title" style="margin-bottom:1.25rem">The <em>Details</em></h2>
   <p style="font-size:.95rem;color:var(--muted);line-height:1.85;max-width:680px;font-weight:300;margin-bottom:2.5rem">Deep Ellum is the heartbeat of Dallas after dark. Once a booming jazz scene in the 1920s, today it pulses with live music venues, independent galleries, street food, and some of the city's best BBQ joints. During the World Cup, expect wall-to-wall fan energy every night.</p>
-  <div class="sec-label" style="margin-bottom:.85rem">Highlights</div>
+  <h3 class="sec-label" style="margin-bottom:.85rem">Highlights</h3>
   <div class="highlights-grid">
     <div class="hi-cell"><span class="hi-star">★</span><div class="hi-text">Live music 7 nights a week</div></div><div class="hi-cell"><span class="hi-star">★</span><div class="hi-text">Pecan Lodge — best brisket in Dallas</div></div><div class="hi-cell"><span class="hi-star">★</span><div class="hi-text">World-class street art and murals</div></div><div class="hi-cell"><span class="hi-star">★</span><div class="hi-text">Massive murals & street art</div></div>
   </div>
-  <div class="sec-label" style="margin-bottom:.75rem">Insider Tips</div>
+  <h3 class="sec-label" style="margin-bottom:.75rem">Insider Tips</h3>
   <div class="tips-list">
     <div class="tip-item"><span class="tip-num">01</span><span>Park on side streets — avoid the main strip lots</span></div><div class="tip-item"><span class="tip-num">02</span><span>Most venues open until 2am</span></div><div class="tip-item"><span class="tip-num">03</span><span>DART Green Line stops at Deep Ellum station</span></div>
   </div>
@@ -73,8 +81,8 @@
 
 <!-- AFFILIATE: hotel/car/activity booking for this neighborhood -->
 <section style="background:var(--mid)">
-  <div class="sec-label">Stay & Explore</div>
-  <div class="sec-title" style="margin-bottom:.5rem">Book for <em>Deep Ellum</em></div>
+  <h3 class="sec-label">Stay & Explore</h3>
+  <h2 class="sec-title" style="margin-bottom:.5rem">Book for <em>Deep Ellum</em></h2>
   <p style="font-size:.82rem;color:var(--muted);font-weight:300;max-width:500px;margin-bottom:0">
     Well connected by DART. Hotels here put you close to restaurants and nightlife.
   </p>
@@ -82,20 +90,27 @@
 </section>
 
 <section>
-  <div class="sec-label">Nearby Dining</div>
-  <div class="sec-title" style="margin-bottom:1.5rem">Where to <em>Eat</em></div>
+  <h3 class="sec-label">Nearby Dining</h3>
+  <h2 class="sec-title" style="margin-bottom:1.5rem">Where to <em>Eat</em></h2>
   <div class="cards-grid" id="nearby"></div>
   <div style="margin-top:1.5rem"><a href="../explore.html#restaurants" class="btn-sec">All Restaurants →</a></div>
 </section>
 
 <section style="background:var(--mid)">
   <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem">
-    <div><div class="sec-label">Keep Exploring</div><div class="sec-title" style="margin-bottom:0">More <em>Neighborhoods</em></div></div>
+    <div><h3 class="sec-label">Keep Exploring</h3><h2 class="sec-title" style="margin-bottom:0">More <em>Neighborhoods</em></h2></div>
     <a href="../explore.html" class="btn-ghost">All Neighborhoods →</a>
   </div>
   <div class="cards-grid" id="more"></div>
 </section>
 
+<section style="background:var(--mid)">
+  <h3 class="sec-label" data-i18n="related_label">Related Guides</h3>
+  <h2 class="sec-title" style="margin-bottom:1.25rem" data-i18n="related_title">Keep <em>Exploring</em></h2>
+  <div style="max-width:560px;border:1px solid var(--border)">
+    <a href="../restaurants/pecan-lodge.html" style="display:block;font-size:.8rem;color:var(--muted);font-weight:300;padding:.5rem 0;border-bottom:1px solid var(--border);text-decoration:none;transition:color .15s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'"><span style="color:var(--red);margin-right:6px">→</span>Pecan Lodge BBQ</a><a href="../restaurants/revolver-taco.html" style="display:block;font-size:.8rem;color:var(--muted);font-weight:300;padding:.5rem 0;border-bottom:1px solid var(--border);text-decoration:none;transition:color .15s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'"><span style="color:var(--red);margin-right:6px">→</span>Revolver Taco Lounge</a><a href="../restaurants/monkey-king-noodle.html" style="display:block;font-size:.8rem;color:var(--muted);font-weight:300;padding:.5rem 0;border-bottom:1px solid var(--border);text-decoration:none;transition:color .15s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'"><span style="color:var(--red);margin-right:6px">→</span>Monkey King Noodle</a><a href="../restaurants/strangeways.html" style="display:block;font-size:.8rem;color:var(--muted);font-weight:300;padding:.5rem 0;border-bottom:1px solid var(--border);text-decoration:none;transition:color .15s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'"><span style="color:var(--red);margin-right:6px">→</span>Strangeways Bar</a><a href="../activities/jfk-memorial.html" style="display:block;font-size:.8rem;color:var(--muted);font-weight:300;padding:.5rem 0;border-bottom:1px solid var(--border);text-decoration:none;transition:color .15s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'"><span style="color:var(--red);margin-right:6px">→</span>JFK Memorial — nearby</a>
+  </div>
+</section>
 <footer id="main-footer"></footer>
 <script src="../js/site.js"></script>
 <script src="../js/affiliate.js"></script>

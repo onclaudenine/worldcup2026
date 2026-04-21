@@ -24,6 +24,14 @@
 .tip-num{font-family:var(--fh);font-weight:700;color:var(--white);flex-shrink:0;min-width:24px}
 </style>
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R35LTLLC4L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R35LTLLC4L');
+</script>
 </head>
 <body>
 <div id="affiliate-disclosure"></div>
@@ -54,14 +62,14 @@
 </div>
 
 <section>
-  <div class="sec-label">About</div>
-  <div class="sec-title" style="margin-bottom:1.25rem">The <em>Details</em></div>
+  <h3 class="sec-label">About</h3>
+  <h2 class="sec-title" style="margin-bottom:1.25rem">The <em>Details</em></h2>
   <p style="font-size:.95rem;color:var(--muted);line-height:1.85;max-width:680px;font-weight:300;margin-bottom:2.5rem">The Dallas Arts District spans 68 acres and contains more LEED-certified buildings than any other arts district in the world. The Dallas Museum of Art is free every day. The Nasher Sculpture Center has one of the finest sculpture gardens in North America.</p>
-  <div class="sec-label" style="margin-bottom:.85rem">Highlights</div>
+  <h3 class="sec-label" style="margin-bottom:.85rem">Highlights</h3>
   <div class="highlights-grid">
     <div class="hi-cell"><span class="hi-star">★</span><div class="hi-text">Dallas Museum of Art (free admission)</div></div><div class="hi-cell"><span class="hi-star">★</span><div class="hi-text">Nasher Sculpture Center</div></div><div class="hi-cell"><span class="hi-star">★</span><div class="hi-text">Morton H. Meyerson Symphony Center</div></div><div class="hi-cell"><span class="hi-star">★</span><div class="hi-text">Crow Museum of Asian Art</div></div>
   </div>
-  <div class="sec-label" style="margin-bottom:.75rem">Insider Tips</div>
+  <h3 class="sec-label" style="margin-bottom:.75rem">Insider Tips</h3>
   <div class="tips-list">
     <div class="tip-item"><span class="tip-num">01</span><span>DMA is free every day — no reservation needed</span></div><div class="tip-item"><span class="tip-num">02</span><span>Nasher garden is best in the late afternoon light</span></div><div class="tip-item"><span class="tip-num">03</span><span>DART Pearl/Arts District station is steps away</span></div>
   </div>
@@ -73,8 +81,8 @@
 
 <!-- AFFILIATE: hotel/car/activity booking for this neighborhood -->
 <section style="background:var(--mid)">
-  <div class="sec-label">Stay & Explore</div>
-  <div class="sec-title" style="margin-bottom:.5rem">Book for <em>Arts District</em></div>
+  <h3 class="sec-label">Stay & Explore</h3>
+  <h2 class="sec-title" style="margin-bottom:.5rem">Book for <em>Arts District</em></h2>
   <p style="font-size:.82rem;color:var(--muted);font-weight:300;max-width:500px;margin-bottom:0">
     Well connected by DART. Hotels here put you close to restaurants and nightlife.
   </p>
@@ -82,20 +90,27 @@
 </section>
 
 <section>
-  <div class="sec-label">Nearby Dining</div>
-  <div class="sec-title" style="margin-bottom:1.5rem">Where to <em>Eat</em></div>
+  <h3 class="sec-label">Nearby Dining</h3>
+  <h2 class="sec-title" style="margin-bottom:1.5rem">Where to <em>Eat</em></h2>
   <div class="cards-grid" id="nearby"></div>
   <div style="margin-top:1.5rem"><a href="../explore.html#restaurants" class="btn-sec">All Restaurants →</a></div>
 </section>
 
 <section style="background:var(--mid)">
   <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem">
-    <div><div class="sec-label">Keep Exploring</div><div class="sec-title" style="margin-bottom:0">More <em>Neighborhoods</em></div></div>
+    <div><h3 class="sec-label">Keep Exploring</h3><h2 class="sec-title" style="margin-bottom:0">More <em>Neighborhoods</em></h2></div>
     <a href="../explore.html" class="btn-ghost">All Neighborhoods →</a>
   </div>
   <div class="cards-grid" id="more"></div>
 </section>
 
+<section style="background:var(--mid)">
+  <h3 class="sec-label" data-i18n="related_label">Related Guides</h3>
+  <h2 class="sec-title" style="margin-bottom:1.25rem" data-i18n="related_title">Keep <em>Exploring</em></h2>
+  <div style="max-width:560px;border:1px solid var(--border)">
+    <a href="../activities/jfk-memorial.html" style="display:block;font-size:.8rem;color:var(--muted);font-weight:300;padding:.5rem 0;border-bottom:1px solid var(--border);text-decoration:none;transition:color .15s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'"><span style="color:var(--red);margin-right:6px">→</span>JFK Memorial & Sixth Floor Museum</a><a href="../restaurants/tei-an.html" style="display:block;font-size:.8rem;color:var(--muted);font-weight:300;padding:.5rem 0;border-bottom:1px solid var(--border);text-decoration:none;transition:color .15s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'"><span style="color:var(--red);margin-right:6px">→</span>Tei-An Soba Restaurant</a><a href="../activities/perot-museum.html" style="display:block;font-size:.8rem;color:var(--muted);font-weight:300;padding:.5rem 0;border-bottom:1px solid var(--border);text-decoration:none;transition:color .15s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'"><span style="color:var(--red);margin-right:6px">→</span>Perot Museum of Nature & Science</a>
+  </div>
+</section>
 <footer id="main-footer"></footer>
 <script src="../js/site.js"></script>
 <script src="../js/affiliate.js"></script>

@@ -46,6 +46,14 @@
 .tab.active,.tab:hover{color:var(--white);border-color:var(--white)}
 </style>
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R35LTLLC4L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R35LTLLC4L');
+</script>
 </head>
 <body>
 <div id="affiliate-disclosure"></div>
@@ -62,15 +70,15 @@
     </svg>
   </div>
   <div class="page-hero-content">
-    <div class="sec-label" data-i18n="explore_beyond">Beyond the Stadium</div>
+    <h3 class="sec-label" data-i18n="explore_beyond">Beyond the Stadium</h3>
     <h1 id="exp-h1" style="font-family:var(--fh);font-weight:900;font-size:clamp(2.5rem,7vw,5rem);line-height:.9;text-transform:uppercase;margin-bottom:1rem">Explore Dallas</h1>
     <p id="exp-sub" style="font-size:1rem;color:var(--muted);line-height:1.75;max-width:560px;font-weight:300">Dallas is a city of neighborhoods, each with its own personality. Here's how to find the real city — not just the stadium.</p>
   </div>
 </div>
 
 <section id="neighborhoods">
-  <div class="sec-label" id="exp-nbh-label">Six Areas to Know</div>
-  <div class="sec-title" id="exp-nbh-title">Neighborhoods</div>
+  <h3 class="sec-label" id="exp-nbh-label">Six Areas to Know</h3>
+  <h2 class="sec-title" id="exp-nbh-title">Neighborhoods</h2>
   <div class="tab-bar" id="nbh-tabs">
     <button class="tab active" onclick="filterNbh(event,'all')" id="exp-tab-all">All Areas</button>
     <button class="tab" onclick="filterNbh(event,'food')" id="exp-tab-food">Food & Drink</button>
@@ -81,8 +89,8 @@
 </section>
 
 <section style="background:var(--mid)" id="restaurants">
-  <div class="sec-label" data-i18n="local_favorites">Local Favorites</div>
-  <div class="sec-title" id="exp-rest-title">Where to Eat</div>
+  <h3 class="sec-label" data-i18n="local_favorites">Local Favorites</h3>
+  <h2 class="sec-title" id="exp-rest-title">Where to Eat</h2>
   <div class="tab-bar" id="rest-tabs">
     <button class="tab active" onclick="filterRest(event,'all')" id="rest-tab-all">All</button>
     <button class="tab" onclick="filterRest(event,'bbq')" id="rest-tab-bbq">BBQ</button>

@@ -20,6 +20,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="stylesheet" href="css/style.css">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R35LTLLC4L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R35LTLLC4L');
+</script>
 </head>
 <body>
 <div id="affiliate-disclosure"></div>
@@ -34,7 +42,7 @@
     </svg>
   </div>
   <div class="page-hero-content" style="position:relative;z-index:2">
-    <div class="sec-label" data-i18n="shop_label">Retail Therapy</div>
+    <h3 class="sec-label" data-i18n="shop_label">Retail Therapy</h3>
     <h1 style="font-family:var(--fh);font-weight:900;font-size:clamp(2.2rem,6vw,4.5rem);line-height:.92;text-transform:uppercase;margin-bottom:.75rem">Shopping in Dallas</h1>
     <p class="page-hero-sub">Dallas is a world-class shopping destination — from luxury malls and designer boutiques to Texas-made goods and outlet bargains. Many international visitors plan a shopping day as part of their World Cup trip.</p>
   </div>
@@ -42,8 +50,8 @@
 
 <!-- Main malls -->
 <section style="background:var(--mid)">
-  <div class="sec-label" data-i18n="shop_malls_label">Major Shopping Centers</div>
-  <div class="sec-title" data-i18n="shop_malls_title">The Big <em>Malls</em></div>
+  <h3 class="sec-label" data-i18n="shop_malls_label">Major Shopping Centers</h3>
+  <h2 class="sec-title" data-i18n="shop_malls_title">The Big <em>Malls</em></h2>
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;margin-top:1.5rem">
 
     <div style="background:var(--card);border:1px solid var(--border);padding:1.4rem">
@@ -128,8 +136,8 @@
 
 <!-- Texas souvenirs -->
 <section>
-  <div class="sec-label" data-i18n="shop_souv_label">What to Buy</div>
-  <div class="sec-title" data-i18n="shop_souv_title">Authentic Texas <em>Souvenirs</em></div>
+  <h3 class="sec-label" data-i18n="shop_souv_label">What to Buy</h3>
+  <h2 class="sec-title" data-i18n="shop_souv_title">Authentic Texas <em>Souvenirs</em></h2>
   <p style="font-size:.85rem;color:var(--muted);font-weight:300;line-height:1.75;max-width:600px;margin-bottom:2rem">Skip the airport gift shop. These are the things worth bringing home from Dallas.</p>
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px">
     <div style="background:var(--card);border:1px solid var(--border);padding:1.25rem">
@@ -167,8 +175,8 @@
 
 <!-- Tax refund note -->
 <section style="background:var(--mid)">
-  <div class="sec-label" data-i18n="shop_intl_label">International Shoppers</div>
-  <div class="sec-title" data-i18n="shop_intl_title">Tax & Shopping <em>Tips</em></div>
+  <h3 class="sec-label" data-i18n="shop_intl_label">International Shoppers</h3>
+  <h2 class="sec-title" data-i18n="shop_intl_title">Tax & Shopping <em>Tips</em></h2>
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-top:1.5rem">
     <div style="background:var(--card);border:1px solid var(--border);padding:1.25rem">
       <div style="font-family:var(--fh);font-size:.9rem;font-weight:700;text-transform:uppercase;margin-bottom:.4rem">No VAT refund in the US</div>
@@ -189,6 +197,13 @@
   </div>
 </section>
 
+<section style="background:var(--mid)">
+  <h3 class="sec-label" data-i18n="related_label">Related Guides</h3>
+  <h2 class="sec-title" style="margin-bottom:1.25rem" data-i18n="related_title">Keep <em>Exploring</em></h2>
+  <div style="max-width:560px;border:1px solid var(--border)">
+    <a href="daytrips.html" style="display:block;font-size:.8rem;color:var(--muted);font-weight:300;padding:.5rem 0;border-bottom:1px solid var(--border);text-decoration:none;transition:color .15s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'"><span style="color:var(--red);margin-right:6px">→</span>Day Trips from Dallas</a><a href="budget.html" style="display:block;font-size:.8rem;color:var(--muted);font-weight:300;padding:.5rem 0;border-bottom:1px solid var(--border);text-decoration:none;transition:color .15s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'"><span style="color:var(--red);margin-right:6px">→</span>Budget Guide — Tax and Tipping</a><a href="neighborhoods/bishop-arts.html" style="display:block;font-size:.8rem;color:var(--muted);font-weight:300;padding:.5rem 0;border-bottom:1px solid var(--border);text-decoration:none;transition:color .15s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'"><span style="color:var(--red);margin-right:6px">→</span>Bishop Arts District Shopping</a><a href="neighborhoods/uptown.html" style="display:block;font-size:.8rem;color:var(--muted);font-weight:300;padding:.5rem 0;border-bottom:1px solid var(--border);text-decoration:none;transition:color .15s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'"><span style="color:var(--red);margin-right:6px">→</span>Uptown Dallas Shopping</a>
+  </div>
+</section>
 <footer id="main-footer"></footer>
 <script src="js/site.js"></script>
 <script src="js/affiliate.js"></script>

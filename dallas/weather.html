@@ -114,6 +114,14 @@
   padding:1rem 1.25rem;font-size:.82rem;color:var(--muted);font-weight:300}
 </style>
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R35LTLLC4L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R35LTLLC4L');
+</script>
 </head>
 <body>
 <div id="affiliate-disclosure"></div>
@@ -123,7 +131,7 @@
 <div class="w-hero">
   <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1.25rem">
     <div>
-      <div class="sec-label" id="wx-label">Live from Dallas, TX</div>
+      <h3 class="sec-label" id="wx-label">Live from Dallas, TX</h3>
       <div style="font-family:var(--fh);font-weight:900;font-size:clamp(1.8rem,4vw,2.6rem);text-transform:uppercase;line-height:.92" id="wx-title">
         Dallas Weather
       </div>
@@ -141,7 +149,7 @@
 
 <!-- HOURLY -->
 <section style="padding:2rem;background:var(--dark)">
-  <div class="sec-label" style="margin-bottom:.75rem" id="wx-next24">Next 24 Hours</div>
+  <h3 class="sec-label" style="margin-bottom:.75rem" id="wx-next24">Next 24 Hours</h3>
   <div id="heat-warning"></div>
   <div class="hourly-scroll">
     <div class="hourly-track" id="hourly-track">
@@ -153,7 +161,7 @@
 <!-- 7-DAY -->
 <section style="padding:2rem;background:var(--mid)">
   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem;flex-wrap:wrap;gap:.75rem">
-    <div class="sec-label" style="margin-bottom:0" id="wx-7day">7-Day Forecast</div>
+    <h3 class="sec-label" style="margin-bottom:0" id="wx-7day">7-Day Forecast</h3>
     <div class="last-updated" id="last-updated"></div>
   </div>
   <div id="heat-warning-week"></div>
@@ -164,7 +172,7 @@
 
 <!-- EXTRAS: UV, Wind, Humidity -->
 <section style="padding:2rem;background:var(--dark)">
-  <div class="sec-label" style="margin-bottom:1rem" id="wx-glance">Conditions at a Glance</div>
+  <h3 class="sec-label" style="margin-bottom:1rem" id="wx-glance">Conditions at a Glance</h3>
   <div class="extras-grid" id="extras-grid">
     <div class="w-loading">Loading…</div>
   </div>
@@ -172,8 +180,8 @@
 
 <!-- FIFA MATCH WEATHER TIP -->
 <section style="padding:2rem;background:var(--mid)">
-  <div class="sec-label" id="wx-advice">Match Day Advice</div>
-  <div class="sec-title" style="margin-bottom:1.25rem">Stadium <em>Weather Tips</em></div>
+  <h3 class="sec-label" id="wx-advice">Match Day Advice</h3>
+  <h2 class="sec-title" style="margin-bottom:1.25rem">Stadium <em>Weather Tips</em></h2>
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px" id="wx-advice-cards">
     <div style="background:var(--card);border:1px solid var(--border);padding:1.3rem">
       <div style="font-size:1.2rem;margin-bottom:.5rem">🏟️</div>

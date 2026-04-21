@@ -27,6 +27,14 @@
 .oc-cons{font-size:.74rem;color:#EF9A9A;line-height:1.55;font-weight:300;margin-bottom:.75rem}
 </style>
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R35LTLLC4L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R35LTLLC4L');
+</script>
 </head>
 <body>
 <div id="affiliate-disclosure"></div>
@@ -47,7 +55,7 @@
 </div>
 
 <section style="background:var(--mid)">
-  <div class="sec-label" id="log-rec-label">Recommended Route</div>
+  <h3 class="sec-label" id="log-rec-label">Recommended Route</h3>
   <div style="font-family:var(--fh);font-weight:900;font-size:clamp(2rem,5vw,3.2rem);text-transform:uppercase;line-height:.92;margin-bottom:1.5rem" id="log-rec-title">Step by Step</div>
   <div class="alert-box" style="margin-bottom:1.75rem">
     <div class="alert-text" id="log-alert"><strong>Important:</strong> Arlington has no light rail or subway. Every visitor needs to plan transport carefully — match-day traffic on I-30 can add 60–90 min each way.</div>
@@ -56,7 +64,7 @@
 </section>
 
 <section>
-  <div class="sec-label" id="log-opts-label">All Options</div>
+  <h3 class="sec-label" id="log-opts-label">All Options</h3>
   <div style="font-family:var(--fh);font-weight:900;font-size:clamp(2rem,5vw,3.2rem);text-transform:uppercase;line-height:.92;margin-bottom:1.5rem" id="log-opts-title">Getting Around</div>
   <div class="option-grid" id="log-opts-grid"></div>
   <div id="uber-card" style="margin-top:1rem"></div>
@@ -69,10 +77,17 @@
 </section>
 
 <section style="background:var(--mid)">
-  <div class="sec-label" id="log-book-label">Book Your Transport</div>
+  <h3 class="sec-label" id="log-book-label">Book Your Transport</h3>
   <div id="logistics-booking"></div>
 </section>
 
+<section style="background:var(--mid)">
+  <h3 class="sec-label" data-i18n="related_label">Related Guides</h3>
+  <h2 class="sec-title" style="margin-bottom:1.25rem" data-i18n="related_title">Keep <em>Exploring</em></h2>
+  <div style="max-width:560px;border:1px solid var(--border)">
+    <a href="airport.html" style="display:block;font-size:.8rem;color:var(--muted);font-weight:300;padding:.5rem 0;border-bottom:1px solid var(--border);text-decoration:none;transition:color .15s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'"><span style="color:var(--red);margin-right:6px">→</span>Dallas Airport Guide</a><a href="accommodation.html" style="display:block;font-size:.8rem;color:var(--muted);font-weight:300;padding:.5rem 0;border-bottom:1px solid var(--border);text-decoration:none;transition:color .15s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'"><span style="color:var(--red);margin-right:6px">→</span>Where to Stay near the Stadium</a><a href="tickets.html" style="display:block;font-size:.8rem;color:var(--muted);font-weight:300;padding:.5rem 0;border-bottom:1px solid var(--border);text-decoration:none;transition:color .15s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'"><span style="color:var(--red);margin-right:6px">→</span>Ticket Guide</a><a href="groups.html" style="display:block;font-size:.8rem;color:var(--muted);font-weight:300;padding:.5rem 0;border-bottom:1px solid var(--border);text-decoration:none;transition:color .15s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'"><span style="color:var(--red);margin-right:6px">→</span>Group Transport Guide</a>
+  </div>
+</section>
 <footer id="main-footer"></footer>
 <script src="js/site.js"></script>
 <script src="js/affiliate.js"></script>

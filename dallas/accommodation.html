@@ -20,6 +20,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="stylesheet" href="css/style.css">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R35LTLLC4L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R35LTLLC4L');
+</script>
 </head>
 <body>
 <div id="affiliate-disclosure"></div>
@@ -34,7 +42,7 @@
     </svg>
   </div>
   <div class="page-hero-content" style="position:relative;z-index:2">
-    <div class="sec-label" data-i18n="acc_label">Where to Stay</div>
+    <h3 class="sec-label" data-i18n="acc_label">Where to Stay</h3>
     <h1 style="font-family:var(--fh);font-weight:900;font-size:clamp(2.2rem,6vw,4.5rem);line-height:.92;text-transform:uppercase;margin-bottom:.75rem">Accommodation Guide</h1>
     <p class="page-hero-sub">Arlington, downtown Dallas, or Fort Worth? Each has real pros and cons depending on how many matches you're attending, your budget, and what you want to do between games. Here's the honest breakdown.</p>
   </div>
@@ -42,8 +50,8 @@
 
 <!-- Area comparison -->
 <section style="background:var(--mid)">
-  <div class="sec-label" data-i18n="acc_decision_label">The Big Decision</div>
-  <div class="sec-title" data-i18n="acc_decision_title">Arlington vs Dallas vs <em>Fort Worth</em></div>
+  <h3 class="sec-label" data-i18n="acc_decision_label">The Big Decision</h3>
+  <h2 class="sec-title" data-i18n="acc_decision_title">Arlington vs Dallas vs <em>Fort Worth</em></h2>
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:2px;background:var(--border);margin-top:1.5rem">
 
     <div style="background:var(--card);padding:1.5rem;border-top:3px solid var(--red)">
@@ -87,8 +95,8 @@
 
 <!-- Hotel recommendations -->
 <section>
-  <div class="sec-label" data-i18n="acc_hotels_label">Recommended Hotels</div>
-  <div class="sec-title" data-i18n="acc_hotels_title">Where We'd <em>Stay</em></div>
+  <h3 class="sec-label" data-i18n="acc_hotels_label">Recommended Hotels</h3>
+  <h2 class="sec-title" data-i18n="acc_hotels_title">Where We'd <em>Stay</em></h2>
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;margin-top:1.5rem">
 
     <div style="background:var(--card);border:1px solid var(--border);padding:1.4rem">
@@ -167,8 +175,8 @@
 
 <!-- Booking tips -->
 <section style="background:var(--mid)">
-  <div class="sec-label" data-i18n="acc_tips_label">Booking Advice</div>
-  <div class="sec-title" data-i18n="acc_tips_title">Book Early. <em>Very Early.</em></div>
+  <h3 class="sec-label" data-i18n="acc_tips_label">Booking Advice</h3>
+  <h2 class="sec-title" data-i18n="acc_tips_title">Book Early. <em>Very Early.</em></h2>
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-top:1.5rem">
     <div style="background:var(--card);border:1px solid var(--border);padding:1.25rem">
       <div style="font-family:var(--fh);font-size:.9rem;font-weight:700;text-transform:uppercase;color:var(--red);margin-bottom:.4rem">Book now — prices will double</div>
@@ -190,6 +198,13 @@
   <div style="margin-top:2rem" id="accom-booking"></div>
 </section>
 
+<section style="background:var(--mid)">
+  <h3 class="sec-label" data-i18n="related_label">Related Guides</h3>
+  <h2 class="sec-title" style="margin-bottom:1.25rem" data-i18n="related_title">Keep <em>Exploring</em></h2>
+  <div style="max-width:560px;border:1px solid var(--border)">
+    <a href="airport.html" style="display:block;font-size:.8rem;color:var(--muted);font-weight:300;padding:.5rem 0;border-bottom:1px solid var(--border);text-decoration:none;transition:color .15s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'"><span style="color:var(--red);margin-right:6px">→</span>Getting from DFW Airport</a><a href="logistics.html" style="display:block;font-size:.8rem;color:var(--muted);font-weight:300;padding:.5rem 0;border-bottom:1px solid var(--border);text-decoration:none;transition:color .15s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'"><span style="color:var(--red);margin-right:6px">→</span>Getting to the Stadium</a><a href="budget.html" style="display:block;font-size:.8rem;color:var(--muted);font-weight:300;padding:.5rem 0;border-bottom:1px solid var(--border);text-decoration:none;transition:color .15s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'"><span style="color:var(--red);margin-right:6px">→</span>Dallas Budget Guide</a><a href="groups.html" style="display:block;font-size:.8rem;color:var(--muted);font-weight:300;padding:.5rem 0;border-bottom:1px solid var(--border);text-decoration:none;transition:color .15s" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'"><span style="color:var(--red);margin-right:6px">→</span>Group Accommodation</a>
+  </div>
+</section>
 <footer id="main-footer"></footer>
 <script src="js/site.js"></script>
 <script src="js/affiliate.js"></script>
