@@ -65,6 +65,7 @@
 renderNav(); renderFooter(); renderDisclosure(); initLang();
 renderChecklistPage();
 document.addEventListener('langchange', renderChecklistPage);
+document.addEventListener('langchange', updateAllI18n);
 </script>
 </body>
 </html>

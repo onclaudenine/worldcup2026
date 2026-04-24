@@ -57,7 +57,7 @@
 
 <div style="margin-top:56px">
 <div style="background:var(--mid);border-bottom:1px solid var(--border);padding:2rem 2rem 1.5rem">
-  <h3 class="sec-label" id="map-label">Interactive Visitor Map</h3>
+  <h3 class="sec-label" id="map-label" data-i18n="map_interactive">Interactive Visitor Map</h3>
   <div style="font-family:var(--fh);font-weight:900;font-size:clamp(2rem,5vw,3rem);text-transform:uppercase;line-height:.92;margin-bottom:.5rem" id="map-title">Dallas <em style="color:var(--red);font-style:normal">Map</em></div>
   <p style="font-size:.82rem;color:var(--muted);font-weight:300;max-width:560px;line-height:1.65">Stadium, transit stops, hotels, fan zones, and top restaurants. Click any pin for details and directions.</p>
 </div>
@@ -292,6 +292,7 @@ function updateMapLang() {
   Object.entries(ids).forEach(([id,key])=>{const el=document.getElementById(id);if(el)el.textContent=t(key);});
 }
 document.addEventListener('langchange', updateMapLang);
+document.addEventListener('langchange', updateAllI18n);
 if (currentLang !== 'en') updateMapLang();
 
 // ── INIT ─────────────────────────────────────────────────────

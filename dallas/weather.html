@@ -131,7 +131,7 @@
 <div class="w-hero">
   <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1.25rem">
     <div>
-      <h3 class="sec-label" id="wx-label">Live from Dallas, TX</h3>
+      <h3 class="sec-label" id="wx-label" data-i18n="wx_live">Live from Dallas, TX</h3>
       <div style="font-family:var(--fh);font-weight:900;font-size:clamp(1.8rem,4vw,2.6rem);text-transform:uppercase;line-height:.92" id="wx-title">
         Dallas Weather
       </div>
@@ -149,7 +149,7 @@
 
 <!-- HOURLY -->
 <section style="padding:2rem;background:var(--dark)">
-  <h3 class="sec-label" style="margin-bottom:.75rem" id="wx-next24">Next 24 Hours</h3>
+  <h3 class="sec-label" style="margin-bottom:.75rem" id="wx-next24" data-i18n="wx_next24">Next 24 Hours</h3>
   <div id="heat-warning"></div>
   <div class="hourly-scroll">
     <div class="hourly-track" id="hourly-track">
@@ -161,7 +161,7 @@
 <!-- 7-DAY -->
 <section style="padding:2rem;background:var(--mid)">
   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem;flex-wrap:wrap;gap:.75rem">
-    <h3 class="sec-label" style="margin-bottom:0" id="wx-7day">7-Day Forecast</h3>
+    <h3 class="sec-label" style="margin-bottom:0" id="wx-7day" data-i18n="wx_7day">7-Day Forecast</h3>
     <div class="last-updated" id="last-updated"></div>
   </div>
   <div id="heat-warning-week"></div>
@@ -172,7 +172,7 @@
 
 <!-- EXTRAS: UV, Wind, Humidity -->
 <section style="padding:2rem;background:var(--dark)">
-  <h3 class="sec-label" style="margin-bottom:1rem" id="wx-glance">Conditions at a Glance</h3>
+  <h3 class="sec-label" style="margin-bottom:1rem" id="wx-glance" data-i18n="wx_conditions">Conditions at a Glance</h3>
   <div class="extras-grid" id="extras-grid">
     <div class="w-loading">Loading…</div>
   </div>
@@ -180,8 +180,8 @@
 
 <!-- FIFA MATCH WEATHER TIP -->
 <section style="padding:2rem;background:var(--mid)">
-  <h3 class="sec-label" id="wx-advice">Match Day Advice</h3>
-  <h2 class="sec-title" style="margin-bottom:1.25rem">Stadium <em>Weather Tips</em></h2>
+  <h3 class="sec-label" id="wx-advice" data-i18n="wx_match_advice">Match Day Advice</h3>
+  <h2 class="sec-title" style="margin-bottom:1.25rem" data-i18n="wx_stadium_h2">Stadium <em>Weather Tips</em></h2>
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px" id="wx-advice-cards">
     <div style="background:var(--card);border:1px solid var(--border);padding:1.3rem">
       <div style="font-size:1.2rem;margin-bottom:.5rem">🏟️</div>
@@ -537,6 +537,7 @@ function updateWeatherLang() {
   if (weatherData) renderAll();
 }
 document.addEventListener('langchange', updateWeatherLang);
+document.addEventListener('langchange', updateAllI18n);
 if (currentLang !== 'en') updateWeatherLang();
 
 // Refresh every 15 minutes

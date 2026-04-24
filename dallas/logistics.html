@@ -55,7 +55,7 @@
 </div>
 
 <section style="background:var(--mid)">
-  <h3 class="sec-label" id="log-rec-label">Recommended Route</h3>
+  <h3 class="sec-label" id="log-rec-label" data-i18n="log_rec_route">Recommended Route</h3>
   <div style="font-family:var(--fh);font-weight:900;font-size:clamp(2rem,5vw,3.2rem);text-transform:uppercase;line-height:.92;margin-bottom:1.5rem" id="log-rec-title">Step by Step</div>
   <div class="alert-box" style="margin-bottom:1.75rem">
     <div class="alert-text" id="log-alert"><strong>Important:</strong> Arlington has no light rail or subway. Every visitor needs to plan transport carefully — match-day traffic on I-30 can add 60–90 min each way.</div>
@@ -64,7 +64,7 @@
 </section>
 
 <section>
-  <h3 class="sec-label" id="log-opts-label">All Options</h3>
+  <h3 class="sec-label" id="log-opts-label" data-i18n="log_all_opts">All Options</h3>
   <div style="font-family:var(--fh);font-weight:900;font-size:clamp(2rem,5vw,3.2rem);text-transform:uppercase;line-height:.92;margin-bottom:1.5rem" id="log-opts-title">Getting Around</div>
   <div class="option-grid" id="log-opts-grid"></div>
   <div id="uber-card" style="margin-top:1rem"></div>
@@ -77,7 +77,7 @@
 </section>
 
 <section style="background:var(--mid)">
-  <h3 class="sec-label" id="log-book-label">Book Your Transport</h3>
+  <h3 class="sec-label" id="log-book-label" data-i18n="log_book_transport">Book Your Transport</h3>
   <div id="logistics-booking"></div>
 </section>
 
@@ -104,6 +104,7 @@ renderBookingSection('logistics-booking', {
 });
 document.addEventListener('langchange', () => {
   renderLogisticsPage();
+document.addEventListener('langchange', updateAllI18n);
 renderUberCard('uber-card');
   renderBookingSection('logistics-booking', {
     title: t('log_book_label'), subtitle: t('log_book_sub'),

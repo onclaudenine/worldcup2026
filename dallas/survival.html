@@ -62,7 +62,7 @@
 </section>
 
 <section>
-  <h3 class="sec-label" id="surv-weather-label">Live Conditions</h3>
+  <h3 class="sec-label" id="surv-weather-label" data-i18n="srv_live">Live Conditions</h3>
   <div style="font-family:var(--fh);font-weight:900;font-size:clamp(1.8rem,4vw,2.6rem);text-transform:uppercase;line-height:.92;margin-bottom:.75rem" id="surv-weather-title">Dallas Weather</div>
   <p style="font-size:.82rem;color:var(--muted);font-weight:300;max-width:540px;line-height:1.65;margin-bottom:1.25rem" id="surv-weather-sub">Real-time Dallas weather — toggle between °F and °C. Plan your outdoor activities around the heat.</p>
   <div id="survival-weather" style="max-width:700px"></div>
@@ -84,6 +84,7 @@ renderNav(); renderFooter(); renderDisclosure(); initLang();
 renderSurvivalPage();
 renderWeatherWidget('survival-weather');
 document.addEventListener('langchange', renderSurvivalPage);
+document.addEventListener('langchange', updateAllI18n);
 </script>
 </body>
 </html>

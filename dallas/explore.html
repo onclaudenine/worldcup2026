@@ -77,8 +77,8 @@
 </div>
 
 <section id="neighborhoods">
-  <h3 class="sec-label" id="exp-nbh-label">Six Areas to Know</h3>
-  <h2 class="sec-title" id="exp-nbh-title">Neighborhoods</h2>
+  <h3 class="sec-label" id="exp-nbh-label" data-i18n="exp_six_areas">Six Areas to Know</h3>
+  <h2 class="sec-title" id="exp-nbh-title" data-i18n="exp_nbh_title">Neighborhoods</h2>
   <div class="tab-bar" id="nbh-tabs">
     <button class="tab active" onclick="filterNbh(event,'all')" id="exp-tab-all">All Areas</button>
     <button class="tab" onclick="filterNbh(event,'food')" id="exp-tab-food">Food & Drink</button>
@@ -90,7 +90,7 @@
 
 <section style="background:var(--mid)" id="restaurants">
   <h3 class="sec-label" data-i18n="local_favorites">Local Favorites</h3>
-  <h2 class="sec-title" id="exp-rest-title">Where to Eat</h2>
+  <h2 class="sec-title" id="exp-rest-title" data-i18n="exp_where_eat_h2">Where to Eat</h2>
   <div class="tab-bar" id="rest-tabs">
     <button class="tab active" onclick="filterRest(event,'all')" id="rest-tab-all">All</button>
     <button class="tab" onclick="filterRest(event,'bbq')" id="rest-tab-bbq">BBQ</button>
@@ -200,6 +200,7 @@ function updateExploreLang() {
   renderNbh();
 }
 document.addEventListener('langchange', updateExploreLang);
+document.addEventListener('langchange', updateAllI18n);
 if (currentLang !== 'en') updateExploreLang();
 
 // Scroll to restaurants if hash

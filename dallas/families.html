@@ -105,7 +105,7 @@
     </div>
   </div>
 
-  <h3 class="sec-label" id="fam-acts-label">10 Attractions for Families</h3>
+  <h3 class="sec-label" id="fam-acts-label" data-i18n="fam_10_title">10 Attractions for Families</h3>
   <h2 class="sec-title" data-i18n="activities_title">Things to Do</h2>
 
   <div class="transit-legend">
@@ -135,7 +135,7 @@
 <!-- TRANSIT GUIDE -->
 <section style="background:var(--dark)">
   <h3 class="sec-label" data-i18n="getting_around_kids">Getting Around with Kids</h3>
-  <h2 class="sec-title" id="fam-transit-title">Family Transit Guide</h2>
+  <h2 class="sec-title" id="fam-transit-title" data-i18n="fam_transit_h2">Family Transit Guide</h2>
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px">
 
     <div style="background:var(--card);border:1px solid var(--border);padding:1.4rem">
@@ -175,8 +175,8 @@
 
 
 <section style="background:var(--mid)">
-  <h3 class="sec-label" id="fam-weather-label">Plan Around the Heat</h3>
-  <h2 class="sec-title" style="margin-bottom:1rem" id="fam-weather-title">Dallas Weather</h2>
+  <h3 class="sec-label" id="fam-weather-label" data-i18n="fam_heat">Plan Around the Heat</h3>
+  <h2 class="sec-title" style="margin-bottom:1rem" id="fam-weather-title" data-i18n="fam_dallas_weather">Dallas Weather</h2>
   <p style="font-size:.82rem;color:var(--muted);font-weight:300;max-width:540px;line-height:1.65;margin-bottom:1.25rem">Check conditions before heading out — especially important for outdoor activities like the Zoo, Arboretum, and Six Flags.</p>
   <div id="fam-weather" style="max-width:700px"></div>
 </section>
@@ -262,6 +262,7 @@ function updateFamiliesLang() {
   renderActivities();
 }
 document.addEventListener('langchange', updateFamiliesLang);
+document.addEventListener('langchange', updateAllI18n);
 if (currentLang !== 'en') updateFamiliesLang();
 
 renderBookingSection('families-booking', {
