@@ -4470,39 +4470,33 @@ const TRANSLATIONS = {
 
 
 
-// ── GOOGLE TRANSLATE BUTTON ───────────────────────────────────────────────
-// Injected after renderNav() — avoids template literal escaping issues
-function injectTranslateBtn() {
-  // Don't inject twice
-  if (document.getElementById('gt-btn')) return;
 
-  // Build the dropdown
+// ── GOOGLE TRANSLATE BUTTON ────────────────────────────────────────────────
+function injectTranslateBtn() {
+  if (document.getElementById('gt-btn')) return;
   var btn = document.createElement('button');
   btn.id = 'gt-btn';
   btn.innerHTML = '&#127760; Translate &#9662;';
   btn.style.cssText = 'background:transparent;border:1px solid var(--border);color:var(--muted);border-radius:3px;padding:3px 8px;font-size:.68rem;cursor:pointer;height:28px;white-space:nowrap;font-family:var(--fb)';
-
   var menu = document.createElement('div');
   menu.id = 'gt-menu';
   menu.style.cssText = 'display:none;position:absolute;top:34px;right:0;background:var(--card);border:1px solid var(--border);border-radius:4px;box-shadow:0 8px 24px rgba(0,0,0,.5);z-index:9999;min-width:160px;padding:4px 0';
-
   var langs = [
     ['nl','\uD83C\uDDF3\uD83C\uDDF1 Nederlands'],
-    ['es','\uD83C\uDDEA\uD83C\uDDF8 Español'],
-    ['fr','\uD83C\uDDEB\uD83C\uDDF7 Français'],
+    ['es','\uD83C\uDDEA\uD83C\uDDF8 Espa\u00F1ol'],
+    ['fr','\uD83C\uDDEB\uD83C\uDDF7 Fran\u00E7ais'],
     ['de','\uD83C\uDDE9\uD83C\uDDEA Deutsch'],
     ['ar','\uD83C\uDDF8\uD83C\uDDE6 Arabic'],
-    ['pt','\uD83C\uDDE7\uD83C\uDDF7 Português'],
+    ['pt','\uD83C\uDDE7\uD83C\uDDF7 Portugu\u00EAs'],
     ['it','\uD83C\uDDEE\uD83C\uDDF9 Italiano'],
     ['ja','\uD83C\uDDEF\uD83C\uDDF5 \u65E5\u672C\u8A9E'],
     ['ko','\uD83C\uDDF0\uD83C\uDDF7 \uD55C\uAD6D\uC5B4'],
     ['zh-CN','\uD83C\uDDE8\uD83C\uDDF3 \u4E2D\u6587'],
     ['ru','\uD83C\uDDF7\uD83C\uDDFA \u0420\u0443\u0441\u0441\u043A\u0438\u0439'],
-    ['tr','\uD83C\uDDF9\uD83C\uDDF7 Türkçe'],
+    ['tr','\uD83C\uDDF9\uD83C\uDDF7 T\u00FCrk\u00E7e'],
     ['hi','\uD83C\uDDEE\uD83C\uDDF3 \u0939\u093F\u0928\u094D\u0926\u0940'],
     ['id','\uD83C\uDDEE\uD83C\uDDE9 Indonesia'],
   ];
-
   langs.forEach(function(l) {
     var item = document.createElement('div');
     item.textContent = l[1];
@@ -4515,22 +4509,17 @@ function injectTranslateBtn() {
     });
     menu.appendChild(item);
   });
-
   btn.addEventListener('click', function(e) {
     e.stopPropagation();
     menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
   });
-
   document.addEventListener('click', function() {
     menu.style.display = 'none';
   });
-
   var wrap = document.createElement('div');
   wrap.style.cssText = 'position:relative;display:inline-block';
   wrap.appendChild(btn);
   wrap.appendChild(menu);
-
-  // Insert before the lang-switcher in the nav
   var langSwitcher = document.querySelector('.lang-switcher');
   if (langSwitcher && langSwitcher.parentNode) {
     langSwitcher.parentNode.insertBefore(wrap, langSwitcher);
