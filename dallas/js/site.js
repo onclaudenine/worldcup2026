@@ -4473,6 +4473,12 @@ function t(key) {
   return lang[key] || TRANSLATIONS.en[key] || key;
 }
 
+// tr() — alias for t() that accepts an optional fallback string
+function tr(key, fallback) {
+  const lang = TRANSLATIONS[currentLang] || TRANSLATIONS.en;
+  return lang[key] || TRANSLATIONS.en[key] || fallback || key;
+}
+
 function setLang(lang) {
   // Update html lang attribute for accessibility and SEO signals
   document.documentElement.lang = lang === 'en' ? 'en' :
