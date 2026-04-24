@@ -87,7 +87,7 @@
 
   <!-- Step by step arrival -->
   <h3 class="sec-label" style="margin-bottom:.75rem" data-i18n="ap_when_land">When You Land</h3>
-  <div style="display:flex;flex-direction:column;gap:10px;max-width:700px">
+  <div id="ap-steps" style="display:flex;flex-direction:column;gap:10px;max-width:700px">
     <div style="background:var(--card);border:1px solid var(--border);padding:1.1rem;display:flex;gap:1rem;align-items:flex-start">
       <div style="font-family:var(--fh);font-size:1.8rem;font-weight:900;color:var(--red);flex-shrink:0;line-height:1">01</div>
       <div>
@@ -130,7 +130,7 @@
 <section>
   <h3 class="sec-label" data-i18n="ap_terminal_label">Terminal Guide</h3>
   <h2 class="sec-title" data-i18n="ap_terminals_title">Which Terminal <em>Are You In?</em></h2>
-  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin-top:1.5rem">
+  <div id="ap-terminals" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin-top:1.5rem">
     <div style="background:var(--card);border:1px solid var(--border);padding:1.25rem">
       <div style="font-family:var(--fh);font-size:1.4rem;font-weight:900;color:var(--red);margin-bottom:.4rem">Terminal A</div>
       <div style="font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem">American Airlines</div>
@@ -190,7 +190,7 @@
 <section>
   <h3 class="sec-label" data-i18n="ap_tips_label">Essential Tips</h3>
   <h2 class="sec-title" data-i18n="ap_tips_title">Don't Make <em>These Mistakes</em></h2>
-  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;margin-top:1.5rem">
+  <div id="ap-tips" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;margin-top:1.5rem">
     <div style="background:var(--card);border:1px solid var(--border);border-left:3px solid var(--red);padding:1.25rem">
       <div style="font-family:var(--fh);font-size:.9rem;font-weight:700;text-transform:uppercase;margin-bottom:.4rem"><span data-i18n="ap_tip1_title">Don't take a taxi from DFW</span></div>
       <div style="font-size:.78rem;color:var(--muted);font-weight:300;line-height:1.65">Taxis from DFW to downtown Dallas cost $50–80. The DART Orange Line does the same journey in 45 minutes for $2.50. Use the train.</div>
@@ -235,8 +235,10 @@
 <script src="js/affiliate.js"></script>
 <script>
 renderNav('airport'); renderFooter(); renderDisclosure(); initLang();
+renderAirportPage();
+document.addEventListener('langchange', renderAirportPage);
 document.addEventListener('langchange', updateAllI18n);
-if (currentLang !== 'en') updateAllI18n();
+if (currentLang !== 'en') { renderAirportPage(); updateAllI18n(); }
 renderUsMobileCard('esim-card');
 renderBookingSection('airport-booking', {
   title:tr('book_dallas_trip','Book Your Dallas Trip'),

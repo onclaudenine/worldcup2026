@@ -59,7 +59,8 @@
   <h2 class="sec-title" data-i18n="bud_tiers_title">How Much Will <em>You Spend?</em></h2>
   <p style="font-size:.85rem;color:var(--muted);font-weight:300;line-height:1.75;max-width:600px;margin-bottom:2rem">Per person per day, excluding match tickets and accommodation. All prices in USD.</p>
 
-  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:2px;background:var(--border)">
+  <p id="bud-note" style="font-size:.85rem;color:var(--muted);font-weight:300;line-height:1.75;max-width:600px;margin-bottom:2rem">Per person per day, excluding match tickets and accommodation. All prices in USD.</p>
+  <div id="bud-tiers" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:2px;background:var(--border)">
 
     <div style="background:var(--card);padding:1.5rem">
       <div style="font-family:var(--fh);font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-bottom:.3rem"><span data-i18n="bud_budget_label">Budget</span></div>
@@ -109,7 +110,7 @@
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:1.5rem">
 
     <div>
-      <div style="font-family:var(--fh);font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.75rem;padding-bottom:.4rem;border-bottom:1px solid var(--border)">Food & Drink</div>
+      <div id="bud-food-header" style="font-family:var(--fh);font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.75rem;padding-bottom:.4rem;border-bottom:1px solid var(--border)">Food & Drink</div>
       <div style="display:flex;flex-direction:column;gap:8px">
         <div style="display:flex;justify-content:space-between;align-items:baseline;font-size:.82rem">
           <span style="color:var(--muted);font-weight:300">McDonald's combo</span>
@@ -147,7 +148,7 @@
     </div>
 
     <div>
-      <div style="font-family:var(--fh);font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.75rem;padding-bottom:.4rem;border-bottom:1px solid var(--border)">Transport & Activities</div>
+      <div id="bud-transport-header" style="font-family:var(--fh);font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.75rem;padding-bottom:.4rem;border-bottom:1px solid var(--border)">Transport & Activities</div>
       <div style="display:flex;flex-direction:column;gap:8px">
         <div style="display:flex;justify-content:space-between;align-items:baseline;font-size:.82rem">
           <span style="color:var(--muted);font-weight:300">DART single trip</span>
@@ -192,7 +193,7 @@
   <h3 class="sec-label" data-i18n="bud_tip_label">Tipping Culture</h3>
   <h2 class="sec-title" data-i18n="bud_tip_title">Tipping in <em>Texas</em></h2>
   <div style="background:rgba(191,10,48,0.08);border-left:3px solid var(--red);padding:1rem 1.25rem;margin-bottom:1.5rem;max-width:680px;font-size:.85rem;color:var(--muted);line-height:1.75;font-weight:300">
-    <strong style="color:var(--text)">Tipping is not optional in the US.</strong> Service staff are often paid below minimum wage with the expectation that tips make up the difference. Not tipping is considered rude and can cause genuine financial hardship for the worker. Budget for it.
+    <span id="bud-tip-warning"><strong style="color:var(--text)">Tipping is not optional in the US.</strong> Service staff are often paid below minimum wage with the expectation that tips make up the difference. Not tipping is considered rude and can cause genuine financial hardship for the worker. Budget for it.</span>
   </div>
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1px;background:var(--border);max-width:780px">
     <div style="background:var(--card);padding:1.25rem">
@@ -232,7 +233,7 @@
 <section>
   <h3 class="sec-label" data-i18n="bud_save_label">Save Money</h3>
   <h2 class="sec-title" data-i18n="bud_save_title">Budget <em>Smart Tips</em></h2>
-  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-top:1.5rem">
+  <div id="bud-save-cards" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-top:1.5rem">
     <div style="background:var(--card);border:1px solid var(--border);padding:1.25rem">
       <div style="font-size:1.4rem;margin-bottom:.5rem">🏛️</div>
       <div style="font-family:var(--fh);font-size:.9rem;font-weight:700;text-transform:uppercase;margin-bottom:.4rem"><span data-i18n="bud_tip1_title">Dallas Museum of Art is Free</span></div>
@@ -278,8 +279,10 @@
 <script src="js/affiliate.js"></script>
 <script>
 renderNav('budget'); renderFooter(); renderDisclosure(); initLang();
+renderBudgetPage();
+document.addEventListener('langchange', renderBudgetPage);
 document.addEventListener('langchange', updateAllI18n);
-if (currentLang !== 'en') updateAllI18n();
+if (currentLang !== 'en') { renderBudgetPage(); updateAllI18n(); }
 </script>
 </body>
 </html>

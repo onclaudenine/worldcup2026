@@ -57,7 +57,7 @@
 <section style="background:var(--mid)">
   <h3 class="sec-label" data-i18n="acc_decision_label">The Big Decision</h3>
   <h2 class="sec-title" data-i18n="acc_decision_title">Arlington vs Dallas vs <em>Fort Worth</em></h2>
-  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:2px;background:var(--border);margin-top:1.5rem">
+  <div id="acc-areas" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:2px;background:var(--border);margin-top:1.5rem">
 
     <div style="background:var(--card);padding:1.5rem;border-top:3px solid var(--red)">
       <div style="font-family:var(--fh);font-size:1.3rem;font-weight:900;text-transform:uppercase;margin-bottom:.2rem"><span data-i18n="acc_arlington_title">Arlington</span></div>
@@ -182,7 +182,7 @@
 <section style="background:var(--mid)">
   <h3 class="sec-label" data-i18n="acc_tips_label">Booking Advice</h3>
   <h2 class="sec-title" data-i18n="acc_tips_title">Book Early. <em>Very Early.</em></h2>
-  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-top:1.5rem">
+  <div id="acc-booking-tips" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-top:1.5rem">
     <div style="background:var(--card);border:1px solid var(--border);padding:1.25rem">
       <div style="font-family:var(--fh);font-size:.9rem;font-weight:700;text-transform:uppercase;color:var(--red);margin-bottom:.4rem"><span data-i18n="acc_book_early_title">Book now — prices will double</span></div>
       <div style="font-size:.78rem;color:var(--muted);font-weight:300;line-height:1.65">Dallas hotel prices during the World Cup are already 2–3× normal rates. By the time matches start, available rooms will be scarce and prices will be extreme. Book refundable rates now and cancel later if plans change.</div>
@@ -215,8 +215,10 @@
 <script src="js/affiliate.js"></script>
 <script>
 renderNav('accommodation'); renderFooter(); renderDisclosure(); initLang();
+renderAccommodationPage();
+document.addEventListener('langchange', renderAccommodationPage);
 document.addEventListener('langchange', updateAllI18n);
-if (currentLang !== 'en') updateAllI18n();
+if (currentLang !== 'en') { renderAccommodationPage(); updateAllI18n(); }
 renderBookingSection('accom-booking', {
   title:tr('book_search_now','Search & Book Now'),
   subtitle:tr('book_search_now_sub','Compare hotels across Arlington, Dallas, and Fort Worth.'),

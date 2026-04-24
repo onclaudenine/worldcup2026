@@ -1815,6 +1815,152 @@ const TRANSLATIONS = {
     fz_warning_title:'Official confirmation pending',
     fz_warning_body:'FIFA typically announces Fan Festival details 3–6 months before the tournament. Check FIFA.com for the latest.',
     shop_northpark:'NorthPark Center',shop_galleria:'Galleria Dallas',shop_allen:'Allen Premium Outlets',shop_legacy:'The Shops at Legacy',shop_bishop:'Bishop Arts District',shop_deepellum:'Deep Ellum',shop_cowboy:'Resistol or Stetson Hat',shop_boots:'Texas Cowboy Boots',shop_sauce:'Texas Hot Sauce & BBQ Rubs',shop_art:'Texas Art & Prints',shop_pecan:'Texas Pecan Treats',shop_merch:'Official Tournament Merchandise',fam_dart_title:'DART Light Rail',fam_car_title:'Rental Car',fam_uber_title:'Uber / Lyft with Kids',
+    
+    // ── TICKETS PAGE [EN] ──
+    tkt_warning:'Always buy official first.',
+    tkt_warning_body:'The only authorised source for FIFA World Cup 2026 tickets is FIFA.com/tickets. Any other site selling \"official\" tickets is a third party at best and a scam at worst.',
+    tkt_official_site_body:'Register for a FIFA account first — required before any purchase',
+    tkt_app_body:'Download the official FIFA app — all tickets are digital, stored here. Required for stadium entry. Download before you travel.',
+    tkt_phases_body:'FIFA runs multiple sales phases — early ballot, general sale, and last-minute. Each phase opens on FIFA.com. Sign up for email alerts.',
+    tkt_id_body:'Tickets are tied to your ID. At the gate you\'ll need your passport or ID matching the ticket name. Non-transferable without FIFA approval.',
+    tkt_cat4_title:'Category 4',
+    tkt_cat4_price:'$50–80',
+    tkt_cat4_body:'Restricted view or upper tier. Lowest price, limited availability. Sold first in ballot phases.',
+    tkt_cat3_title:'Category 3',
+    tkt_cat3_price:'$100–150',
+    tkt_cat3_body:'Upper tier with full pitch view. Best value category — good sight lines at AT&T Stadium.',
+    tkt_cat2_title:'Category 2',
+    tkt_cat2_price:'$200–350',
+    tkt_cat2_body:'Lower tier, side stands. Excellent view, good atmosphere. Most popular category.',
+    tkt_cat1_title:'Category 1',
+    tkt_cat1_price:'$400–800',
+    tkt_cat1_body:'Premium lower tier, behind goals or midfield. Best seats in the stadium. Very limited.',
+    tkt_semi_title:'Semifinal',
+    tkt_semi_price:'$400–2,000',
+    tkt_semi_body:'Dallas hosts a Semifinal (July 14). Premium pricing across all categories. Book the moment sales open.',
+    tkt_resale_intro:'FIFA runs an official resale platform — this is the safest secondary market option. Third-party resale sites also carry World Cup tickets but with significant price premiums.',
+    tkt_resale1_title:'FIFA Official Resale',
+    tkt_resale1_body:'FIFA.com/tickets — official resale marketplace. Safest option for secondary market. Tickets are verified and ID-linked. Check regularly as tickets are returned throughout the tournament.',
+    tkt_resale2_title:'StubHub / Viagogo',
+    tkt_resale2_body:'Expect 3–10× face value for popular matches. Prices spike as match day approaches for big games. Buy early if you\'re using resale. Both offer buyer guarantees.',
+    tkt_resale3_title:'Supporters Club Allocation',
+    tkt_resale3_body:'National football associations receive ticket allocations. Join your national supporters club — Dutch, Argentine, Brazilian, and English supporter clubs often have ticket packages for members.',
+    tkt_scam1_title:'PDF tickets are fake',
+    tkt_scam1_body:'FIFA World Cup 2026 tickets are digital only — stored in the FIFA app. Anyone selling a PDF, screenshot, or printed ticket is scamming you. Walk away immediately.',
+    tkt_scam2_title:'Bank transfer = no protection',
+    tkt_scam2_body:'Never pay by bank transfer, wire, crypto, or gift cards for tickets. Use a credit card through a verified platform only — gives you chargeback rights if the ticket is invalid.',
+    tkt_scam3_title:'Social media sellers',
+    tkt_scam3_body:'Facebook groups, WhatsApp, and Instagram are full of ticket scammers during major tournaments. Even if a seller looks legitimate with reviews and photos, use only verified platforms.',
+    tkt_scam4_title:'Fake FIFA websites',
+    tkt_scam4_body:'Scammers create convincing fake ticket sites. The only real FIFA ticketing URL is fifa.com — bookmark it and type it directly. Do not click links in emails or ads claiming to sell official tickets.',
+    tkt_stad1_title:'Download the FIFA App',
+    tkt_stad1_body:'Your ticket lives in the FIFA app. Download it and add your ticket well before match day. Keep the app on your home screen. Make sure your phone is charged.',
+    tkt_stad2_title:'Arrive 90 minutes early',
+    tkt_stad2_body:'AT&T Stadium is enormous. Security queues for 100,000+ people take time. Gates open 2.5 hours before kickoff. Arrive 90 minutes early to avoid missing the start.',
+    tkt_stad3_title:'Clear bag policy',
+    tkt_stad3_body:'AT&T Stadium enforces a strict clear bag policy. Only bags smaller than 12\"×6\"×12\" in clear plastic, vinyl, or PVC are permitted. Small clutch bags up to 4.5\"×6.5\" are allowed.',
+    tkt_stad4_title:'Bring photo ID',
+    tkt_stad4_body:'Your passport or government-issued ID must match the name on your ticket. FIFA may conduct random ID checks at the gate. Minors must be accompanied by the registered ticket holder.',
+    
+    // ── BIG PAGE CONTENT [EN] ──
+    ap_step1_body:'Allow 60–90 minutes. US citizens use APC kiosks (faster). International visitors use staffed lanes. Have your ESTA or visa, passport, and return flight details ready.',
+    ap_step2_body:'AT&T and T-Mobile stores are in Terminal D arrivals hall — open from 6am. Prepaid SIMs from $20–40 for 30 days. Much cheaper than roaming. Alternatively, activate an eSIM before you fly.',
+    ap_step3_body:'If you have a connecting domestic flight, take the free Skylink automated train between terminals. It runs 24/7 every 2–5 minutes. Terminals are far apart — allow 30+ minutes for connections.',
+    ap_step4_body:'The DART Orange Line runs from Terminal A (South) at DFW directly to downtown Dallas in ~45 minutes. $2.50 per trip. Do not take a taxi or Uber from the airport to downtown — DART is faster and 10× cheaper.',
+    ap_step5_body:'On match days: TRE train from DFW direct to CentrePort/DFW station — then FREE FIFA shuttle to AT&T Stadium. No match day? Rent a car or Uber (~$35–50).',
+    ap_tip1_body:'Taxis from DFW to downtown Dallas cost $50–80. The DART Orange Line does the same journey in 45 minutes for $2.50.',
+    ap_tip2_body:'During the World Cup, DFW will be at peak international capacity. Budget 90 minutes minimum. Do not book tight connections on entry day.',
+    ap_tip3_body:'Visitors from visa-waiver countries need ESTA approval. Apply at esta.cbp.dhs.gov at least 72 hours before departure. It costs $21 and is valid for 2 years.',
+    ap_tip4_body:'The DART GoPass app lets you buy transit tickets on your phone. Download and set it up before you land so you can go straight to the DART platform.',
+    ap_tip5_body:'DFW has 5 terminals spread across a huge area. Never book under 90 minutes for a connection at DFW.',
+    ap_tip6_body:'Airport currency exchange has terrible rates. Get USD at your home bank. Cards (Visa/Mastercard) are accepted almost everywhere in Dallas.',
+    ap_term_a_airlines:'American Airlines',
+    ap_term_a_body:'Domestic US flights. DART Orange Line station is at Terminal A South — the quickest route to downtown Dallas.',
+    ap_term_b_airlines:'American Airlines',
+    ap_term_b_body:'Domestic US flights. Good food options including local Texas brands. Skylink to all other terminals.',
+    ap_term_c_airlines:'American Airlines',
+    ap_term_c_body:'Domestic and some international. Skylink connects to Terminal D for international arrivals and customs.',
+    ap_term_d_airlines:'International — Most visitors land here',
+    ap_term_d_body:'All international arrivals. Immigration, customs, SIM stores, currency exchange, and ground transport. If flying from Europe, South America, Asia, or the Middle East — you land here.',
+    ap_term_e_airlines:'Multiple Airlines',
+    ap_term_e_body:'Spirit, Frontier, United, and others. Ground transport to TRE and rental cars. Skylink to all terminals.',
+    ap_dal_airlines:'Southwest Airlines (primary), Delta, United (limited)',
+    ap_dal_dist:'8 km from downtown Dallas — much closer than DFW',
+    ap_dal_transit:'DART Orange/Blue Line (Inwood/Love Field station) — 15 min to downtown',
+    ap_dal_body:'Love Field is domestic only — no international flights. If you\'re connecting from a US city, you might land here. It\'s more convenient than DFW for downtown Dallas hotels. The DART light rail stop is a short walk from the terminal.',
+    ap_dal_airlines_label:'Airlines',
+    ap_dal_dist_label:'Distance',
+    ap_dal_transit_label:'Transit',
+    bud_budget_items:'Fast food or food trucks ($8–12/meal)|DART for all transport|Free fan zones & parks|Budget hostel or VRBO shared apartment|Free museums (DMA is free daily)',
+    bud_mid_items:'Sit-down restaurants ($20–35/meal)|Occasional Uber ($15–25/trip)|Paid attractions ($20–30)|Mid-range hotel or private VRBO rental|Most people fall in this range',
+    bud_splurge_items:'Fine dining ($80–150/meal)|Uber Black everywhere|Luxury hotel (Omni, Ritz, etc.)|Premium stadium experiences|Shopping at Northpark / Galleria',
+    bud_per_day:'per day',
+    bud_excl_note:'Per person per day, excluding match tickets and accommodation. All prices in USD.',
+    bud_food_drink:'Food & Drink',
+    bud_transport_activities:'Transport & Activities',
+    bud_tipping_warning:'Tipping is not optional in the US.',
+    bud_tipping_body:'Service staff are often paid below minimum wage — tips make up the difference. Not tipping is considered rude. Budget for it.',
+    hal_tip1_title:'Verify halal certification',
+    hal_tip1_body:'Always verify halal status with the restaurant directly — use Zabihah.com or the Halal Trip app to find certified halal restaurants in DFW.',
+    hal_tip2_title:'Halal grocery stores',
+    hal_tip2_body:'Al-Barakah Halal Meat Market in Richardson and Halal Meat Shop on Greenville Ave stock a wide range of certified halal meat and groceries.',
+    hal_tip3_title:'Wudu at the stadium',
+    hal_tip3_body:'AT&T Stadium bathrooms have standard sinks. Plan to perform wudu at your hotel before match day. Prayer room availability will be confirmed closer to the tournament.',
+    hal_tip4_title:'Qibla direction in Dallas',
+    hal_tip4_body:'From Dallas, the qibla direction is approximately 48–50° northeast. Use the Muslim Pro or Athan app for a precise compass reading.',
+    hal_tip5_title:'Alcohol is everywhere',
+    hal_tip5_body:'Alcohol is served at the stadium, in restaurants, and at fan zones. It is not compulsory — simply decline. The Richardson halal restaurant cluster is entirely alcohol-free.',
+    hal_tip6_title:'Richardson — your base',
+    hal_tip6_body:'Consider staying in Richardson if halal food access is a priority. 15 min on DART to downtown Dallas, 30 min to the stadium on match days.',
+    hal_mosque1_title:'IANT — Islamic Association of North Texas',
+    hal_mosque1_loc:'Richardson · Main community mosque',
+    hal_mosque1_body:'The largest Islamic centre in the Dallas area. Full Friday Jumu\'ah services, daily prayers, halal food market on-site. Near DART Red Line.',
+    hal_mosque2_title:'Masjid Al-Islam',
+    hal_mosque2_loc:'Dallas · Near downtown',
+    hal_mosque2_body:'Convenient for visitors staying in downtown Dallas. Daily prayers. Friday Jumu\'ah at 1:15pm. Accessible by DART.',
+    hal_mosque3_title:'Masjid Al-Hedaya',
+    hal_mosque3_loc:'Arlington · Near AT&T Stadium',
+    hal_mosque3_body:'Closest mosque to AT&T Stadium. Useful on match days for Dhuhr or Asr prayers before or after a game. ~5 minutes drive from the stadium.',
+    hal_mosque4_title:'Prayer Times App',
+    hal_mosque4_loc:'Digital tool',
+    hal_mosque4_body:'Download Muslim Pro or Athan app before travelling. Both provide accurate Dallas prayer times, qibla direction, and nearby mosque finder. Free to use.',
+    hal_rest_intro:'Richardson (15-20 min from downtown Dallas on DART Red Line) is the heart of halal dining in DFW — a cluster of excellent restaurants within walking distance of each other.',
+    acc_hotel1_name:'Omni Dallas Hotel',
+    acc_hotel1_area:'Downtown Dallas · $$$',
+    acc_hotel1_tag:'Top Pick',
+    acc_hotel1_body:'Connected by skybridge to the Kay Bailey Hutchison Convention Center. Rooftop pool, great views, and directly above DART connections. One of Dallas\'s finest hotels — book far in advance.',
+    acc_hotel2_name:'Marriott Courtyard Arlington',
+    acc_hotel2_area:'Arlington · $$',
+    acc_hotel2_tag:'Near Stadium',
+    acc_hotel2_body:'Within walking distance of AT&T Stadium. Clean, reliable, and the location is unbeatable for match days. Fills up months in advance — check availability now.',
+    acc_hotel3_name:'The Adolphus Hotel',
+    acc_hotel3_area:'Downtown Dallas · $$$$',
+    acc_hotel3_tag:'Historic Luxury',
+    acc_hotel3_body:'Built in 1912, this is Dallas\'s most storied hotel. Beaux-Arts architecture, exceptional service, and a legendary bar. If you want one memorable splurge night, this is the one.',
+    acc_hotel4_name:'Aloft Dallas Downtown',
+    acc_hotel4_area:'Downtown Dallas · $$',
+    acc_hotel4_tag:'Best Value Central',
+    acc_hotel4_body:'Modern, well-located, and reasonably priced. Good common areas, reliable WiFi, and walking distance to DART. Great for younger travellers and groups.',
+    acc_hotel5_name:'VRBO — Uptown Dallas',
+    acc_hotel5_area:'Uptown · $ per person',
+    acc_hotel5_tag:'Groups of 4+',
+    acc_hotel5_body:'For groups of 4+, a VRBO apartment in Uptown Dallas often works out significantly cheaper than hotel rooms. Full kitchen, more space, and one of Dallas\'s best neighborhoods.',
+    acc_hotel6_name:'Hilton Fort Worth',
+    acc_hotel6_area:'Fort Worth · $$',
+    acc_hotel6_tag:'Budget Smart',
+    acc_hotel6_body:'Downtown Fort Worth, walking distance to the Stockyards. TRE train gives direct match-day access to the stadium. Often 30–40% cheaper than equivalent Dallas hotels.',
+    acc_arlington_best:'Attending 3+ matches · Groups who want to walk to the stadium · Avoiding match-day transport chaos',
+    acc_dallas_best:'First-time visitors · Exploring Dallas culture · Fan zones · Mix of matches and sightseeing',
+    acc_fw_best:'Budget-conscious visitors · Families · Those wanting a quieter base with Texas character',
+    acc_arlington_price:'$150–350/night during match days · Books out fast — reserve now',
+    acc_dallas_price:'$120–280/night · More hotel options than Arlington',
+    acc_fw_price:'$80–180/night · Significantly cheaper than Dallas on match days',
+    acc_price_range:'Price range',
+    acc_best_for_lbl:'Best for',
+    acc_book_early_body:'Dallas hotel prices during the World Cup are already 2–3× normal rates. Book refundable rates now and cancel later if plans change.',
+    acc_free_cancel_body:'Book fully refundable rates even if they\'re slightly higher. Match schedules can shift. Booking.com and VRBO both offer strong cancellation options.',
+    acc_checkout_body:'Many hotels require minimum stays around match days. Look for hotels with no minimum stay requirements — or book a full week even if you plan to arrive late.',
+    acc_non_match_body:'Match days have surge pricing on Uber and chaotic traffic. Schedule your departure for a quiet Tuesday or Wednesday — easier airport journey and cheaper rideshare prices.',
     footer_note:'Fan-made visitor guide for FIFA World Cup 2026 · Not affiliated with FIFA or the City of Dallas',
     booking_sub: 'Find the best deals on hotels, flights, and transport to Dallas.',
     bk_deals: 'Deals',
@@ -2498,6 +2644,152 @@ const TRANSLATIONS = {
     fz_warning_title:'Confirmación oficial pendiente',
     fz_warning_body:'FIFA typically announces Fan Festival details 3–6 months before the tournament. Check FIFA.com for the latest.',
     shop_northpark:'NorthPark Center',shop_galleria:'Galleria Dallas',shop_allen:'Allen Premium Outlets',shop_legacy:'The Shops at Legacy',shop_bishop:'Distrito de Artes Bishop',shop_deepellum:'Deep Ellum',shop_cowboy:'Sombrero Resistol o Stetson',shop_boots:'Botas Vaqueras de Texas',shop_sauce:'Salsa Picante y BBQ de Texas',shop_art:'Arte e Impresiones de Texas',shop_pecan:'Dulces de Pacana de Texas',shop_merch:'Merchandising Oficial del Torneo',fam_dart_title:'Metro DART',fam_car_title:'Coche de Alquiler',fam_uber_title:'Uber / Lyft con Niños',
+    
+    // ── TICKETS PAGE [ES] ──
+    tkt_warning:'Compra siempre oficial primero.',
+    tkt_warning_body:'La única fuente autorizada para entradas del Mundial FIFA 2026 es FIFA.com/tickets. Cualquier otro sitio es un tercero en el mejor caso, una estafa en el peor.',
+    tkt_official_site_body:'Regístrate en FIFA primero — obligatorio antes de cualquier compra',
+    tkt_app_body:'Descarga la app oficial de FIFA — todas las entradas son digitales. Necesaria para entrar al estadio. Descárgala antes de viajar.',
+    tkt_phases_body:'FIFA tiene varias fases de venta — ballot anticipado, venta general y de última hora. Cada fase abre en FIFA.com. Suscríbete a alertas por email.',
+    tkt_id_body:'Las entradas están vinculadas a tu ID. En la puerta necesitarás tu pasaporte o DNI que coincida con el nombre de la entrada.',
+    tkt_cat4_title:'Categoría 4',
+    tkt_cat4_price:'$50–80',
+    tkt_cat4_body:'Vista restringida o nivel superior. El precio más bajo, disponibilidad limitada. Las primeras en venderse en el ballot.',
+    tkt_cat3_title:'Categoría 3',
+    tkt_cat3_price:'$100–150',
+    tkt_cat3_body:'Nivel superior con vista completa del campo. La mejor relación calidad-precio — buenas líneas de visión en el AT&T Stadium.',
+    tkt_cat2_title:'Categoría 2',
+    tkt_cat2_price:'$200–350',
+    tkt_cat2_body:'Nivel inferior, gradas laterales. Vista excelente, buen ambiente. La categoría más popular.',
+    tkt_cat1_title:'Categoría 1',
+    tkt_cat1_price:'$400–800',
+    tkt_cat1_body:'Nivel inferior premium, detrás de las porterías o en el centro. Los mejores asientos del estadio. Muy limitados.',
+    tkt_semi_title:'Semifinal',
+    tkt_semi_price:'$400–2.000',
+    tkt_semi_body:'Dallas acoge una Semifinal (14 de julio). Precios premium en todas las categorías. Compra en cuanto abra la venta.',
+    tkt_resale_intro:'FIFA tiene una plataforma oficial de reventa — la opción más segura en el mercado secundario.',
+    tkt_resale1_title:'Reventa Oficial FIFA',
+    tkt_resale1_body:'FIFA.com/tickets — mercado oficial de reventa. La opción más segura. Entradas verificadas y vinculadas al ID.',
+    tkt_resale2_title:'StubHub / Viagogo',
+    tkt_resale2_body:'Espera pagar 3–10 veces el precio de cara para partidos populares. Compra pronto si vas a usar reventa.',
+    tkt_resale3_title:'Asignación de Peñas',
+    tkt_resale3_body:'Las federaciones nacionales reciben asignaciones de entradas. Únete a tu peña nacional — las peñas holandesa, argentina, brasileña e inglesa suelen tener paquetes de entradas.',
+    tkt_scam1_title:'Las entradas en PDF son falsas',
+    tkt_scam1_body:'Las entradas del Mundial FIFA 2026 son solo digitales — en la app FIFA. Quien venda un PDF, captura o entrada impresa te está estafando.',
+    tkt_scam2_title:'Transferencia bancaria = sin protección',
+    tkt_scam2_body:'Nunca pagues con transferencia bancaria, cripto o tarjetas regalo. Usa solo tarjeta de crédito a través de una plataforma verificada.',
+    tkt_scam3_title:'Vendedores en redes sociales',
+    tkt_scam3_body:'Facebook, WhatsApp e Instagram están llenos de estafadores durante los grandes torneos. Usa solo plataformas verificadas.',
+    tkt_scam4_title:'Páginas web falsas de FIFA',
+    tkt_scam4_body:'La única URL real de entradas FIFA es fifa.com — márcala y escríbela directamente. No hagas clic en enlaces de emails o anuncios.',
+    tkt_stad1_title:'Descarga la App FIFA',
+    tkt_stad1_body:'Tu entrada está en la app FIFA. Descárgala y añade tu entrada antes del día del partido.',
+    tkt_stad2_title:'Llega 90 minutos antes',
+    tkt_stad2_body:'El AT&T Stadium es enorme. Las colas de seguridad para 100.000+ personas llevan tiempo. Las puertas abren 2,5 horas antes del partido.',
+    tkt_stad3_title:'Política de bolsa transparente',
+    tkt_stad3_body:'Solo se permiten bolsas transparentes menores de 30×15×30 cm. Las pequeñas clutch de hasta 11×16,5 cm están permitidas.',
+    tkt_stad4_title:'Lleva tu ID con foto',
+    tkt_stad4_body:'Tu pasaporte o ID debe coincidir con el nombre de la entrada. FIFA puede hacer controles aleatorios en la puerta.',
+    
+    // ── BIG PAGE CONTENT [ES] ──
+    ap_step1_body:'Permite 60–90 minutos. Los ciudadanos estadounidenses usan quioscos APC. Los visitantes internacionales usan carriles con personal. Ten preparados tu ESTA o visa, pasaporte y detalles del vuelo de regreso.',
+    ap_step2_body:'Las tiendas AT&T y T-Mobile están en el vestíbulo de llegadas de la Terminal D. SIM prepago desde $20–40 por 30 días. Mucho más barato que el roaming.',
+    ap_step3_body:'If you have a connecting domestic flight, take the free Skylink automated train between terminals. It runs 24/7 every 2–5 minutes. Terminals are far apart — allow 30+ minutes for connections.',
+    ap_step4_body:'La línea naranja DART va desde la Terminal A Sur del DFW directamente al centro de Dallas en ~45 minutos. $2.50 por viaje. No tomes taxi o Uber desde el aeropuerto.',
+    ap_step5_body:'En días de partido: tren TRE desde DFW hasta la estación CentrePort — luego lanzadera GRATUITA de la FIFA al AT&T Stadium.',
+    ap_tip1_body:'Los taxis desde DFW al centro cuestan $50–80. La línea naranja DART hace el mismo recorrido en 45 minutos por $2.50.',
+    ap_tip2_body:'Durante el Mundial, DFW estará a máxima capacidad internacional. Planifica al menos 90 minutos para inmigración.',
+    ap_tip3_body:'Los visitantes de países con exención de visado necesitan aprobación ESTA. Solicítalo en esta.cbp.dhs.gov al menos 72 horas antes.',
+    ap_tip4_body:'La app DART GoPass permite comprar billetes en el móvil. Descárgala y configúrala antes de aterrizar.',
+    ap_tip5_body:'DFW tiene 5 terminales en una área enorme. Nunca reserves menos de 90 minutos para una conexión en DFW.',
+    ap_tip6_body:'Las casas de cambio del aeropuerto tienen pésimas tasas. Consigue dólares en tu banco antes de viajar.',
+    ap_term_a_airlines:'American Airlines',
+    ap_term_a_body:'Domestic US flights. DART Orange Line station is at Terminal A South — the quickest route to downtown Dallas.',
+    ap_term_b_airlines:'American Airlines',
+    ap_term_b_body:'Domestic US flights. Good food options including local Texas brands. Skylink to all other terminals.',
+    ap_term_c_airlines:'American Airlines',
+    ap_term_c_body:'Domestic and some international. Skylink connects to Terminal D for international arrivals and customs.',
+    ap_term_d_airlines:'International — Most visitors land here',
+    ap_term_d_body:'All international arrivals. Immigration, customs, SIM stores, currency exchange, and ground transport. If flying from Europe, South America, Asia, or the Middle East — you land here.',
+    ap_term_e_airlines:'Multiple Airlines',
+    ap_term_e_body:'Spirit, Frontier, United, and others. Ground transport to TRE and rental cars. Skylink to all terminals.',
+    ap_dal_airlines:'Southwest Airlines (primary), Delta, United (limited)',
+    ap_dal_dist:'8 km from downtown Dallas — much closer than DFW',
+    ap_dal_transit:'DART Orange/Blue Line (Inwood/Love Field station) — 15 min to downtown',
+    ap_dal_body:'Love Field is domestic only — no international flights. If you\'re connecting from a US city, you might land here. It\'s more convenient than DFW for downtown Dallas hotels. The DART light rail stop is a short walk from the terminal.',
+    ap_dal_airlines_label:'Airlines',
+    ap_dal_dist_label:'Distance',
+    ap_dal_transit_label:'Transit',
+    bud_budget_items:'Comida rápida o food trucks ($8–12/plato)|DART para todo el transporte|Fan zones y parques gratuitos|Hostal económico o apartamento VRBO compartido|Museos gratuitos (el DMA es gratis todos los días)',
+    bud_mid_items:'Restaurantes ($20–35/persona)|Uber ocasional ($15–25/viaje)|Atracciones de pago ($20–30)|Hotel intermedio o VRBO privado|La mayoría de la gente entra en esta categoría',
+    bud_splurge_items:'Restaurantes de lujo ($80–150/persona)|Uber Black en todos lados|Hotel de lujo (Omni, Ritz, etc.)|Experiencias premium en el estadio|Compras en Northpark / Galleria',
+    bud_per_day:'por día',
+    bud_excl_note:'Por persona por día, excluyendo entradas y alojamiento. Todos los precios en USD.',
+    bud_food_drink:'Comida y Bebida',
+    bud_transport_activities:'Transporte y Actividades',
+    bud_tipping_warning:'Las propinas no son opcionales en EE.UU.',
+    bud_tipping_body:'El personal de servicio suele cobrar menos del salario mínimo. No dejar propina se considera una falta de respeto.',
+    hal_tip1_title:'Verifica la certificación halal',
+    hal_tip1_body:'Always verify halal status with the restaurant directly — use Zabihah.com or the Halal Trip app to find certified halal restaurants in DFW.',
+    hal_tip2_title:'Supermercados halal',
+    hal_tip2_body:'Al-Barakah Halal Meat Market in Richardson and Halal Meat Shop on Greenville Ave stock a wide range of certified halal meat and groceries.',
+    hal_tip3_title:'Wudu en el estadio',
+    hal_tip3_body:'AT&T Stadium bathrooms have standard sinks. Plan to perform wudu at your hotel before match day. Prayer room availability will be confirmed closer to the tournament.',
+    hal_tip4_title:'Dirección Qibla en Dallas',
+    hal_tip4_body:'From Dallas, the qibla direction is approximately 48–50° northeast. Use the Muslim Pro or Athan app for a precise compass reading.',
+    hal_tip5_title:'El alcohol está en todas partes',
+    hal_tip5_body:'Alcohol is served at the stadium, in restaurants, and at fan zones. It is not compulsory — simply decline. The Richardson halal restaurant cluster is entirely alcohol-free.',
+    hal_tip6_title:'Richardson — tu base',
+    hal_tip6_body:'Consider staying in Richardson if halal food access is a priority. 15 min on DART to downtown Dallas, 30 min to the stadium on match days.',
+    hal_mosque1_title:'IANT — Asociación Islámica del Norte de Texas',
+    hal_mosque1_loc:'Richardson · Mezquita principal',
+    hal_mosque1_body:'The largest Islamic centre in the Dallas area. Full Friday Jumu\'ah services, daily prayers, halal food market on-site. Near DART Red Line.',
+    hal_mosque2_title:'Masjid Al-Islam',
+    hal_mosque2_loc:'Dallas · Cerca del centro',
+    hal_mosque2_body:'Convenient for visitors staying in downtown Dallas. Daily prayers. Friday Jumu\'ah at 1:15pm. Accessible by DART.',
+    hal_mosque3_title:'Masjid Al-Hedaya',
+    hal_mosque3_loc:'Arlington · Cerca del AT&T Stadium',
+    hal_mosque3_body:'Closest mosque to AT&T Stadium. Useful on match days for Dhuhr or Asr prayers before or after a game. ~5 minutes drive from the stadium.',
+    hal_mosque4_title:'App de Horarios de Oración',
+    hal_mosque4_loc:'Herramienta digital',
+    hal_mosque4_body:'Download Muslim Pro or Athan app before travelling. Both provide accurate Dallas prayer times, qibla direction, and nearby mosque finder. Free to use.',
+    hal_rest_intro:'Richardson (15-20 min desde el centro de Dallas en DART Línea Roja) es el corazón de la gastronomía halal en DFW.',
+    acc_hotel1_name:'Omni Dallas Hotel',
+    acc_hotel1_area:'Downtown Dallas · $$$',
+    acc_hotel1_tag:'Primera Opción',
+    acc_hotel1_body:'Connected by skybridge to the Kay Bailey Hutchison Convention Center. Rooftop pool, great views, and directly above DART connections. One of Dallas\'s finest hotels — book far in advance.',
+    acc_hotel2_name:'Marriott Courtyard Arlington',
+    acc_hotel2_area:'Arlington · $$',
+    acc_hotel2_tag:'Cerca del Estadio',
+    acc_hotel2_body:'Within walking distance of AT&T Stadium. Clean, reliable, and the location is unbeatable for match days. Fills up months in advance — check availability now.',
+    acc_hotel3_name:'The Adolphus Hotel',
+    acc_hotel3_area:'Downtown Dallas · $$$$',
+    acc_hotel3_tag:'Lujo Histórico',
+    acc_hotel3_body:'Built in 1912, this is Dallas\'s most storied hotel. Beaux-Arts architecture, exceptional service, and a legendary bar. If you want one memorable splurge night, this is the one.',
+    acc_hotel4_name:'Aloft Dallas Downtown',
+    acc_hotel4_area:'Downtown Dallas · $$',
+    acc_hotel4_tag:'Mejor Relación Calidad-Precio',
+    acc_hotel4_body:'Modern, well-located, and reasonably priced. Good common areas, reliable WiFi, and walking distance to DART. Great for younger travellers and groups.',
+    acc_hotel5_name:'VRBO — Uptown Dallas',
+    acc_hotel5_area:'Uptown · $ per person',
+    acc_hotel5_tag:'Grupos de 4+',
+    acc_hotel5_body:'For groups of 4+, a VRBO apartment in Uptown Dallas often works out significantly cheaper than hotel rooms. Full kitchen, more space, and one of Dallas\'s best neighborhoods.',
+    acc_hotel6_name:'Hilton Fort Worth',
+    acc_hotel6_area:'Fort Worth · $$',
+    acc_hotel6_tag:'Económico Inteligente',
+    acc_hotel6_body:'Downtown Fort Worth, walking distance to the Stockyards. TRE train gives direct match-day access to the stadium. Often 30–40% cheaper than equivalent Dallas hotels.',
+    acc_arlington_best:'Asistir a 3+ partidos · Grupos que quieren ir andando al estadio',
+    acc_dallas_best:'Primera visita · Explorar Dallas · Fan zones',
+    acc_fw_best:'Viajeros con presupuesto · Familias · Base tranquila',
+    acc_arlington_price:'$150–350/noche en días de partido · Se agota rápido — reserva ahora',
+    acc_dallas_price:'$120–280/noche · Más opciones de hotel que Arlington',
+    acc_fw_price:'$80–180/noche · Mucho más barato que Dallas en días de partido',
+    acc_price_range:'Rango de precios',
+    acc_best_for_lbl:'Mejor para',
+    acc_book_early_body:'Dallas hotel prices during the World Cup are already 2–3× normal rates. Book refundable rates now and cancel later if plans change.',
+    acc_free_cancel_body:'Book fully refundable rates even if they\'re slightly higher. Match schedules can shift. Booking.com and VRBO both offer strong cancellation options.',
+    acc_checkout_body:'Many hotels require minimum stays around match days. Look for hotels with no minimum stay requirements — or book a full week even if you plan to arrive late.',
+    acc_non_match_body:'Match days have surge pricing on Uber and chaotic traffic. Schedule your departure for a quiet Tuesday or Wednesday — easier airport journey and cheaper rideshare prices.',
     footer_note:'Guía de visitantes creada por fanáticos para la Copa Mundial FIFA 2026 · No afiliada con FIFA ni la Ciudad de Dallas',
     booking_sub: 'Encuentra las mejores ofertas en hoteles, vuelos y transporte a Dallas.',
     bk_deals: 'Ofertas',
@@ -3179,6 +3471,152 @@ const TRANSLATIONS = {
     fz_warning_title:'Confirmation officielle en attente',
     fz_warning_body:'FIFA typically announces Fan Festival details 3–6 months before the tournament. Check FIFA.com for the latest.',
     shop_northpark:'NorthPark Center',shop_galleria:'Galleria Dallas',shop_allen:'Allen Premium Outlets',shop_legacy:'The Shops at Legacy',shop_bishop:'Quartier des Arts Bishop',shop_deepellum:'Deep Ellum',shop_cowboy:'Chapeau Resistol ou Stetson',shop_boots:'Bottes de Cowboy du Texas',shop_sauce:'Sauce Piquante et BBQ du Texas',shop_art:'Art et Impressions du Texas',shop_pecan:'Friandises Noix de Pécan',shop_merch:'Merchandising Officiel du Tournoi',fam_dart_title:'Métro Léger DART',fam_car_title:'Location de Voiture',fam_uber_title:'Uber / Lyft avec Enfants',
+    
+    // ── TICKETS PAGE [FR] ──
+    tkt_warning:'Achetez toujours officiel en premier.',
+    tkt_warning_body:'La seule source autorisée pour les billets de la Coupe du Monde FIFA 2026 est FIFA.com/tickets. Tout autre site vendant des billets \"officiels\" est un tiers au mieux, une arnaque au pire.',
+    tkt_official_site_body:'Créez d\'abord un compte FIFA — obligatoire avant tout achat',
+    tkt_app_body:'Téléchargez l\'application officielle FIFA — tous les billets sont numériques. Nécessaire pour l\'entrée au stade. Téléchargez avant de voyager.',
+    tkt_phases_body:'FIFA organise plusieurs phases de vente — ballot anticipé, vente générale et dernière minute. Chaque phase s\'ouvre sur FIFA.com. Inscrivez-vous aux alertes email.',
+    tkt_id_body:'Les billets sont liés à votre identité. À l\'entrée, vous aurez besoin de votre passeport ou pièce d\'identité correspondant au nom du billet.',
+    tkt_cat4_title:'Catégorie 4',
+    tkt_cat4_price:'50–80$',
+    tkt_cat4_body:'Vue restreinte ou niveau supérieur. Prix le plus bas, disponibilité limitée. Premières à être vendues lors des phases de ballot.',
+    tkt_cat3_title:'Catégorie 3',
+    tkt_cat3_price:'100–150$',
+    tkt_cat3_body:'Niveau supérieur avec vue complète sur le terrain. Meilleur rapport qualité-prix — bonne visibilité au AT&T Stadium.',
+    tkt_cat2_title:'Catégorie 2',
+    tkt_cat2_price:'200–350$',
+    tkt_cat2_body:'Niveau inférieur, tribunes latérales. Excellente vue, bonne ambiance. Catégorie la plus populaire.',
+    tkt_cat1_title:'Catégorie 1',
+    tkt_cat1_price:'400–800$',
+    tkt_cat1_body:'Niveau inférieur premium, derrière les buts ou au milieu. Meilleures places du stade. Très limitées.',
+    tkt_semi_title:'Demi-finale',
+    tkt_semi_price:'400–2 000$',
+    tkt_semi_body:'Dallas accueille une Demi-finale (14 juillet). Tarifs premium dans toutes les catégories. Achetez dès l\'ouverture des ventes.',
+    tkt_resale_intro:'FIFA dispose d\'une plateforme de revente officielle — l\'option la plus sûre sur le marché secondaire.',
+    tkt_resale1_title:'Revente Officielle FIFA',
+    tkt_resale1_body:'FIFA.com/tickets — marché officiel de revente. Option la plus sûre. Billets vérifiés et liés à l\'ID.',
+    tkt_resale2_title:'StubHub / Viagogo',
+    tkt_resale2_body:'Attendez-vous à payer 3–10× le prix facial pour les matchs populaires. Achetez tôt si vous utilisez la revente.',
+    tkt_resale3_title:'Allocation Clubs de Supporters',
+    tkt_resale3_body:'Les fédérations nationales reçoivent des allocations de billets. Rejoignez votre club de supporters national — les clubs néerlandais, argentin, brésilien et anglais ont souvent des packages.',
+    tkt_scam1_title:'Les billets PDF sont faux',
+    tkt_scam1_body:'Les billets de la Coupe du Monde FIFA 2026 sont uniquement numériques. Quiconque vend un PDF, capture d\'écran ou billet imprimé vous arnaque.',
+    tkt_scam2_title:'Virement bancaire = aucune protection',
+    tkt_scam2_body:'Ne payez jamais par virement, crypto ou cartes-cadeaux. Utilisez uniquement une carte de crédit via une plateforme vérifiée.',
+    tkt_scam3_title:'Vendeurs sur les réseaux sociaux',
+    tkt_scam3_body:'Facebook, WhatsApp et Instagram sont remplis d\'arnaqueurs lors des grands tournois. Utilisez uniquement des plateformes vérifiées.',
+    tkt_scam4_title:'Faux sites FIFA',
+    tkt_scam4_body:'La seule vraie URL FIFA est fifa.com — mettez-la en favori. Ne cliquez pas sur des liens dans des emails ou des publicités.',
+    tkt_stad1_title:'Téléchargez l\'Appli FIFA',
+    tkt_stad1_body:'Votre billet est dans l\'application FIFA. Téléchargez-la et ajoutez votre billet bien avant le jour du match.',
+    tkt_stad2_title:'Arrivez 90 minutes en avance',
+    tkt_stad2_body:'Le AT&T Stadium est immense. Les files de sécurité pour 100 000+ personnes prennent du temps. Les portes ouvrent 2h30 avant le coup d\'envoi.',
+    tkt_stad3_title:'Politique sac transparent',
+    tkt_stad3_body:'Seuls les sacs transparents inférieurs à 30×15×30 cm sont autorisés. Les petites pochettes jusqu\'à 11×16,5 cm sont permises.',
+    tkt_stad4_title:'Apportez une pièce d\'identité',
+    tkt_stad4_body:'Votre passeport ou pièce d\'identité doit correspondre au nom du billet. La FIFA peut effectuer des contrôles aléatoires à l\'entrée.',
+    
+    // ── BIG PAGE CONTENT [FR] ──
+    ap_step1_body:'Comptez 60–90 minutes. Les citoyens américains utilisent les bornes APC. Les visiteurs internationaux utilisent les guichets avec agents. Ayez votre ESTA, passeport et détails de vol de retour prêts.',
+    ap_step2_body:'Les boutiques AT&T et T-Mobile sont dans le hall des arrivées du Terminal D. SIM prépayée de $20–40 pour 30 jours. Bien moins cher que le roaming.',
+    ap_step3_body:'If you have a connecting domestic flight, take the free Skylink automated train between terminals. It runs 24/7 every 2–5 minutes. Terminals are far apart — allow 30+ minutes for connections.',
+    ap_step4_body:'La ligne Orange DART relie le Terminal A Sud du DFW au centre-ville de Dallas en ~45 minutes. $2.50 par trajet. Ne prenez pas de taxi depuis l\'aéroport.',
+    ap_step5_body:'Les jours de match: train TRE depuis DFW jusqu\'à la gare CentrePort — puis navette GRATUITE FIFA vers le AT&T Stadium.',
+    ap_tip1_body:'Les taxis de DFW au centre-ville coûtent $50–80. La ligne Orange DART fait le même trajet en 45 minutes pour $2.50.',
+    ap_tip2_body:'Pendant la Coupe du Monde, DFW sera à sa capacité internationale maximale. Prévoyez au moins 90 minutes pour l\'immigration.',
+    ap_tip3_body:'Les visiteurs des pays exemptés de visa ont besoin de l\'ESTA. Faites la demande sur esta.cbp.dhs.gov au moins 72 heures avant le départ.',
+    ap_tip4_body:'L\'application DART GoPass vous permet d\'acheter des tickets sur votre téléphone. Téléchargez-la avant d\'atterrir.',
+    ap_tip5_body:'DFW a 5 terminaux répartis sur une grande zone. Ne réservez jamais moins de 90 minutes pour une correspondance à DFW.',
+    ap_tip6_body:'Les bureaux de change des aéroports ont de mauvais taux. Procurez-vous des dollars dans votre banque avant de voyager.',
+    ap_term_a_airlines:'American Airlines',
+    ap_term_a_body:'Domestic US flights. DART Orange Line station is at Terminal A South — the quickest route to downtown Dallas.',
+    ap_term_b_airlines:'American Airlines',
+    ap_term_b_body:'Domestic US flights. Good food options including local Texas brands. Skylink to all other terminals.',
+    ap_term_c_airlines:'American Airlines',
+    ap_term_c_body:'Domestic and some international. Skylink connects to Terminal D for international arrivals and customs.',
+    ap_term_d_airlines:'International — Most visitors land here',
+    ap_term_d_body:'All international arrivals. Immigration, customs, SIM stores, currency exchange, and ground transport. If flying from Europe, South America, Asia, or the Middle East — you land here.',
+    ap_term_e_airlines:'Multiple Airlines',
+    ap_term_e_body:'Spirit, Frontier, United, and others. Ground transport to TRE and rental cars. Skylink to all terminals.',
+    ap_dal_airlines:'Southwest Airlines (primary), Delta, United (limited)',
+    ap_dal_dist:'8 km from downtown Dallas — much closer than DFW',
+    ap_dal_transit:'DART Orange/Blue Line (Inwood/Love Field station) — 15 min to downtown',
+    ap_dal_body:'Love Field is domestic only — no international flights. If you\'re connecting from a US city, you might land here. It\'s more convenient than DFW for downtown Dallas hotels. The DART light rail stop is a short walk from the terminal.',
+    ap_dal_airlines_label:'Airlines',
+    ap_dal_dist_label:'Distance',
+    ap_dal_transit_label:'Transit',
+    bud_budget_items:'Fast food ou food trucks ($8–12/repas)|DART pour tout le transport|Fan zones et parcs gratuits|Auberge de jeunesse ou appartement VRBO partagé|Musées gratuits (le DMA est gratuit chaque jour)',
+    bud_mid_items:'Restaurants ($20–35/personne)|Uber occasionnel ($15–25/trajet)|Attractions payantes ($20–30)|Hôtel intermédiaire ou VRBO privé|La plupart des visiteurs sont dans cette catégorie',
+    bud_splurge_items:'Restaurant gastronomique ($80–150/personne)|Uber Black partout|Hôtel de luxe (Omni, Ritz, etc.)|Expériences premium au stade|Shopping au Northpark / Galleria',
+    bud_per_day:'par jour',
+    bud_excl_note:'Par personne par jour, hors billets de match et hébergement. Tous les prix en USD.',
+    bud_food_drink:'Nourriture et Boissons',
+    bud_transport_activities:'Transport et Activités',
+    bud_tipping_warning:'Le pourboire n\'est pas optionnel aux États-Unis.',
+    bud_tipping_body:'Le personnel de service est souvent payé en dessous du salaire minimum. Ne pas donner de pourboire est considéré comme impoli.',
+    hal_tip1_title:'Vérifiez la certification halal',
+    hal_tip1_body:'Always verify halal status with the restaurant directly — use Zabihah.com or the Halal Trip app to find certified halal restaurants in DFW.',
+    hal_tip2_title:'Épiceries halal',
+    hal_tip2_body:'Al-Barakah Halal Meat Market in Richardson and Halal Meat Shop on Greenville Ave stock a wide range of certified halal meat and groceries.',
+    hal_tip3_title:'Wudu au stade',
+    hal_tip3_body:'AT&T Stadium bathrooms have standard sinks. Plan to perform wudu at your hotel before match day. Prayer room availability will be confirmed closer to the tournament.',
+    hal_tip4_title:'Direction qibla à Dallas',
+    hal_tip4_body:'From Dallas, the qibla direction is approximately 48–50° northeast. Use the Muslim Pro or Athan app for a precise compass reading.',
+    hal_tip5_title:'L\'alcool est partout',
+    hal_tip5_body:'Alcohol is served at the stadium, in restaurants, and at fan zones. It is not compulsory — simply decline. The Richardson halal restaurant cluster is entirely alcohol-free.',
+    hal_tip6_title:'Richardson — votre base',
+    hal_tip6_body:'Consider staying in Richardson if halal food access is a priority. 15 min on DART to downtown Dallas, 30 min to the stadium on match days.',
+    hal_mosque1_title:'IANT — Association Islamique du Nord du Texas',
+    hal_mosque1_loc:'Richardson · Principale mosquée communautaire',
+    hal_mosque1_body:'The largest Islamic centre in the Dallas area. Full Friday Jumu\'ah services, daily prayers, halal food market on-site. Near DART Red Line.',
+    hal_mosque2_title:'Masjid Al-Islam',
+    hal_mosque2_loc:'Dallas · Près du centre-ville',
+    hal_mosque2_body:'Convenient for visitors staying in downtown Dallas. Daily prayers. Friday Jumu\'ah at 1:15pm. Accessible by DART.',
+    hal_mosque3_title:'Masjid Al-Hedaya',
+    hal_mosque3_loc:'Arlington · Près du AT&T Stadium',
+    hal_mosque3_body:'Closest mosque to AT&T Stadium. Useful on match days for Dhuhr or Asr prayers before or after a game. ~5 minutes drive from the stadium.',
+    hal_mosque4_title:'Application Horaires de Prière',
+    hal_mosque4_loc:'Outil numérique',
+    hal_mosque4_body:'Download Muslim Pro or Athan app before travelling. Both provide accurate Dallas prayer times, qibla direction, and nearby mosque finder. Free to use.',
+    hal_rest_intro:'Richardson (15-20 min du centre-ville de Dallas sur la Ligne Rouge DART) est le cœur de la restauration halal à DFW.',
+    acc_hotel1_name:'Omni Dallas Hotel',
+    acc_hotel1_area:'Downtown Dallas · $$$',
+    acc_hotel1_tag:'Premier Choix',
+    acc_hotel1_body:'Connected by skybridge to the Kay Bailey Hutchison Convention Center. Rooftop pool, great views, and directly above DART connections. One of Dallas\'s finest hotels — book far in advance.',
+    acc_hotel2_name:'Marriott Courtyard Arlington',
+    acc_hotel2_area:'Arlington · $$',
+    acc_hotel2_tag:'Près du Stade',
+    acc_hotel2_body:'Within walking distance of AT&T Stadium. Clean, reliable, and the location is unbeatable for match days. Fills up months in advance — check availability now.',
+    acc_hotel3_name:'The Adolphus Hotel',
+    acc_hotel3_area:'Downtown Dallas · $$$$',
+    acc_hotel3_tag:'Luxe Historique',
+    acc_hotel3_body:'Built in 1912, this is Dallas\'s most storied hotel. Beaux-Arts architecture, exceptional service, and a legendary bar. If you want one memorable splurge night, this is the one.',
+    acc_hotel4_name:'Aloft Dallas Downtown',
+    acc_hotel4_area:'Downtown Dallas · $$',
+    acc_hotel4_tag:'Meilleur Rapport Qualité-Prix',
+    acc_hotel4_body:'Modern, well-located, and reasonably priced. Good common areas, reliable WiFi, and walking distance to DART. Great for younger travellers and groups.',
+    acc_hotel5_name:'VRBO — Uptown Dallas',
+    acc_hotel5_area:'Uptown · $ per person',
+    acc_hotel5_tag:'Groupes de 4+',
+    acc_hotel5_body:'For groups of 4+, a VRBO apartment in Uptown Dallas often works out significantly cheaper than hotel rooms. Full kitchen, more space, and one of Dallas\'s best neighborhoods.',
+    acc_hotel6_name:'Hilton Fort Worth',
+    acc_hotel6_area:'Fort Worth · $$',
+    acc_hotel6_tag:'Budget Intelligent',
+    acc_hotel6_body:'Downtown Fort Worth, walking distance to the Stockyards. TRE train gives direct match-day access to the stadium. Often 30–40% cheaper than equivalent Dallas hotels.',
+    acc_arlington_best:'Assister à 3+ matchs · Groupes voulant marcher jusqu\'au stade',
+    acc_dallas_best:'Premiers visiteurs · Explorer Dallas · Fan zones',
+    acc_fw_best:'Voyageurs avec budget limité · Familles · Base tranquille',
+    acc_arlington_price:'$150–350/nuit les jours de match · Se remplit vite — réservez maintenant',
+    acc_dallas_price:'$120–280/nuit · Plus d\'options d\'hôtels qu\'Arlington',
+    acc_fw_price:'$80–180/nuit · Nettement moins cher que Dallas les jours de match',
+    acc_price_range:'Fourchette de prix',
+    acc_best_for_lbl:'Idéal pour',
+    acc_book_early_body:'Dallas hotel prices during the World Cup are already 2–3× normal rates. Book refundable rates now and cancel later if plans change.',
+    acc_free_cancel_body:'Book fully refundable rates even if they\'re slightly higher. Match schedules can shift. Booking.com and VRBO both offer strong cancellation options.',
+    acc_checkout_body:'Many hotels require minimum stays around match days. Look for hotels with no minimum stay requirements — or book a full week even if you plan to arrive late.',
+    acc_non_match_body:'Match days have surge pricing on Uber and chaotic traffic. Schedule your departure for a quiet Tuesday or Wednesday — easier airport journey and cheaper rideshare prices.',
     footer_note:'Guide de visiteurs créé par des fans pour la Coupe du Monde FIFA 2026 · Non affilié à la FIFA ni à la ville de Dallas',
     booking_sub: 'Trouvez les meilleures offres en hotels, vols et transport vers Dallas.',
     bk_deals: 'Offres',
@@ -3830,6 +4268,152 @@ const TRANSLATIONS = {
     fz_warning_title:'Officiële bevestiging in afwachting',
     fz_warning_body:'FIFA typically announces Fan Festival details 3–6 months before the tournament. Check FIFA.com for the latest.',
     shop_northpark:'NorthPark Center',shop_galleria:'Galleria Dallas',shop_allen:'Allen Premium Outlets',shop_legacy:'The Shops at Legacy',shop_bishop:'Bishop Arts District',shop_deepellum:'Deep Ellum',shop_cowboy:'Resistol of Stetson Hoed',shop_boots:'Texaanse Cowboylaarzen',shop_sauce:'Texaanse Hete Saus en BBQ Kruiden',shop_art:'Texaanse Kunst en Prints',shop_pecan:'Texaanse Pecansnoepjes',shop_merch:'Officieel Toernooiartikelen',fam_dart_title:'DART Lightrail',fam_car_title:'Huurauto',fam_uber_title:'Uber / Lyft met Kinderen',
+    
+    // ── TICKETS PAGE [NL] ──
+    tkt_warning:'Koop altijd eerst officieel.',
+    tkt_warning_body:'De enige geautoriseerde bron voor FIFA WK 2026 tickets is FIFA.com/tickets. Elke andere site die \"officiële\" tickets verkoopt is op zijn best een derde partij en op zijn slechtst oplichting.',
+    tkt_official_site_body:'Maak eerst een FIFA-account aan — vereist voor elke aankoop',
+    tkt_app_body:'Download de officiële FIFA-app — alle tickets zijn digitaal. Vereist voor stadiontoelating. Download voor vertrek.',
+    tkt_phases_body:'FIFA heeft meerdere verkoopfasen — vroege loting, algemene verkoop en last-minute. Elke fase opent op FIFA.com. Meld je aan voor e-mailmeldingen.',
+    tkt_id_body:'Tickets zijn gekoppeld aan uw ID. Bij de ingang heeft u uw paspoort of ID nodig dat overeenkomt met de naam op het ticket.',
+    tkt_cat4_title:'Categorie 4',
+    tkt_cat4_price:'$50–80',
+    tkt_cat4_body:'Beperkt zicht of bovenste ring. Laagste prijs, beperkte beschikbaarheid. Eerste categorie die verkocht wordt in de loting.',
+    tkt_cat3_title:'Categorie 3',
+    tkt_cat3_price:'$100–150',
+    tkt_cat3_body:'Bovenste ring met volledig zicht op het veld. Beste prijs-kwaliteitverhouding — goed zicht in AT&T Stadium.',
+    tkt_cat2_title:'Categorie 2',
+    tkt_cat2_price:'$200–350',
+    tkt_cat2_body:'Onderste ring, zijtribunes. Uitstekend zicht, goede sfeer. Meest populaire categorie.',
+    tkt_cat1_title:'Categorie 1',
+    tkt_cat1_price:'$400–800',
+    tkt_cat1_body:'Premium onderste ring, achter de doelen of middenveld. Beste zitplaatsen in het stadion. Zeer beperkt.',
+    tkt_semi_title:'Halve finale',
+    tkt_semi_price:'$400–2.000',
+    tkt_semi_body:'Dallas ontvangt een halve finale (14 juli). Premiumprijs in alle categorieën. Koop zodra de verkoop opent.',
+    tkt_resale_intro:'FIFA heeft een officieel doorverkoopplatform — de veiligste optie op de secundaire markt.',
+    tkt_resale1_title:'FIFA Officiële Doorverkoop',
+    tkt_resale1_body:'FIFA.com/tickets — officiële doorverkoopmarktplaats. Veiligste optie. Tickets zijn geverifieerd en gekoppeld aan ID.',
+    tkt_resale2_title:'StubHub / Viagogo',
+    tkt_resale2_body:'Verwacht 3–10× de nominale waarde voor populaire wedstrijden. Koop vroeg als u doorverkoop gebruikt.',
+    tkt_resale3_title:'Supportersclub Toewijzing',
+    tkt_resale3_body:'Nationale voetbalbonden ontvangen tickettoewijzingen. Word lid van uw nationale supportersclub — de Nederlandse, Argentijnse, Braziliaanse en Engelse clubs hebben vaak ticketpakketten.',
+    tkt_scam1_title:'PDF-tickets zijn nep',
+    tkt_scam1_body:'FIFA WK 2026 tickets zijn alleen digitaal — opgeslagen in de FIFA-app. Wie een PDF, screenshot of gedrukt ticket verkoopt, is een oplichter.',
+    tkt_scam2_title:'Bankoverschrijving = geen bescherming',
+    tkt_scam2_body:'Betaal nooit via bankoverschrijving, crypto of cadeaukaarten. Gebruik alleen een creditcard via een geverifieerd platform.',
+    tkt_scam3_title:'Verkopers op sociale media',
+    tkt_scam3_body:'Facebook, WhatsApp en Instagram zitten vol oplichters tijdens grote toernooien. Gebruik alleen geverifieerde platforms.',
+    tkt_scam4_title:'Nep FIFA-websites',
+    tkt_scam4_body:'De enige echte FIFA-ticketing URL is fifa.com — sla hem op en typ hem rechtstreeks in. Klik niet op links in e-mails of advertenties.',
+    tkt_stad1_title:'Download de FIFA-app',
+    tkt_stad1_body:'Uw ticket staat in de FIFA-app. Download hem en voeg uw ticket toe ruim voor de wedstrijddag.',
+    tkt_stad2_title:'90 minuten vroeger aankomen',
+    tkt_stad2_body:'AT&T Stadium is enorm. Beveiligingswachtrijen voor 100.000+ mensen kosten tijd. Poorten open 2,5 uur voor aftrap.',
+    tkt_stad3_title:'Beleid voor doorzichtige tassen',
+    tkt_stad3_body:'Alleen doorzichtige tassen kleiner dan 30×15×30 cm zijn toegestaan. Kleine clutchtassen tot 11×16,5 cm zijn toegestaan.',
+    tkt_stad4_title:'Neem foto-ID mee',
+    tkt_stad4_body:'Uw paspoort of overheids-ID moet overeenkomen met de naam op het ticket. FIFA kan willekeurige ID-controles uitvoeren bij de ingang.',
+    
+    // ── BIG PAGE CONTENT [NL] ──
+    ap_step1_body:'Reken op 60–90 minuten. Amerikaanse burgers gebruiken APC-kiosken. Internationale bezoekers gebruiken bemande rijen. Zorg dat uw ESTA, paspoort en terugvluchtgegevens gereed zijn.',
+    ap_step2_body:'AT&T en T-Mobile winkels zijn in de aankomsthal van Terminal D. Prepaid SIM-kaarten vanaf $20–40 voor 30 dagen. Veel goedkoper dan roaming.',
+    ap_step3_body:'If you have a connecting domestic flight, take the free Skylink automated train between terminals. It runs 24/7 every 2–5 minutes. Terminals are far apart — allow 30+ minutes for connections.',
+    ap_step4_body:'De DART Oranje Lijn rijdt van Terminal A (Zuid) bij DFW rechtstreeks naar het centrum van Dallas in ~45 minuten. $2.50 per rit. Neem geen taxi of Uber van het vliegveld.',
+    ap_step5_body:'Op wedstrijddagen: TRE-trein van DFW naar station CentrePort — dan GRATIS FIFA-pendelbus naar AT&T Stadium.',
+    ap_tip1_body:'Taxi\'s van DFW naar het centrum kosten $50–80. De DART Oranje Lijn doet hetzelfde in 45 minuten voor $2.50.',
+    ap_tip2_body:'Tijdens het WK zal DFW op maximale internationale capaciteit zijn. Reken minimaal 90 minuten voor immigratie.',
+    ap_tip3_body:'Bezoekers uit landen met visumontheffing hebben ESTA-goedkeuring nodig. Aanvragen op esta.cbp.dhs.gov minimaal 72 uur voor vertrek.',
+    ap_tip4_body:'Met de DART GoPass-app koopt u transittickets op uw telefoon. Download het voor de landing.',
+    ap_tip5_body:'DFW heeft 5 terminals verspreid over een groot gebied. Boek nooit minder dan 90 minuten voor een overstap bij DFW.',
+    ap_tip6_body:'Wisselkantoren op luchthavens hebben slechte koersen. Haal dollars bij uw bank voor vertrek.',
+    ap_term_a_airlines:'American Airlines',
+    ap_term_a_body:'Domestic US flights. DART Orange Line station is at Terminal A South — the quickest route to downtown Dallas.',
+    ap_term_b_airlines:'American Airlines',
+    ap_term_b_body:'Domestic US flights. Good food options including local Texas brands. Skylink to all other terminals.',
+    ap_term_c_airlines:'American Airlines',
+    ap_term_c_body:'Domestic and some international. Skylink connects to Terminal D for international arrivals and customs.',
+    ap_term_d_airlines:'International — Most visitors land here',
+    ap_term_d_body:'All international arrivals. Immigration, customs, SIM stores, currency exchange, and ground transport. If flying from Europe, South America, Asia, or the Middle East — you land here.',
+    ap_term_e_airlines:'Multiple Airlines',
+    ap_term_e_body:'Spirit, Frontier, United, and others. Ground transport to TRE and rental cars. Skylink to all terminals.',
+    ap_dal_airlines:'Southwest Airlines (primary), Delta, United (limited)',
+    ap_dal_dist:'8 km from downtown Dallas — much closer than DFW',
+    ap_dal_transit:'DART Orange/Blue Line (Inwood/Love Field station) — 15 min to downtown',
+    ap_dal_body:'Love Field is domestic only — no international flights. If you\'re connecting from a US city, you might land here. It\'s more convenient than DFW for downtown Dallas hotels. The DART light rail stop is a short walk from the terminal.',
+    ap_dal_airlines_label:'Airlines',
+    ap_dal_dist_label:'Distance',
+    ap_dal_transit_label:'Transit',
+    bud_budget_items:'Fast food of foodtrucks ($8–12/maaltijd)|DART voor al het vervoer|Gratis fanzones en parken|Budget hostel of gedeeld VRBO-appartement|Gratis musea (DMA elke dag gratis)',
+    bud_mid_items:'Restaurants ($20–35/persoon)|Af en toe Uber ($15–25/rit)|Betaalde attracties ($20–30)|Middenklasse hotel of privé VRBO|De meeste mensen vallen in deze categorie',
+    bud_splurge_items:'Fine dining ($80–150/persoon)|Uber Black overal|Luxe hotel (Omni, Ritz, etc.)|Premium stadionervaringen|Winkelen bij Northpark / Galleria',
+    bud_per_day:'per dag',
+    bud_excl_note:'Per persoon per dag, exclusief wedstrijdtickets en accommodatie. Alle prijzen in USD.',
+    bud_food_drink:'Eten en Drinken',
+    bud_transport_activities:'Vervoer en Activiteiten',
+    bud_tipping_warning:'Fooi geven is niet optioneel in de VS.',
+    bud_tipping_body:'Servicemedewerkers verdienen vaak minder dan het minimumloon. Geen fooi geven wordt als onbeleefd beschouwd.',
+    hal_tip1_title:'Controleer halal-certificering',
+    hal_tip1_body:'Always verify halal status with the restaurant directly — use Zabihah.com or the Halal Trip app to find certified halal restaurants in DFW.',
+    hal_tip2_title:'Halal supermarkten',
+    hal_tip2_body:'Al-Barakah Halal Meat Market in Richardson and Halal Meat Shop on Greenville Ave stock a wide range of certified halal meat and groceries.',
+    hal_tip3_title:'Wudu in het stadion',
+    hal_tip3_body:'AT&T Stadium bathrooms have standard sinks. Plan to perform wudu at your hotel before match day. Prayer room availability will be confirmed closer to the tournament.',
+    hal_tip4_title:'Qibla-richting in Dallas',
+    hal_tip4_body:'From Dallas, the qibla direction is approximately 48–50° northeast. Use the Muslim Pro or Athan app for a precise compass reading.',
+    hal_tip5_title:'Alcohol is overal',
+    hal_tip5_body:'Alcohol is served at the stadium, in restaurants, and at fan zones. It is not compulsory — simply decline. The Richardson halal restaurant cluster is entirely alcohol-free.',
+    hal_tip6_title:'Richardson — uw uitvalsbasis',
+    hal_tip6_body:'Consider staying in Richardson if halal food access is a priority. 15 min on DART to downtown Dallas, 30 min to the stadium on match days.',
+    hal_mosque1_title:'IANT — Islamitische Vereniging van Noord-Texas',
+    hal_mosque1_loc:'Richardson · Belangrijkste gemeenschapsmoskee',
+    hal_mosque1_body:'The largest Islamic centre in the Dallas area. Full Friday Jumu\'ah services, daily prayers, halal food market on-site. Near DART Red Line.',
+    hal_mosque2_title:'Masjid Al-Islam',
+    hal_mosque2_loc:'Dallas · Nabij centrum',
+    hal_mosque2_body:'Convenient for visitors staying in downtown Dallas. Daily prayers. Friday Jumu\'ah at 1:15pm. Accessible by DART.',
+    hal_mosque3_title:'Masjid Al-Hedaya',
+    hal_mosque3_loc:'Arlington · Nabij AT&T Stadium',
+    hal_mosque3_body:'Closest mosque to AT&T Stadium. Useful on match days for Dhuhr or Asr prayers before or after a game. ~5 minutes drive from the stadium.',
+    hal_mosque4_title:'Gebedstijden-app',
+    hal_mosque4_loc:'Digitaal hulpmiddel',
+    hal_mosque4_body:'Download Muslim Pro or Athan app before travelling. Both provide accurate Dallas prayer times, qibla direction, and nearby mosque finder. Free to use.',
+    hal_rest_intro:'Richardson (15-20 min van het centrum van Dallas via DART Rode Lijn) is het hart van halal-eten in DFW.',
+    acc_hotel1_name:'Omni Dallas Hotel',
+    acc_hotel1_area:'Downtown Dallas · $$$',
+    acc_hotel1_tag:'Beste Keuze',
+    acc_hotel1_body:'Connected by skybridge to the Kay Bailey Hutchison Convention Center. Rooftop pool, great views, and directly above DART connections. One of Dallas\'s finest hotels — book far in advance.',
+    acc_hotel2_name:'Marriott Courtyard Arlington',
+    acc_hotel2_area:'Arlington · $$',
+    acc_hotel2_tag:'Nabij Stadion',
+    acc_hotel2_body:'Within walking distance of AT&T Stadium. Clean, reliable, and the location is unbeatable for match days. Fills up months in advance — check availability now.',
+    acc_hotel3_name:'The Adolphus Hotel',
+    acc_hotel3_area:'Downtown Dallas · $$$$',
+    acc_hotel3_tag:'Historische Luxe',
+    acc_hotel3_body:'Built in 1912, this is Dallas\'s most storied hotel. Beaux-Arts architecture, exceptional service, and a legendary bar. If you want one memorable splurge night, this is the one.',
+    acc_hotel4_name:'Aloft Dallas Downtown',
+    acc_hotel4_area:'Downtown Dallas · $$',
+    acc_hotel4_tag:'Beste Prijs-Kwaliteit',
+    acc_hotel4_body:'Modern, well-located, and reasonably priced. Good common areas, reliable WiFi, and walking distance to DART. Great for younger travellers and groups.',
+    acc_hotel5_name:'VRBO — Uptown Dallas',
+    acc_hotel5_area:'Uptown · $ per person',
+    acc_hotel5_tag:'Groepen van 4+',
+    acc_hotel5_body:'For groups of 4+, a VRBO apartment in Uptown Dallas often works out significantly cheaper than hotel rooms. Full kitchen, more space, and one of Dallas\'s best neighborhoods.',
+    acc_hotel6_name:'Hilton Fort Worth',
+    acc_hotel6_area:'Fort Worth · $$',
+    acc_hotel6_tag:'Slim Budgetteren',
+    acc_hotel6_body:'Downtown Fort Worth, walking distance to the Stockyards. TRE train gives direct match-day access to the stadium. Often 30–40% cheaper than equivalent Dallas hotels.',
+    acc_arlington_best:'3+ wedstrijden bijwonen · Groepen die naar het stadion willen lopen',
+    acc_dallas_best:'Eerste bezoekers · Dallas verkennen · Fanzones',
+    acc_fw_best:'Budgetbewuste reizigers · Gezinnen · Rustige uitvalsbasis',
+    acc_arlington_price:'$150–350/nacht op wedstrijddagen · Vol snel — reserveer nu',
+    acc_dallas_price:'$120–280/nacht · Meer hotelopties dan Arlington',
+    acc_fw_price:'$80–180/nacht · Aanzienlijk goedkoper dan Dallas op wedstrijddagen',
+    acc_price_range:'Prijsklasse',
+    acc_best_for_lbl:'Geschikt voor',
+    acc_book_early_body:'Dallas hotel prices during the World Cup are already 2–3× normal rates. Book refundable rates now and cancel later if plans change.',
+    acc_free_cancel_body:'Book fully refundable rates even if they\'re slightly higher. Match schedules can shift. Booking.com and VRBO both offer strong cancellation options.',
+    acc_checkout_body:'Many hotels require minimum stays around match days. Look for hotels with no minimum stay requirements — or book a full week even if you plan to arrive late.',
+    acc_non_match_body:'Match days have surge pricing on Uber and chaotic traffic. Schedule your departure for a quiet Tuesday or Wednesday — easier airport journey and cheaper rideshare prices.',
     footer_note:"Fangemaakt bezoekersguide voor het FIFA WK 2026 - Niet gelieerd aan FIFA",
     booking_sub: 'Vind de beste deals voor hotels, vluchten en vervoer naar Dallas.',
     bk_deals: 'Deals',
@@ -4642,6 +5226,305 @@ function renderLogisticsPage() {
         ${o.link ? `<div style="margin-top:.75rem"><a href="${o.link.url}" target="_blank" rel="noopener" class="ext-link" style="font-size:.65rem">${o.link.label}</a></div>` : ''}
       </div>`).join('');
   }
+}
+
+
+// ── AIRPORT PAGE ─────────────────────────────────────────────────────────────
+function renderAirportPage() {
+  const $ = id => document.getElementById(id);
+  const tl = (key, fb) => tr(key, fb) || fb;
+
+  // Steps
+  const steps = $('ap-steps');
+  if (steps) steps.innerHTML = [
+    ['01', tl('ap_step1_title','Immigration & Customs (Terminal D)'), tl('ap_step1_body','Allow 60–90 minutes.')],
+    ['02', tl('ap_step2_title','Get a US SIM Card'), tl('ap_step2_body','AT&T and T-Mobile stores in Terminal D.')],
+    ['03', tl('ap_step3_title','Take the Skylink to Your Terminal'), tl('ap_step3_body','Free automated train runs 24/7.')],
+    ['04', tl('ap_step4_title','DART Orange Line to Downtown Dallas'), tl('ap_step4_body','~45 minutes. $2.50 per trip.')],
+    ['05', tl('ap_step5_title','Getting to Arlington (Stadium)'), tl('ap_step5_body','TRE train on match days — free FIFA shuttle.')],
+  ].map(([n,title,body]) => `<div style="background:var(--card);border:1px solid var(--border);padding:1.1rem;display:flex;gap:1rem;align-items:flex-start">
+    <div style="font-family:var(--fh);font-size:1.8rem;font-weight:900;color:var(--red);flex-shrink:0;line-height:1">${n}</div>
+    <div>
+      <div style="font-family:var(--fh);font-size:.88rem;font-weight:700;text-transform:uppercase;margin-bottom:.3rem">${title}</div>
+      <div style="font-size:.78rem;color:var(--muted);font-weight:300;line-height:1.65">${body}</div>
+    </div>
+  </div>`).join('');
+
+  // Terminals
+  const terms = $('ap-terminals');
+  if (terms) terms.innerHTML = [
+    ['A', tl('ap_term_a_airlines','American Airlines'), tl('ap_term_a_body','Domestic US flights. DART Orange Line at Terminal A South.'), false],
+    ['B', tl('ap_term_b_airlines','American Airlines'), tl('ap_term_b_body','Domestic US flights.'), false],
+    ['C', tl('ap_term_c_airlines','American Airlines'), tl('ap_term_c_body','Domestic and some international.'), false],
+    ['D ★', tl('ap_term_d_airlines','International — Most visitors land here'), tl('ap_term_d_body','All international arrivals. Immigration, customs, SIM stores, currency exchange.'), true],
+    ['E', tl('ap_term_e_airlines','Multiple Airlines'), tl('ap_term_e_body','Spirit, Frontier, United, and others.'), false],
+  ].map(([letter, airlines, body, star]) => `<div style="background:var(--card);border:1px solid var(--border);${star?'border-left:3px solid var(--red);':''}padding:1.25rem">
+    <div style="font-family:var(--fh);font-size:1.4rem;font-weight:900;color:var(--red);margin-bottom:.4rem">Terminal ${letter}</div>
+    <div style="font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem">${airlines}</div>
+    <div style="font-size:.78rem;color:var(--muted);font-weight:300;line-height:1.65">${body}</div>
+  </div>`).join('');
+
+  // Tips
+  const tips = $('ap-tips');
+  if (tips) tips.innerHTML = [
+    [tl('ap_tip1_title',"Don't take a taxi from DFW"), tl('ap_tip1_body','Taxis cost $50–80. DART does it for $2.50.')],
+    [tl('ap_tip2_title','Allow time for immigration'), tl('ap_tip2_body','Budget 90 minutes minimum.')],
+    [tl('ap_tip3_title','Sort your ESTA before you fly'), tl('ap_tip3_body','Apply at esta.cbp.dhs.gov 72 hours before departure.')],
+    [tl('ap_tip4_title','Download GoPass before arriving'), tl('ap_tip4_body','Buy transit tickets on your phone.')],
+    [tl('ap_tip5_title','DFW is enormous — allow connection time'), tl('ap_tip5_body','Never book under 90 minutes for a connection.')],
+    [tl('ap_tip6_title','Currency — get USD before you arrive'), tl('ap_tip6_body','Airport exchange rates are terrible.')],
+  ].map(([title, body]) => `<div style="background:var(--card);border:1px solid var(--border);border-left:3px solid var(--red);padding:1.25rem">
+    <div style="font-family:var(--fh);font-size:.9rem;font-weight:700;text-transform:uppercase;margin-bottom:.4rem">${title}</div>
+    <div style="font-size:.78rem;color:var(--muted);font-weight:300;line-height:1.65">${body}</div>
+  </div>`).join('');
+}
+
+// ── BUDGET PAGE ───────────────────────────────────────────────────────────────
+function renderBudgetPage() {
+  const $ = id => document.getElementById(id);
+  const tl = (key, fb) => tr(key, fb) || fb;
+
+  // Tiers
+  const tiers = $('bud-tiers');
+  if (tiers) {
+    const perDay = tl('bud_per_day', 'per day');
+    const note = tl('bud_excl_note', 'Per person per day, excluding match tickets and accommodation. All prices in USD.');
+    const tierData = [
+      {key:'bud_budget_label', fb:'Budget', price:'$60', range:'–90', color:'var(--muted)', border:'', items:'bud_budget_items', arrow:'var(--red)'},
+      {key:'bud_midrange_label', fb:'Mid-Range ★', price:'$150', range:'–220', color:'var(--gold)', border:'border-top:3px solid var(--gold);', items:'bud_mid_items', arrow:'var(--gold)'},
+      {key:'bud_splurge_label', fb:'Splurge', price:'$350', range:'+', color:'var(--muted)', border:'', items:'bud_splurge_items', arrow:'var(--red)'},
+    ];
+    tiers.innerHTML = tierData.map(t => {
+      const rawItems = tl(t.items, '');
+      const items = rawItems ? rawItems.split('|') : [];
+      return `<div style="background:var(--card);padding:1.5rem;${t.border}">
+        <div style="font-family:var(--fh);font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:${t.color};margin-bottom:.3rem">${tl(t.key, t.fb)}</div>
+        <div style="font-family:var(--fh);font-size:3rem;font-weight:900;line-height:1;margin-bottom:.3rem">${t.price}<span style="font-size:1.5rem;color:var(--muted)">${t.range}</span></div>
+        <div style="font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem">${perDay}</div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:6px">
+          ${items.map(i => `<li style="font-size:.78rem;color:var(--muted);font-weight:300;display:flex;gap:8px"><span style="color:${t.arrow};flex-shrink:0">→</span>${i}</li>`).join('')}
+        </ul>
+      </div>`;
+    }).join('');
+    const noteEl = $('bud-note');
+    if (noteEl) noteEl.textContent = note;
+  }
+
+  // Tipping warning
+  const tipWarn = $('bud-tip-warning');
+  if (tipWarn) tipWarn.innerHTML = `<strong style="color:var(--text)">${tl('bud_tipping_warning','Tipping is not optional in the US.')}</strong> ${tl('bud_tipping_body','Service staff are often paid below minimum wage.')}`;
+
+  // Price table headers
+  const foodH = $('bud-food-header');
+  if (foodH) foodH.textContent = tl('bud_food_drink','Food & Drink');
+  const transH = $('bud-transport-header');
+  if (transH) transH.textContent = tl('bud_transport_activities','Transport & Activities');
+
+  // Save tips
+  const saves = $('bud-save-cards');
+  if (saves) saves.innerHTML = [
+    ['🏛️', tl('bud_tip1_title','Dallas Museum of Art is Free'), tl('bud_tip1_body','General admission is free every day.')],
+    ['🚆', tl('bud_tip2_title','DART saves $30–50 per day'), tl('bud_tip2_body','A DART day pass is $6.')],
+    ['💳', tl('bud_tip3_title','Use Wise or Revolut'), tl('bud_tip3_body','Near-perfect exchange rates.')],
+    ['🌮', tl('bud_tip4_title','Food trucks for lunch'), tl('bud_tip4_body','Tacos, BBQ for $10–14.')],
+    ['🏟️', tl('bud_tip5_title','BYOW to the stadium (water)'), tl('bud_tip5_body','Empty bottles are permitted.')],
+    ['🛒', tl('bud_tip6_title','Walmart / HEB for snacks'), tl('bud_tip6_body','Stock up at the grocery store.')],
+  ].map(([icon, title, body]) => `<div style="background:var(--card);border:1px solid var(--border);padding:1.25rem">
+    <div style="font-size:1.4rem;margin-bottom:.5rem">${icon}</div>
+    <div style="font-family:var(--fh);font-size:.9rem;font-weight:700;text-transform:uppercase;margin-bottom:.4rem">${title}</div>
+    <div style="font-size:.78rem;color:var(--muted);font-weight:300;line-height:1.65">${body}</div>
+  </div>`).join('');
+}
+
+// ── HALAL PAGE ────────────────────────────────────────────────────────────────
+function renderHalalPage() {
+  const $ = id => document.getElementById(id);
+  const tl = (key, fb) => tr(key, fb) || fb;
+
+  // Restaurants intro
+  const restIntro = $('hal-rest-intro');
+  if (restIntro) restIntro.textContent = tl('hal_rest_intro','Richardson is the heart of halal dining in DFW.');
+
+  // Mosques
+  const mosques = $('hal-mosques');
+  if (mosques) mosques.innerHTML = [
+    [tl('hal_mosque1_title','IANT'), tl('hal_mosque1_loc','Richardson · Main community mosque'), tl('hal_mosque1_body',"The largest Islamic centre in the Dallas area. Full Friday Jumu'ah services, daily prayers, halal food market on-site."), '840 Abrams Rd, Richardson, TX 75081'],
+    [tl('hal_mosque2_title','Masjid Al-Islam'), tl('hal_mosque2_loc','Dallas · Near downtown'), tl('hal_mosque2_body',"Convenient for downtown visitors. Daily prayers. Friday Jumu'ah at 1:15pm. Accessible by DART."), 'South Dallas — search Google Maps'],
+    [tl('hal_mosque3_title','Masjid Al-Hedaya'), tl('hal_mosque3_loc','Arlington · Near AT&T Stadium'), tl('hal_mosque3_body','Closest mosque to AT&T Stadium. ~5 minutes drive from the stadium.'), 'Arlington — search Google Maps'],
+    [tl('hal_mosque4_title','Prayer Times App'), tl('hal_mosque4_loc','Digital tool'), tl('hal_mosque4_body','Download Muslim Pro or Athan app before travelling. Accurate Dallas prayer times, qibla direction, and mosque finder.'), ''],
+  ].map(([title, loc, body, addr]) => `<div style="background:var(--card);border:1px solid var(--border);padding:1.4rem">
+    <div style="font-family:var(--fh);font-size:1.1rem;font-weight:700;text-transform:uppercase;margin-bottom:.3rem">${title}</div>
+    <div style="font-size:.72rem;color:var(--muted);font-weight:300;margin-bottom:.6rem">${loc}</div>
+    <div style="font-size:.78rem;color:var(--muted);font-weight:300;line-height:1.65;margin-bottom:.6rem">${body}</div>
+    ${addr ? `<div style="font-size:.68rem;color:var(--dim)">${addr}</div>` : ''}
+  </div>`).join('');
+
+  // Tips
+  const htips = $('hal-tips');
+  if (htips) htips.innerHTML = [
+    [tl('hal_tip1_title','Verify halal certification'), tl('hal_tip1_body','Use Zabihah.com or Halal Trip app.')],
+    [tl('hal_tip2_title','Halal grocery stores'), tl('hal_tip2_body','Al-Barakah Halal Meat Market in Richardson.')],
+    [tl('hal_tip3_title','Wudu at the stadium'), tl('hal_tip3_body','Plan to perform wudu at your hotel before match day.')],
+    [tl('hal_tip4_title','Qibla direction in Dallas'), tl('hal_tip4_body','Approximately 48–50° northeast. Use Muslim Pro or Athan app.')],
+    [tl('hal_tip5_title','Alcohol is everywhere'), tl('hal_tip5_body','Simply decline when offered. Richardson is alcohol-free.')],
+    [tl('hal_tip6_title','Richardson — your base'), tl('hal_tip6_body','15 min on DART to downtown, 30 min to the stadium on match days.')],
+  ].map(([title, body]) => `<div style="background:var(--card);border:1px solid var(--border);padding:1.25rem">
+    <div style="font-family:var(--fh);font-size:.9rem;font-weight:700;text-transform:uppercase;margin-bottom:.4rem">${title}</div>
+    <div style="font-size:.78rem;color:var(--muted);font-weight:300;line-height:1.65">${body}</div>
+  </div>`).join('');
+}
+
+// ── ACCOMMODATION PAGE ───────────────────────────────────────────────────────
+function renderAccommodationPage() {
+  const $ = id => document.getElementById(id);
+  const tl = (key, fb) => tr(key, fb) || fb;
+
+  // Area comparison
+  const areas = $('acc-areas');
+  if (areas) areas.innerHTML = [
+    {key:'acc_arlington_title', fb:'Arlington', sub_key:'acc_arlington_sub', sub_fb:'Walking distance to stadium', color:'var(--red)', body_key:'acc_arlington_body', body_fb:'Most convenient for attending multiple matches.', best_key:'acc_arlington_best', best_fb:'Attending 3+ matches', price_key:'acc_arlington_price', price_fb:'$150–350/night'},
+    {key:'acc_dallas_title', fb:'Downtown Dallas', sub_key:'acc_dallas_sub', sub_fb:'Best all-round choice', color:'var(--gold)', body_key:'acc_dallas_body', body_fb:'Best balance of access and experience.', best_key:'acc_dallas_best', best_fb:'First-time visitors', price_key:'acc_dallas_price', price_fb:'$120–280/night'},
+    {key:'acc_fw_title', fb:'Fort Worth', sub_key:'acc_fw_sub', sub_fb:'Budget-friendly, charming', color:'var(--muted)', body_key:'acc_fw_body', body_fb:'Often overlooked but genuinely great.', best_key:'acc_fw_best', best_fb:'Budget-conscious visitors', price_key:'acc_fw_price', price_fb:'$80–180/night'},
+  ].map(a => `<div style="background:var(--card);padding:1.5rem;border-top:3px solid ${a.color}">
+    <div style="font-family:var(--fh);font-size:1.3rem;font-weight:900;text-transform:uppercase;margin-bottom:.2rem">${tl(a.key, a.fb)}</div>
+    <div style="font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:${a.color};margin-bottom:1rem">${tl(a.sub_key, a.sub_fb)}</div>
+    <div style="font-size:.8rem;color:var(--muted);font-weight:300;line-height:1.75;margin-bottom:1rem">${tl(a.body_key, a.body_fb)}</div>
+    <div style="font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text);margin-bottom:.4rem">${tl('acc_best_for_lbl','Best for')}</div>
+    <div style="font-size:.78rem;color:var(--muted);font-weight:300;line-height:1.6;margin-bottom:1rem">${tl(a.best_key, a.best_fb)}</div>
+    <div style="border-top:1px solid var(--border);padding-top:1rem">
+      <div style="font-size:.72rem;font-weight:700;color:var(--text);margin-bottom:.3rem">${tl('acc_price_range','Price range')}</div>
+      <div style="font-size:.82rem;color:var(--muted);font-weight:300">${tl(a.price_key, a.price_fb)}</div>
+    </div>
+  </div>`).join('');
+
+  // Booking tips
+  const btips = $('acc-booking-tips');
+  if (btips) btips.innerHTML = [
+    [tl('acc_book_early_title','Book now — prices will double'), 'var(--red)', tl('acc_book_early_body','Dallas hotel prices are already 2–3× normal rates.')],
+    [tl('acc_free_cancel_title','Free cancellation is your friend'), '', tl('acc_free_cancel_body','Book fully refundable rates even if slightly higher.')],
+    [tl('acc_checkout_title','Check checkout day carefully'), '', tl('acc_checkout_body','Many hotels require minimum stays around match days.')],
+    [tl('acc_non_match_title','Consider checking out on a non-match day'), '', tl('acc_non_match_body','Match days have surge pricing on Uber.')],
+  ].map(([title, color, body]) => `<div style="background:var(--card);border:1px solid var(--border);padding:1.25rem">
+    <div style="font-family:var(--fh);font-size:.9rem;font-weight:700;text-transform:uppercase;${color?'color:'+color+';':''}margin-bottom:.4rem">${title}</div>
+    <div style="font-size:.78rem;color:var(--muted);font-weight:300;line-height:1.65">${body}</div>
+  </div>`).join('');
+}
+
+// ── PHRASES PAGE ──────────────────────────────────────────────────────────────
+function renderPhrasesPage() {
+  const $ = id => document.getElementById(id);
+  const tl = (key, fb) => tr(key, fb) || fb;
+
+  // Slang cards
+  const slang = $('phr-slang');
+  if (slang) slang.innerHTML = [
+    [tl("phr_yall_title","Y'all"), tl('phr_yall_body',"You all / you plural. Use it freely.")],
+    [tl("phr_fixin_title","Fixin' to"), tl('phr_fixin_body',"About to. Not broken, just Texas grammar.")],
+    [tl('phr_bless_title','Bless your heart'), tl('phr_bless_body','On the surface sounds kind. Often means something else.')],
+    [tl('phr_howdy_title','Howdy'), tl('phr_howdy_body','Hello. Yes, people actually say this.')],
+    [tl('phr_check_title','Check / the check'), tl('phr_check_body','The bill at a restaurant.')],
+    [tl('phr_restroom_title','Restroom'), tl('phr_restroom_body','Toilet / bathroom.')],
+    [tl('phr_togo_title','To-go / take-out'), tl('phr_togo_body','"Take-away" in American English.')],
+    [tl('phr_soccer_title','Soccer'), tl('phr_soccer_body',"What everyone calls football in the US.")],
+  ].map(([title, body]) => `<div style="background:var(--card);padding:1.25rem">
+    <div style="font-family:var(--fh);font-size:1.1rem;font-weight:700;color:var(--gold);margin-bottom:.3rem">${title}</div>
+    <div style="font-size:.8rem;color:var(--muted);font-weight:300;line-height:1.65">${body}</div>
+  </div>`).join('');
+
+  // Cultural cards
+  const cult = $('phr-cultural');
+  if (cult) cult.innerHTML = [
+    ['💵', tl('phr_cult1_title','Tipping is not optional'), tl('phr_cult1_body','18–20% at restaurants is standard.')],
+    ['🌡️', tl('phr_cult2_title','Fahrenheit, not Celsius'), tl('phr_cult2_body','Dallas in June-July is 95–105°F (35–40°C).')],
+    ['🚗', tl('phr_cult3_title','Everything requires a car'), tl('phr_cult3_body','Dallas is not a walking city.')],
+    ['🥤', tl('phr_cult4_title','Free refills are real'), tl('phr_cult4_body','Unlimited free refills at almost every restaurant.')],
+    ['🍖', tl('phr_cult5_title','How to order BBQ'), tl('phr_cult5_body','Order by weight at a counter.')],
+    ['🍺', tl('phr_cult6_title','Always carry your passport'), tl('phr_cult6_body','US bars card everyone who looks under 40.')],
+    ['💬', tl('phr_cult7_title','"How are you?" is a greeting'), tl('phr_cult7_body','It\'s a greeting, not a genuine enquiry.')],
+    ['💊', tl('phr_cult8_title','Healthcare is very expensive'), tl('phr_cult8_body','Buy comprehensive travel insurance.')],
+  ].map(([icon, title, body]) => `<div style="background:var(--card);border:1px solid var(--border);padding:1.4rem">
+    <div style="font-size:1.5rem;margin-bottom:.5rem">${icon}</div>
+    <div style="font-family:var(--fh);font-size:.9rem;font-weight:700;text-transform:uppercase;margin-bottom:.4rem">${title}</div>
+    <div style="font-size:.78rem;color:var(--muted);font-weight:300;line-height:1.65">${body}</div>
+  </div>`).join('');
+
+  // Column labels
+  const restCol = $('phr-col-restaurant');
+  if (restCol) restCol.textContent = tl('phr_col_restaurant','At a restaurant');
+  const transCol = $('phr-col-transport');
+  if (transCol) transCol.textContent = tl('phr_col_transport','Getting around');
+}
+function renderTicketsPage() {
+  const $ = id => document.getElementById(id);
+
+  // Warning banner
+  const warn = $('tkt-warning');
+  if (warn) warn.innerHTML = `<strong style="color:var(--text)">${tr('tkt_warning','Always buy official first.')}</strong> ${tr('tkt_warning_body','The only authorised source is FIFA.com/tickets.')}`;
+
+  // Official info cards
+  const info = $('tkt-official-info');
+  if (info) info.innerHTML = [
+    [tr('lbl_official_site','Official site'), `<a href="https://www.fifa.com/tickets" target="_blank" rel="noopener" class="ext-link">FIFA.com/tickets ↗</a><br>${tr('tkt_official_site_body','Register for a FIFA account first')}`],
+    [tr('lbl_fifa_app','FIFA Ticketing App'), tr('tkt_app_body','Download the official FIFA app — all tickets are digital.')],
+    [tr('lbl_sales_phases','Sales phases'), tr('tkt_phases_body','FIFA runs multiple sales phases.')],
+    [tr('lbl_id_required','ID required'), tr('tkt_id_body','Tickets are tied to your ID.')],
+  ].map(([label, body]) => `<div style="background:var(--card);padding:1.25rem">
+    <div class="card-label">${label}</div>
+    <div style="font-size:.85rem;color:var(--muted);font-weight:300">${body}</div>
+  </div>`).join('');
+
+  // Category cards
+  const cats = $('tkt-categories');
+  if (cats) cats.innerHTML = [
+    [tr('tkt_cat4_title','Category 4'), tr('tkt_cat4_price','$50–80'), tr('tkt_cat4_body','Restricted view or upper tier.'), 'rgba(248,244,239,0.2)', ''],
+    [tr('tkt_cat3_title','Category 3'), tr('tkt_cat3_price','$100–150'), tr('tkt_cat3_body','Upper tier with full pitch view.'), 'rgba(248,244,239,0.3)', ''],
+    [tr('tkt_cat2_title','Category 2'), tr('tkt_cat2_price','$200–350'), tr('tkt_cat2_body','Lower tier, side stands.'), 'var(--gold)', 'color:var(--gold);'],
+    [tr('tkt_cat1_title','Category 1'), tr('tkt_cat1_price','$400–800'), tr('tkt_cat1_body','Premium lower tier, behind goals or midfield.'), 'var(--red)', 'color:var(--red);'],
+    [tr('tkt_semi_title','Semifinal'), tr('tkt_semi_price','$400–2,000'), tr('tkt_semi_body','Dallas hosts a Semifinal (July 14).'), 'var(--red)', 'color:var(--red);'],
+  ].map(([title, price, body, border, color]) => `<div style="background:var(--card);padding:1.25rem;border-top:3px solid ${border}">
+    <div style="font-family:var(--fh);font-size:1rem;font-weight:700;text-transform:uppercase;margin-bottom:.3rem;${color}">${title}</div>
+    <div style="font-family:var(--fh);font-size:1.6rem;font-weight:900;color:var(--white);margin-bottom:.3rem">${price}</div>
+    <div style="font-size:.72rem;color:var(--muted);font-weight:300">${body}</div>
+  </div>`).join('');
+
+  // Resale intro
+  const resaleIntro = $('tkt-resale-intro');
+  if (resaleIntro) resaleIntro.textContent = tr('tkt_resale_intro','FIFA runs an official resale platform.');
+
+  // Resale cards
+  const resale = $('tkt-resale-cards');
+  if (resale) resale.innerHTML = [
+    [tr('tkt_resale1_title','FIFA Official Resale'), tr('tkt_resale1_body','FIFA.com/tickets — official resale marketplace.'), 'var(--gold)', true],
+    [tr('tkt_resale2_title','StubHub / Viagogo'), tr('tkt_resale2_body','Expect 3–10× face value.'), '', false],
+    [tr('tkt_resale3_title','Supporters Club Allocation'), tr('tkt_resale3_body','National football associations receive allocations.'), '', false],
+  ].map(([title, body, accent, gold]) => `<div style="background:var(--card);border:1px solid var(--border);${gold?'border-left:3px solid var(--gold);':''}padding:1.25rem">
+    <div style="font-family:var(--fh);font-size:.9rem;font-weight:700;text-transform:uppercase;margin-bottom:.4rem">${title}</div>
+    <div style="font-size:.78rem;color:var(--muted);font-weight:300;line-height:1.65">${body}</div>
+  </div>`).join('');
+
+  // Scam cards
+  const scams = $('tkt-scam-cards');
+  if (scams) scams.innerHTML = [
+    [tr('tkt_scam1_title','PDF tickets are fake'), tr('tkt_scam1_body','FIFA tickets are digital only.')],
+    [tr('tkt_scam2_title','Bank transfer = no protection'), tr('tkt_scam2_body','Never pay by bank transfer.')],
+    [tr('tkt_scam3_title','Social media sellers'), tr('tkt_scam3_body','Full of scammers during major tournaments.')],
+    [tr('tkt_scam4_title','Fake FIFA websites'), tr('tkt_scam4_body','The only real FIFA ticketing URL is fifa.com.')],
+  ].map(([title, body]) => `<div style="background:var(--card);border:1px solid var(--border);border-left:3px solid var(--red);padding:1.25rem">
+    <div style="font-family:var(--fh);font-size:.9rem;font-weight:700;text-transform:uppercase;color:var(--red);margin-bottom:.4rem">${title}</div>
+    <div style="font-size:.78rem;color:var(--muted);font-weight:300;line-height:1.65">${body}</div>
+  </div>`).join('');
+
+  // Stadium cards
+  const stad = $('tkt-stadium-cards');
+  if (stad) stad.innerHTML = [
+    [tr('tkt_stad1_title','Download the FIFA App'), tr('tkt_stad1_body','Your ticket lives in the FIFA app.')],
+    [tr('tkt_stad2_title','Arrive 90 minutes early'), tr('tkt_stad2_body','AT&T Stadium is enormous.')],
+    [tr('tkt_stad3_title','Clear bag policy'), tr('tkt_stad3_body','Only clear bags are permitted.')],
+    [tr('tkt_stad4_title','Bring photo ID'), tr('tkt_stad4_body','Your passport must match the name on your ticket.')],
+  ].map(([title, body]) => `<div style="background:var(--card);border:1px solid var(--border);padding:1.25rem">
+    <div style="font-family:var(--fh);font-size:.9rem;font-weight:700;text-transform:uppercase;margin-bottom:.4rem">${title}</div>
+    <div style="font-size:.78rem;color:var(--muted);font-weight:300;line-height:1.65">${body}</div>
+  </div>`).join('');
 }
 
 function renderGroupsPage() {

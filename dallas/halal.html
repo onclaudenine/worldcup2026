@@ -48,7 +48,7 @@
 <section>
   <h3 class="sec-label" data-i18n="hal_rest_label">Halal Restaurants</h3>
   <h2 class="sec-title" data-i18n="hal_rest_title">Where to <em>Eat</em></h2>
-  <p style="font-size:.88rem;color:var(--muted);font-weight:300;line-height:1.75;max-width:640px;margin-bottom:1.5rem">Richardson (15-20 min from downtown Dallas on DART Red Line) is the heart of halal dining in DFW — a cluster of excellent restaurants within walking distance of each other.</p>
+  <p id="hal-rest-intro" style="font-size:.88rem;color:var(--muted);font-weight:300;line-height:1.75;max-width:640px;margin-bottom:1.5rem">Richardson (15-20 min from downtown Dallas on DART Red Line) is the heart of halal dining in DFW — a cluster of excellent restaurants within walking distance of each other.</p>
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px">
     <a href="restaurants/yemandi.html" style="background:var(--card);border:1px solid var(--border);border-left:4px solid var(--gold);padding:1.4rem;text-decoration:none;color:inherit;display:block;transition:border-color .2s" onmouseover="this.style.borderLeftColor='var(--red)'" onmouseout="this.style.borderLeftColor='var(--gold)'">
       <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.6rem"><div style="font-family:var(--fh);font-size:1.1rem;font-weight:700;text-transform:uppercase">Yemandi Yemeni Cuisine</div><span class="tag tag-red">HALAL</span></div>
@@ -80,7 +80,7 @@
 <section style="background:var(--mid)">
   <h3 class="sec-label" data-i18n="hal_mosque_label">Mosques &amp; Prayer</h3>
   <h2 class="sec-title" data-i18n="hal_mosque_title">Prayer Facilities <em>in Dallas</em></h2>
-  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;margin-top:1.5rem">
+  <div id="hal-mosques" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;margin-top:1.5rem">
     <div style="background:var(--card);border:1px solid var(--border);padding:1.4rem">
       <div style="font-family:var(--fh);font-size:1.1rem;font-weight:700;text-transform:uppercase;margin-bottom:.3rem">IANT — Islamic Association of North Texas</div>
       <div style="font-size:.72rem;color:var(--muted);font-weight:300;margin-bottom:.6rem">Richardson · Main community mosque</div>
@@ -110,7 +110,7 @@
 <section>
   <h3 class="sec-label" data-i18n="hal_tips_label">Practical Tips</h3>
   <h2 class="sec-title" data-i18n="hal_tips_title">Muslim-Friendly <em>Travel Tips</em></h2>
-  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-top:1.5rem">
+  <div id="hal-tips" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-top:1.5rem">
     <div style="background:var(--card);border:1px solid var(--border);padding:1.25rem">
       <div style="font-family:var(--fh);font-size:.9rem;font-weight:700;text-transform:uppercase;margin-bottom:.4rem">Verify halal certification</div>
       <div style="font-size:.78rem;color:var(--muted);font-weight:300;line-height:1.65">Always verify halal status with the restaurant directly — use Zabihah.com or the Halal Trip app to find certified halal restaurants in DFW. Don't assume a restaurant is halal based on name or cuisine type alone.</div>
@@ -148,6 +148,8 @@
 <footer id="main-footer"></footer>
 <script src="js/site.js"></script><script src="js/affiliate.js"></script>
 <script>renderNav('halal'); renderFooter(); renderDisclosure(); initLang();
+renderHalalPage();
+document.addEventListener('langchange', renderHalalPage);
 document.addEventListener('langchange', updateAllI18n);
-if (currentLang !== 'en') updateAllI18n();</script>
+if (currentLang !== 'en') { renderHalalPage(); updateAllI18n(); }</script>
 </body></html>
