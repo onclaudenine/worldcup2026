@@ -26,6 +26,31 @@
 
 </head>
 <body>
+<div id="gt-wrap" style="position:fixed;top:12px;right:10px;z-index:99999;display:flex;align-items:center;gap:6px">
+<div style="position:relative">
+<button id="gt-btn" onclick="var m=document.getElementById('gt-dd');m.style.display=m.style.display=='block'?'none':'block'" style="background:rgba(30,30,30,0.9);color:#aaa;border:1px solid #444;border-radius:4px;padding:4px 10px;font-size:11px;cursor:pointer;font-family:sans-serif;white-space:nowrap">&#127760; Translate</button>
+<div id="gt-dd" style="display:none;position:absolute;top:32px;right:0;background:#1a1a1a;border:1px solid #444;border-radius:4px;box-shadow:0 8px 24px rgba(0,0,0,.7);z-index:99999;min-width:155px;padding:4px 0;font-family:sans-serif">
+<div onclick="gtx('nl')" style="padding:8px 14px;font-size:12px;color:#ccc;cursor:pointer" onmouseover="this.style.background='#333'" onmouseout="this.style.background='transparent'">&#127475;&#127473; Nederlands</div>
+<div onclick="gtx('es')" style="padding:8px 14px;font-size:12px;color:#ccc;cursor:pointer" onmouseover="this.style.background='#333'" onmouseout="this.style.background='transparent'">&#127466;&#127480; Español</div>
+<div onclick="gtx('fr')" style="padding:8px 14px;font-size:12px;color:#ccc;cursor:pointer" onmouseover="this.style.background='#333'" onmouseout="this.style.background='transparent'">&#127467;&#127479; Français</div>
+<div onclick="gtx('de')" style="padding:8px 14px;font-size:12px;color:#ccc;cursor:pointer" onmouseover="this.style.background='#333'" onmouseout="this.style.background='transparent'">&#127465;&#127466; Deutsch</div>
+<div onclick="gtx('ar')" style="padding:8px 14px;font-size:12px;color:#ccc;cursor:pointer" onmouseover="this.style.background='#333'" onmouseout="this.style.background='transparent'">&#127480;&#127462; Arabic</div>
+<div onclick="gtx('pt')" style="padding:8px 14px;font-size:12px;color:#ccc;cursor:pointer" onmouseover="this.style.background='#333'" onmouseout="this.style.background='transparent'">&#127463;&#127479; Português</div>
+<div onclick="gtx('it')" style="padding:8px 14px;font-size:12px;color:#ccc;cursor:pointer" onmouseover="this.style.background='#333'" onmouseout="this.style.background='transparent'">&#127470;&#127481; Italiano</div>
+<div onclick="gtx('ja')" style="padding:8px 14px;font-size:12px;color:#ccc;cursor:pointer" onmouseover="this.style.background='#333'" onmouseout="this.style.background='transparent'">&#127471;&#127477; 日本語</div>
+<div onclick="gtx('ko')" style="padding:8px 14px;font-size:12px;color:#ccc;cursor:pointer" onmouseover="this.style.background='#333'" onmouseout="this.style.background='transparent'">&#127472;&#127479; 한국어</div>
+<div onclick="gtx('zh-CN')" style="padding:8px 14px;font-size:12px;color:#ccc;cursor:pointer" onmouseover="this.style.background='#333'" onmouseout="this.style.background='transparent'">&#127464;&#127475; 中文</div>
+<div onclick="gtx('ru')" style="padding:8px 14px;font-size:12px;color:#ccc;cursor:pointer" onmouseover="this.style.background='#333'" onmouseout="this.style.background='transparent'">&#127479;&#127482; Русский</div>
+<div onclick="gtx('tr')" style="padding:8px 14px;font-size:12px;color:#ccc;cursor:pointer" onmouseover="this.style.background='#333'" onmouseout="this.style.background='transparent'">&#127481;&#127479; Türkçe</div>
+<div onclick="gtx('hi')" style="padding:8px 14px;font-size:12px;color:#ccc;cursor:pointer" onmouseover="this.style.background='#333'" onmouseout="this.style.background='transparent'">&#127470;&#127475; हिन्दी</div>
+<div onclick="gtx('id')" style="padding:8px 14px;font-size:12px;color:#ccc;cursor:pointer" onmouseover="this.style.background='#333'" onmouseout="this.style.background='transparent'">&#127470;&#127465; Indonesia</div>
+</div>
+</div>
+</div>
+<script>
+function gtx(l){document.getElementById('gt-dd').style.display='none';window.location.href='https://translate.google.com/translate?sl=en&tl='+l+'&u='+encodeURIComponent(window.location.href);}
+document.addEventListener('click',function(e){var d=document.getElementById('gt-dd');if(d&&!document.getElementById('gt-btn').contains(e.target))d.style.display='none';});
+</script>
 <div id="affiliate-disclosure"></div>
 <nav id="main-nav"></nav>
 <div class="page-hero" style="margin-top:56px">
@@ -99,8 +124,8 @@
   </div>
 </section>
 <footer id="main-footer"></footer>
-<script src="../js/site.js"></script><script src="../js/affiliate.js"></script>
-<script>renderNav('explore') injectTranslateBtn(); renderFooter(); renderDisclosure(); initLang();document.addEventListener('langchange', updateAllI18n);
+<script src="../js/site.js?v=1777077150"></script><script src="../js/affiliate.js?v=1777077150"></script>
+<script>renderNav('explore')  renderFooter(); renderDisclosure(); initLang();document.addEventListener('langchange', updateAllI18n);
 if (typeof currentLang !== 'undefined' && currentLang !== 'en') updateAllI18n();
 </script>
 
